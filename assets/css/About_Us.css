@@ -1,0 +1,153 @@
+body {
+    background-image: url("../images/CoinBg.png");
+    background-size: 600px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.Whole_Window {
+    margin-top: 1%;
+    background-color: #242B31;
+    border-radius: 20px;
+    width: 1440px;
+    height: 1030px;
+    display: block;
+    padding: 20px;
+    margin-left: 20%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.UserPhoto {
+    border-radius: 50%;
+    height: 70px;
+    width: 70px;
+    margin-left: 550%;
+}
+
+/* Text */
+
+.About_Text {
+    text-align: center;
+    font-family: Commissioner, sans-serif;
+    font-size: 25px;
+    line-height: 20px;
+    font-weight: 800;
+    color: #242B31;
+    opacity: 80%;
+    padding-top: 20px;
+}
+
+.Text {
+    text-align: center;
+    font-family: Commissioner, sans-serif;
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 600;
+    color: #242B31;
+    opacity: 80%;
+
+}
+
+
+.Text_Container {
+    text-align: center;
+}
+
+.Swift_Text, .Pay_Text {
+    font-family: Commissioner, sans-serif;
+    font-weight: 900;
+    font-size: 90px;
+}
+
+.Swift_Text {
+    color: #B4C8C7;
+}
+
+.Pay_Text {
+    color: #EDB547;
+}
+
+.Back_Button {
+    height: 40px;
+    width: 40px;
+    border-radius: 10px;
+    font-weight: 900;
+    font-size: 20px;
+    font-family: Commissioner, sans-serif;
+    box-shadow: 5px 5px 5px #101416;
+    background-color: #B4C8C7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Back_Button_Image {
+    height: 30px;
+    width: 30px;
+}
+
+/* Start of Content */
+
+.Photo_Container {
+    margin-left: 30px;
+    background-color: #B4C8C7;
+    height: 800px;
+    width: 95%;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+/* Images */
+
+.Creator {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 25%;
+
+}
+
+.image-item {
+    margin: 10px;
+    text-align: center;
+}
+
+.Creator_Photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    border: 4px #242B31 solid;
+}
+
+.Image_Caption {
+    font-family: Commissioner, sans-serif;
+    margin-top: 10px;
+    font-weight: 800;
+}
+
+.Text_Container_for_Footer {
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.Swift_Text_Footer, .Pay_Text_Footer {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 700;
+}
+
+.Swift_Text_Footer {
+    color: #B4C8C7;
+}
+
+.Pay_Text_Footer {
+    color: #EDB547;
+}
+

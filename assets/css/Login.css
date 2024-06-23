@@ -1,0 +1,171 @@
+body {
+    background-image: url("../images/CoinBg.png");
+    background-size: 600px;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.Whole_Window {
+    margin-top: 1%;
+    background-color: #242B31;
+    border-radius: 20px;
+    display: flex;
+    width: 1440px;
+    height: 1000px;
+}
+
+.image-container {
+    flex: 1;
+}
+
+.SlideShow {
+    height: 1000px;
+    width: 620px;
+    border-radius: 20px;
+    margin-left: -14px;
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 30px;
+}
+
+/* Text */
+
+.Text_Container {
+    text-align: center;
+    margin-top: 5%;
+    margin-right: 10%;
+}
+
+.Swift_Text, .Pay_Text, .Tagline {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 900;
+}
+
+.Swift_Text {
+    display: inline;
+    font-family: Commissioner, sans-serif;
+    font-weight: 900;
+    font-size: 90px;
+    color: #B4C8C7;
+}
+
+.Pay_Text {
+    display: inline;
+    font-family: Commissioner, sans-serif;
+    font-weight: 900;
+    font-size: 90px;
+    color: #EDB547;
+}
+
+.Tagline {
+    font-family: Commissioner, sans-serif;
+    font-weight: 800;
+    color: #EDB547;
+    line-height: 1px;
+    font-size: 20px;
+}
+
+/* Log In Container */
+
+.LogIn_Box {
+    background-color: #B4C8C7;
+    padding: 20px;
+    height: 500px;
+    width: 650px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input_UserID, .input {
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 17px;
+    height: 68px;
+    width: 521px;
+    padding-left: 10px;
+}
+
+.input_UserID {
+    margin-top: 30px;
+}
+
+::placeholder {
+    color: #828282;
+    font-family: 'Commissioner', sans-serif;
+    opacity: 70%;
+    font-size: 15;
+}
+
+input[type="checkbox"] {
+    margin-top: 30px;
+}
+
+
+.Text {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 700;
+    color: #FEFEFE;
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.Forgot_Password_Link {
+    text-decoration: none;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 800;
+    color: #FEFEFE;
+    margin-left: 180px;
+    font-size: 20px;
+}
+
+.LogIn_Button {
+    border: none;
+    font-family: 'Commissioner', sans-serif;
+    color: #FEFEFE;
+    background-color: #FE654D;
+    border-radius: 10px;
+    margin-top: 60px;
+    margin-left: 18%;
+    font-weight: 700;
+    font-size: 20px;
+    height: 70px;
+    width: 325px;
+}
+
+/* Footer */
+
+.Text_Container_for_Link {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.Swift_Text_Footer, .Pay_Text_Footer {
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 700;
+}
+
+.Swift_Text_Footer {
+    color: #B4C8C7;
+}
+
+.Pay_Text_Footer {
+    color: #EDB547;
+}
+
+.AboutUs_Link {
+    text-decoration: none;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 800;
+    color: #B4C8C7;
+}
