@@ -1,0 +1,228 @@
+.body {
+    background-image: url("../images/CoinBg.png");
+    background-size: 600px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Side Bar */
+
+.sidebar {
+    background-color: #242B31;
+    height: 900px; width: 5%;
+    margin-right: auto; margin-top: 10px;
+    margin-left: 1%;
+    display: block;
+    border-radius: 10px;
+
+}
+
+.Sidebar_Text {
+    font-family: Commissioner, sans-serif;
+    color: #FFFFFF;
+    font-weight: 550;
+    margin-top: 1px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Images an Icons */
+
+.Icons {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.LogOff_Icon {
+    width: 40px;
+    height: 40px;
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    display: block;
+}
+
+.UserPhoto {
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Dashboard*/
+
+.Dashboard_Content {
+    border-radius: 20px;
+    background-color: #B4C8C7;
+    height: 900px; width: 1380px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.Swift_Text {
+    font-family: Commissioner, sans-serif;
+    color: #B4C8C7;
+    font-weight: 800;
+    line-height: 30px;
+    font-size: 30px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.Pay_Text {
+    font-family: Commissioner, sans-serif;
+    color: #EDB547;
+    font-weight: 800;
+    line-height: 1px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.Dashboard_Header {
+    background-color: #242B31;
+    width: 98%; height: 90px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 1%;
+    display: block;
+}
+
+.Messages_Tab {
+    background-color: #373f46;
+    margin-top: 10px;
+    height: 900px; width: 20%;
+    margin-left: 10px; 
+    border-radius: 20px;
+}
+
+/* Employee Pay Slip */
+
+/* Button CSS End */
+.Messages {
+    background-color: #242B31;
+    margin-top: -2px;
+    height: 90%;
+    border-radius: 20px;
+    padding-top: 30px;
+    margin-top: 1%;
+}
+
+.Messages_Window {
+    background-color: #CECECE;
+    margin-left: auto; margin-right: auto;
+    width: 97%; height: 97%;
+    border-radius: 20px;
+    padding-left: 3%;
+    padding-top: 2%;
+}
+
+/* Messages Start */
+
+.TitleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: Commissioner, sans-serif;
+}
+
+
+.Text  {
+    font-weight: 800;
+    font-size: 20px;
+    font-family: Commissioner, sans-serif;
+}
+
+.TextHighLight {
+    font-weight: 900;
+    font-size: 20px;
+    font-family: Commissioner, sans-serif;
+}
+
+.Table_PaySlip_Receipt {
+    margin-top: 1%;
+    width: 98%;
+    border: none;
+}
+
+.Table_PaySlip_Receipt table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.Table_PaySlip_Receipt th, .Table_PaySlip_Receipt td {
+    padding: 5px;
+}
+
+.Table_PaySlip_Receipt td {
+    background-color: #7D7D7D;
+}
+
+.Date, .Deduction, .Earning {
+    background-color: #7D7D7D;
+    text-align: center;
+}
+
+.LogChange, .Amount  {
+    text-align: right;
+    background-color: #7D7D7D;
+    color: #FFFFFF;
+}
+
+.LogTable {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.Profile_Photo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+
+/* Next And Back Button */
+
+.Next_and_Back_Button {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Next_and_Back_Button button {
+    font-size: 15px; 
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    height: 60px; width: 10%;
+    background-color: #FE654D;
+    color: #FFFFFF;
+    margin-bottom: 1%;
+}
+
+.Log_Text {
+    color: #242B31;
+    font-size: 24px;
+}

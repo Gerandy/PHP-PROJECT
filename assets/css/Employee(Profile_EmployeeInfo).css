@@ -1,0 +1,263 @@
+.body {
+    background-image: url("../images/CoinBg.png");
+    background-size: 600px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Side Bar */
+
+.sidebar {
+    background-color: #242B31;
+    height: 900px; width: 5%;
+    margin-right: auto; margin-top: 10px;
+    margin-left: 1%;
+    display: block;
+    border-radius: 10px;
+
+}
+
+.Sidebar_Text {
+    font-family: Commissioner, sans-serif;
+    color: #FFFFFF;
+    font-weight: 550;
+    margin-top: 1px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Images an Icons */
+
+.Icons {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.LogOff_Icon {
+    width: 40px;
+    height: 40px;
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 100px;
+    display: block;
+}
+
+.UserPhoto {
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Dashboard*/
+
+.Dashboard_Content {
+    border-radius: 20px;
+    background-color: #B4C8C7;
+    height: 900px; width: 1380px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.Swift_Text {
+    font-family: Commissioner, sans-serif;
+    color: #B4C8C7;
+    font-weight: 800;
+    line-height: 30px;
+    font-size: 30px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.Pay_Text {
+    font-family: Commissioner, sans-serif;
+    color: #EDB547;
+    font-weight: 800;
+    line-height: 1px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.Dashboard_Header {
+    background-color: #242B31;
+    width: 98%; height: 90px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 1%;
+    display: block;
+}
+
+.Messages_Tab {
+    background-color: #373f46;
+    margin-top: 10px;
+    height: 900px; width: 20%;
+    margin-left: 10px; 
+    border-radius: 20px;
+}
+
+/* Employee Pay Slip */
+
+/* Button CSS Start */
+
+.Buttons {
+    position: relative;
+    display: inline-block;
+    margin-right: -5px;
+}
+
+.EmployeeInfoDropDown {
+    margin-top: 20px;
+    background-color: #242B31;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px 0px 0px 0px;
+    width: 200px; height: 60px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+}
+
+.EarningsDropDown {
+    margin-top: 20px;
+    background-color: #242B31;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    width: 250px; height: 60px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+}
+
+.LogsDropDown {
+    margin-top: 20px;
+    background-color: #242B31;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 20px 0px 0px;
+    width: 250px; height: 60px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+}
+
+
+.EmployeeInfoDropDown:hover, .EmployeeInfoDropDown:focus, 
+.EarningsDropDown:hover, .EarningsDropDown:focus,
+.LogsDropDown:hover, .LogsDropDown:focus {
+    background-color: #EDB547;
+}
+
+.show {
+    display: block;
+}
+
+/* Button CSS End */
+
+.Download {
+    margin-left: 77%;
+    margin-top: 1%;
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    color: #FEFEFE;
+    background-color: #FE654D;
+    border: none;
+    height: 60px; width: 300px;
+    border-radius: 20px;
+}
+
+.Employee {
+    background-color: #242B31;
+    margin-top: -2px;
+    height: 80%;
+    border-radius: 0px 20px 20px 20px;
+    padding-top: 30px;
+}
+
+.EmployeeInfo_Window {
+    background-color: #9D9D9D;
+    margin-left: auto; margin-right: auto;
+    width: 97%; height: 97%;
+    border-radius: 20px;
+    padding-left: 3%;
+    padding-top: 2%;
+}
+
+/* Employee Info window CSS  */
+
+.EmployeeInfo_Window {
+    display: flex;
+    align-items: flex-start; /* Align items to the top */
+    padding: 20px;
+}
+
+.EmployeePhoto_Container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 20px; /* Space between photo container and text */
+}
+
+.EmployeePhoto {
+    height: 250px; 
+    width: 250px;
+    border-radius: 20px; 
+    border: 5px solid #242B31;
+}
+
+.EmployeeName_Text {
+    margin-top: 10px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    text-align: center;
+}
+
+.EmployeeDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.TextContainer {
+    background-color: #858585;
+    height: 2%; 
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+.EmployeeInfo_Columns {
+    display: flex;
+    justify-content: space-between;
+}
+
+.EmployeeInfo_Text, .EmployeeInfo_Text2, .EmployeeInfo_Text3 {
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+    width: 1%;
+    font-family: Commissioner, sans-serif;
+    font-weight: 800;
+    font-size: 21px;
+    white-space: nowrap;
+}
+
+.EmployeeInfo_Text2 {
+    margin-left: 10%;
+}
+
+.EmployeeInformation {
+    color: #FEFEFE;
+    font-family: Commissioner, sans-serif;
+    font-weight: 800;
+}

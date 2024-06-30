@@ -11,8 +11,9 @@
 
 .sidebar {
     background-color: #242B31;
-    height: 900px; width: 90px;
-    margin-left: 10%; margin-right: auto; margin-top: 10px;
+    height: 900px; width: 5%;
+    margin-right: auto; margin-top: 10px;
+    margin-left: 1%;
     display: block;
     border-radius: 10px;
 
@@ -59,7 +60,7 @@
 /* Dashboard*/
 
 .Dashboard_Content {
-    border-radius: 10px;
+    border-radius: 20px;
     background-color: #B4C8C7;
     height: 900px; width: 1380px;
     margin-top: 10px; margin-bottom: 10px;
@@ -87,8 +88,18 @@
 
 .Dashboard_Header {
     background-color: #242B31;
-    width: 1340px; height: 79px;
+    width: 98%; height: 90px;
     border-radius: 10px;
-    margin-top: 10px; margin-left: auto; margin-right: auto;
+    margin-top: 10px;
+    margin-left: 1%;
     display: block;
 }
+
+.Messages_Tab {
+    background-color: #373f46;
+    margin-top: 10px;
+    height: 900px; width: 27%;
+    margin-left: 10px; 
+    border-radius: 20px;
+}
+/* End of DashBoard CSS (Gonzales )*/
