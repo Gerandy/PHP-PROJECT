@@ -1,0 +1,341 @@
+.body {
+  background-image: url("assets/Icon/CoinBg.png");
+  background-size: 600px;
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Side Bar */
+
+.sidebar {
+  background-color: #242B31;
+  height: 900px;
+  width: 5%;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-left: 1%;
+  display: block;
+  border-radius: 10px;
+
+}
+
+.Sidebar_Text {
+  font-family: Commissioner, sans-serif;
+  color: #FFFFFF;
+  font-weight: 550;
+  margin-top: 1px;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+/* Images an Icons */
+
+.Icons {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.LogOff_Icon {
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  margin-top: 200px;
+  display: block;
+}
+
+.UserPhoto {
+  width: 60px;
+  height: 60px;
+  margin-top: 30px;
+  margin-bottom: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Dashboard*/
+
+.Dashboard_Content {
+  border-radius: 20px;
+  background-color: #B4C8C7;
+  height: 900px;
+  width: 1380px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.Swift_Text {
+  font-family: Commissioner, sans-serif;
+  color: #B4C8C7;
+  font-weight: 800;
+  line-height: 30px;
+  font-size: 30px;
+  margin-left: 20px;
+  padding-top: 10px;
+}
+
+.Pay_Text {
+  font-family: Commissioner, sans-serif;
+  color: #EDB547;
+  font-weight: 800;
+  line-height: 1px;
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.Dashboard_Header {
+  background-color: #242B31;
+  width: 98%;
+  height: 90px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-left: 1%;
+  display: block;
+}
+
+.Messages_Tab {
+  background-color: #373f46;
+  margin-top: 10px;
+  height: 900px;
+  width: 20%;
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+/* Employee Pay Slip */
+
+/* Drop down Start */
+
+.dropdown, .Semi {
+  position: relative;
+  display: inline-block;
+  margin-right: -5px;
+}
+
+.MonthDropDown {
+  margin-top: 20px;
+  background-color: #242B31;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px 0px 0px 0px;
+  width: 200px; height: 60px;
+  font-family: Commissioner, sans-serif;
+  font-weight: 700;
+}
+
+.SemiMonthlyDropDown {
+  margin-top: 20px;
+  background-color: #242B31;
+  color: white;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0px 20px 0px 0px;
+  width: 250px; height: 60px;
+  font-family: Commissioner, sans-serif;
+  font-weight: 700;
+}
+
+
+
+.MonthDropDown:hover, .MonthDropDown:focus, 
+.SemiMonthlyDropDown:hover, .SemiMonthlyDropDown:focus,
+.PendingDropDown:hover, .PendingDropDown:focus {
+  background-color: #EDB547;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
+}
+
+/* Drop Down End */
+
+.Back_Button {
+  margin-left: 1%;
+  margin-top: 1%;
+  font-family: Commissioner, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #FEFEFE;
+  background-color: #FE654D;
+  border: none;
+  height: 60px; width: 300px;
+  border-radius: 20px;
+}
+
+.Apply_Button {
+  margin-left: 30%;
+  margin-top: 1%;
+  font-family: Commissioner, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #FEFEFE;
+  background-color: #FE654D;
+  border: none;
+  height: 60px; width: 300px;
+  border-radius: 20px;
+}
+
+.Employee_Button {
+  margin-left: 10px;
+  margin-top: 1%;
+  font-family: Commissioner, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #FEFEFE;
+  background-color: #FE654D;
+  border: none;
+  height: 60px; width: 300px;
+  border-radius: 20px;
+}
+
+/* Payslip Receipt Start */
+
+.Receipt {
+  background-color: #CECECE;
+  margin-top: -2px;
+  height: 80%;
+  border-radius: 0px 20px 20px 20px;
+  padding-top: 30px;
+}
+
+.PaySlip {
+  background-color: #CECECE;
+  margin-left: auto; margin-right: auto;
+  width: 97%; height: 97%;
+  border-radius: 20px;
+}
+
+
+
+/* Table Start */
+
+/* PaySlip Receipt Table */
+
+.Text  {
+  font-weight: 800;
+  font-size: 13px;
+  font-family: Commissioner, sans-serif;
+}
+
+
+
+
+.TextHighLight {
+  font-weight: 900;
+  font-size: 20px;
+  font-family: Commissioner, sans-serif;
+}
+
+.Table_PaySlip_Receipt {
+  margin-top: 5px;
+  width: 95%;
+  margin-left: auto;margin-right: auto;
+  border: 2px solid #242B31;
+  border-style: solid;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.Table_PaySlip_Receipt table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Table_PaySlip_Receipt th, .Table_PaySlip_Receipt td {
+  padding: 10px;
+}
+
+.Table_PaySlip_Receipt td {
+  background-color: #E0E0E0;
+}
+
+.Date, .Deduction, .Earning {
+  background-color: #E0E0E0;
+  text-align: left;
+}
+
+.Table_Title {
+  text-align: center;
+  background-color: #E0E0E0;
+}
+
+.Receipt_Code, .Amount  {
+  text-align: right;
+  background-color: #E0E0E0;
+}
+
+/* End PaySlip Receipt Table */
+
+/* Start of PaySlip Deduction, Earning Table */
+
+.Earning_And_Deduction_Table {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.Table_Payslip_Earnnings, .Table_Payslip_Deduction {
+  width: 47%;
+  border: 2px solid #242B31;
+  overflow: hidden;
+  margin-right: 5px;
+}
+
+.Table_Payslip_Earnnings table, .Table_Payslip_Deduction table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.Table_Payslip_Earnnings th, .Table_Payslip_Earnnings td,
+.Table_Payslip_Deduction th, .Table_Payslip_Deduction td {
+  padding: 10px;
+  background-color: #E0E0E0;
+}
+
+.th_Date, .th_Receipt_Code {
+  text-align: center;
+  background-color: #E0E0E0;
+}
+
+.Table_Payslip_Deduction {
+  width: 47%;
+  border-radius: 20px 20px 20px 20px;
+}
+
+.Table_Payslip_Earnnings {
+  border-radius: 20px 20px 20px 20px;
+}
+
+/* End of PaySlip Deduction. Earning Table */
