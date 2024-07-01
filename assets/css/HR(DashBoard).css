@@ -44,7 +44,7 @@
     height: 40px;
     margin-left: auto; margin-right: auto;
     margin-bottom: 10px;
-    margin-top: 100px;
+    margin-top: 150px;
     display: block;
 }
 
@@ -52,7 +52,7 @@
     width: 60px;
     height: 60px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -439,6 +439,7 @@ td {
     border-radius: 0 0 20px 20px;
     font-family: Commissioner, sans-serif;
 }
+
 
 /* End of Table for Notification */
 

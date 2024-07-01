@@ -44,7 +44,7 @@
     height: 40px;
     margin-left: auto; margin-right: auto;
     margin-bottom: 10px;
-    margin-top: 100px;
+    margin-top: 150px;
     display: block;
 }
 
@@ -52,7 +52,7 @@
     width: 60px;
     height: 60px;
     margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 200px;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -107,7 +107,6 @@
 }
 
 .watch {
-    
     color: #FFFFFF;
     font-weight: 400;
     font-size: 16px;
@@ -139,13 +138,6 @@
 
 /* End Header */
 
-.Messages_Tab {
-    background-color: #373f46;
-    margin-top: 10px;
-    height: 900px; width: 27%;
-    margin-left: 10px; 
-    border-radius: 20px;
-}
 
 /* Start Dashboard Code */
 
@@ -355,6 +347,15 @@
 
 /* Messages Window CSS */
 
+.Messages_Tab {
+    background-color: #373f46;
+    margin-top: 10px;
+    height: 900px; width: 27%;
+    margin-left: 10px; 
+    border-radius: 20px;
+}
+
+
 .Notification_Panel {
     background-color: #B5B2B2;
     height: 600px;
@@ -439,6 +440,7 @@ td {
     border-radius: 0 0 20px 20px;
     font-family: Commissioner, sans-serif;
 }
+
 
 /* End of Table for Notification */
 
