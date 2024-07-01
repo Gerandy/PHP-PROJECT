@@ -28,13 +28,13 @@
                 <div class="LogIn_Box">
                     <form>
                         <label class="sr-only">User ID</label>
-                        <input type="text" placeholder="User ID:" class="input_UserID">
+                        <input type="text" placeholder="User ID:" class="input_UserID" required>
                         <br>
                         <label class="sr-only">Email</label>
-                        <input type="email" placeholder="Email:" class="input">
+                        <input type="email" placeholder="Email:" class="input" required>
                         <br>
                         <label class="sr-only">Password</label>
-                        <input type="password" placeholder="Password:" class="input">
+                        <input type="password" placeholder="Password:" class="input" required>
                         <br>
                         <input type="checkbox">
                         <label class="Text"> Remember Me </label>
@@ -57,19 +57,22 @@
         <!-- Pop Up Form -->
 
         <div class="form-popup" id="myForm">
-            <form action="/action_page.php" class="form-container">
-              <h1>Login</h1>
-          
-              <label for="email"><b>Email</b></label>
-              <input type="text" placeholder="Enter Email" name="email" required>
-          
-              <label for="psw"><b>Password</b></label>
-              <input type="password" placeholder="Enter Password" name="psw" required>
-          
-              <button type="submit" class="btn">Login</button>
-              <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+            <form class="form-container">
+                <p class="Title"> CHANGE PASSWORD</p>
+        
+                <input type="text" placeholder="User ID:" class="UserID" required>
+                
+                <textarea placeholder="Message:" class="Message" required></textarea>
+                
+                <p class="Note"> Your message will be sent to the administrator for password reset <br>
+                    assistance. Please provide relevant details to help verify your request
+                </p>
+        
+                <button type="submit" class="SubmitButton"> SUBMIT </button>
+                <button type="button" class="BackButton" onclick="closeForm()"> BACK </button>
             </form>
         </div>
+        
 
 
         <!-- Javascript for Pop Up -->

@@ -140,6 +140,8 @@
 }
 
 
+/* Table for messages */
+
 .Text  {
     font-weight: 800;
     font-size: 20px;
@@ -198,6 +200,18 @@
     margin-right: 2%;
     margin-bottom: 2%;
 }
+
+/* Making the table look like a button */
+
+.clickableTable {
+    cursor: pointer;
+}
+
+.clickableTable:hover {
+    background-color: #f0f0f0;
+}
+
+/* End of Table for message */
 
 
 /* Next And Back Button */
@@ -360,4 +374,153 @@
 }
 
 /* End of Messages Window CSS */
+
+/* PopUp CSS message */
+
+/* Pop Up for Checking Message */
+
+.DateText {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 2%;
+    padding-top: 2%;
+    margin-left: 37%;
+}
+
+.Sender_Profile {
+    height: 60px; width: 60px;
+    
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 17%;
+    left: 35%;
+    background-color: #242B31;
+    height: 800px;
+    width: 700px;
+    border-radius: 20px;
+}
+
+
+.form-container {
+    padding: 10px;
+    background-color: #CECECE;
+    height: 740px;
+    width: 650px;
+    margin-left: 3.5%;
+    margin-top: 4.5%;
+    border-radius: 20px;
+}
+
+.Memo {
+    background-color: #7D7D7D;
+    width: 98%; height: 85%;
+    border-radius: 20px;
+    margin-left: 1%;
+    font-weight: 800;
+}
+
+.UserID, .Message {
+    padding: 10px;
+    margin-left: 3%;
+    margin-top: 2%;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    width: 92%;
+}
+
+.UserID {
+    height: 60px;
+}
+
+.Message {
+    height: 200px;
+    resize: none;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+
+.UserID, .Message:focus {
+    background-color: #ffffff;
+    outline: none;
+}
+
+.message-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.Sender_Profile {
+    margin-right: 10px;
+    margin-left: 3%;
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+     
+}
+
+
+.Note {
+    font-weight: 800;
+    font-family: 'Commissioner', sans-serif;
+    margin-top: 4%;
+    font-size: 20px;
+    text-align: left;
+    opacity: 80%;
+    margin-left: 3%;
+    color: #f0f0f0;
+}
+
+.MessageBox {
+    background-color: #9D9D9D;
+    height: 70%; width: 95%;
+    margin-left: 2.5%;
+    border-radius: 20px;
+}
+
+.Mail {
+    font-family: 'Commissioner', sans-serif;
+    padding-top: 4%;
+    padding-left: 2%;
+    font-weight: 700;
+    font-size: 20px;
+    color: #242B31;
+}
+
+
+.form-container .SubmitButton, .BackButton {
+    background-color: #EDB547;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    height: 80px;
+    width: 220px;
+    margin-left: 3%;
+    font-weight: 700;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.BackButton {
+    margin-left: 25%;
+}
+
+.form-container .BackButton {
+    background-color: #FE654D;
+}
+
 

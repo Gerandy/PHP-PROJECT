@@ -172,79 +172,98 @@ input[type="checkbox"] {
 
 
 
-/* Try Pop Up */
+/* Pop Up for Chhanging Password */
 
-
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
-
-/* Button used to open the contact form - fixed at the bottom of the page */
-.open-button {
-    background-color: #555;
-    color: white;
-    padding: 16px 20px;
-    border: none;
-    cursor: pointer;
-    opacity: 0.8;
-    position: fixed;
-    bottom: 23px;
-    right: 28px;
-    width: 280px;
-
+.Title {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    margin-top: 2%;
+    margin-left: 9%;
 }
 
-/* The popup form - hidden by default */
 .form-popup {
     display: none;
     position: fixed;
-    top: 20%;
-    left: 40%;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
+    top: 17%;
+    left: 35%;
+    background-color: #242B31;
+    height: 629px;
+    width: 550px;
+    border-radius: 20px;
 }
 
-/* Add styles to the form container */
+
 .form-container {
-    max-width: 300px;
     padding: 10px;
-    background-color: white;
+    background-color: #B4C8C7;
+    height: 580px;
+    width: 510px;
+    margin-left: 3.5%;
+    margin-top: 4.5%;
+    border-radius: 20px;
 }
 
-/* Full-width input fields */
-.form-container input[type=text], .form-container input[type=password] {
-    width: 100%;
-    padding: 15px;
-    margin: 5px 0 22px 0;
+.UserID, .Message {
+    padding: 10px;
+    margin-left: 3%;
+    margin-top: 2%;
     border: none;
-    background: #f1f1f1;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    width: 92%;
 }
 
-/* When the inputs get focus, do something */
-.form-container input[type=text]:focus, .form-container input[type=password]:focus {
-    background-color: #ddd;
+.UserID {
+    height: 60px;
+}
+
+.Message {
+    height: 200px;
+    resize: none;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+
+.UserID, .Message:focus {
+    background-color: #ffffff;
     outline: none;
 }
 
-/* Set a style for the submit/login button */
-.form-container .btn {
-    background-color: #04AA6D;
+
+.Note {
+    font-weight: 700;
+    font-family: 'Commissioner', sans-serif;
+    margin-top: 4%;
+    font-size: 16px;
+    text-align: center;
+    opacity: 80%;
+}
+
+
+.form-container .SubmitButton, .BackButton {
+    background-color: #FE654D;
     color: white;
     padding: 16px 20px;
     border: none;
     cursor: pointer;
-    width: 100%;
-    margin-bottom:10px;
-    opacity: 0.8;
+    width: 40%;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    height: 80px;
+    width: 220px;
+    margin-left: 3%;
+    font-weight: 700;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
 }
 
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-    background-color: red;
+.form-container .BackButton {
+    background-color: #242B31;
 }
 
-/* Add some hover effects to buttons */
-.form-container .btn:hover, .open-button:hover {
-    opacity: 1;
-}

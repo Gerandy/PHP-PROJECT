@@ -20,7 +20,6 @@
         <p class="Pay_Text">PAY</p>
     </div>
 
-
     <!-- Side Bar -->
     <div class="container-fluid">
         <div class="row">
@@ -59,7 +58,7 @@
                         </div>
                         
                         <div class="Table_PaySlip_Receipt">
-                            <table class="LogTable"> 
+                            <table class="LogTable clickableTable"> 
                                 <tr>
                                     <th class="Date Text"> FROM: "HR NAME"</th>
                                 </tr> 
@@ -67,7 +66,7 @@
                                     <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
                                 </tr>
                             </table>
-                            <table class="LogTable"> 
+                            <table class="LogTable clickableTable"> 
                                 <tr>
                                     <th class="Date Text"> FROM: "HR NAME"</th>
                                 </tr> 
@@ -75,7 +74,7 @@
                                     <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
                                 </tr>
                             </table>
-                            <table class="LogTable"> 
+                            <table class="LogTable clickableTable"> 
                                 <tr>
                                     <th class="Date Text"> FROM: "HR NAME"</th>
                                 </tr> 
@@ -83,7 +82,7 @@
                                     <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
                                 </tr>
                             </table>
-                            <table class="LogTable"> 
+                            <table class="LogTable clickableTable"> 
                                 <tr>
                                     <th class="Date Text"> FROM: "HR NAME"</th>
                                 </tr> 
@@ -157,6 +156,56 @@
             </div>
         </div>
     </div>
-    <!-- End of DropDown Javascript -->
+
+    <!-- Pop Up Form -->
+    <div class="form-popup" id="myForm">
+        <div class="form-container">
+            <form class="Memo">
+                <p class="DateText"> 07 - 03 - 2024 </p>
+                <div class="message-container">
+                    <img src="assets/images/Profile.jpg" class="Sender_Profile">
+                    <p class="Note"> FROM: "HR NAME" <br>
+                    Your request to change your PASSWORD is approved!
+                    </p>
+                </div>
+
+                <div class="MessageBox">
+                    <p class="Mail">
+                        Subject: Password Change Request Approved
+                        <br>
+                        Hi [Employee Name],
+                        <br>
+                        <br>
+                        Your request to change your password has been approved. Please proceed with updating it as needed.
+                        <br> <br>
+                        Link to change your Password: <br>
+                        https//Bastalink.com <br> <br>
+
+                        Best regards, <br>
+                        [HR name] <br>
+                        Human Resources. <br>
+                    </p>
+                </div>
+                
+            </form>
+            <button type="submit" class="SubmitButton"> MARK AS READ </button>
+            <button type="button" class="BackButton" onclick="closeForm()"> BACK </button>
+        </div>
+    </div>
+
+    <script>
+        function openForm() {
+            document.getElementById("myForm").style.display = "block";
+        }
+            
+        function closeForm() {
+            document.getElementById("myForm").style.display = "none";
+        }
+
+        // Attach event listeners to all tables with the class "clickableTable"
+        document.querySelectorAll('.clickableTable').forEach(table => {
+            table.addEventListener('click', openForm);
+        });
+    </script>
 </body>
 </html>
