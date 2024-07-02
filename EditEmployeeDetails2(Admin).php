@@ -1,5 +1,9 @@
 <?php 
 include('config/php/addSalary.php'); 
+include('config/php/connect.php');
+include('config/php/logincomand.php');
+include('config/php/datagetter.php');
+
 ?>
 <!DOCTYPE html>
 <html>
