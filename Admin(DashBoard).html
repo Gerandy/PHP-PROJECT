@@ -10,6 +10,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/Admin(DashBoard).css">
+
+    <style>
+        .Icons_Section{
+            cursor: pointer;
+            transition: 0.3 ease;
+        }
+    
+        .Icons_Section:hover{
+            background-color: #808080;
+        }
+    
+        .AdminNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
+        }
+    
+    </style>
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -31,19 +48,43 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                    <div class="Icons_Section">
+                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">DASH<br>BOARD</p>
                     </div>
-                    <div class="Icons_Section">
+                    <script>
+                        function redirectToAdminDashBoard(){
+                            window.location.href='Admin(DashBoard).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
                         <img src="assets/Icon/EmployeesList_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">PAY<br>SLIP</p>
+                        <p class="Sidebar_Text">EMPLOYEE<br>LIST</p>
                     </div>
-                    <div class="Icons_Section">
+                    <script>
+                        function redirectToEmployeeListAdmin(){
+                            window.location.href='EmployeeList(Admin).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToAdminMessage()">
                         <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">MESSAGES</p>
                     </div>
+                    <script>
+                        function redirectToAdminMessage(){
+                            window.location.href='Admin(Messages).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                    </div>
+
+                    <script>
+                        function redirectToLogin(){
+                            window.location.href='Login.html';
+                        }
+                    </script>
+
                 </div>
 
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
@@ -104,13 +145,8 @@
                     <!-- Messages Tab Here -->
                         <div class="Notification_Panel"> 
                             <p class="Notification_Text"> NOTIFICATION </p>
-                            <label class="Dropdown_Text">FILTER:</label>
-                            <select id="" class="Filter_Dropdown">
-                                <option value="" class="Drop_Text"> A-Z </option>
-                                <option value="" class="Drop_Text"> oldest </option>
-                                <option value="" class="Drop_Text"> newest </option>
-                            </select>
-
+                            
+                            <div class="AdminNotification_Scrollbar">
                             <table>
                                 <tr>
                                     <th> NEW MESSAGE </th>
@@ -137,6 +173,16 @@
                                     <td> New Announcemnet </td>
                                 </tr>
                             </table>
+
+                            <table>
+                                <tr>
+                                    <th> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr>
+                                    <td> New Announcemnet </td>
+                                </tr>
+                            </table>
+                        </div>
                         </div>
 
                         <div class="About_User">

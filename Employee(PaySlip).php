@@ -1,3 +1,13 @@
+<?php 
+
+include('config/php/connect.php');
+include('config/php/logincomand.php');
+include('config/php/datagetter.php');
+
+// $result = mysqli_query($conn, $sql_username);
+// $row = mysqli_fetch_assoc($result);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,21 +19,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets\css\Payslip(Admin).css">
+    <link rel="stylesheet" href="assets/css/Employee(PaySlip).css">
 
     <style>
         .Icons_Section{
             cursor: pointer;
             transition: 0.3 ease;
         }
-    
+        
         .Icons_Section:hover{
             background-color: #808080;
         }
-    
-    
-    
+        .Notification_Scroll_Bar{
+            overflow-y: scroll;
+            height:510px;
+        }
+        
+        .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
+    }
     </style>
+
 </head>
 <body class="body">
 
@@ -39,29 +56,72 @@
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                 <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
+                <div class="Icons_Section" onclick="redirectToEmployeeDashBoard()">
                     <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">DASH<br>BOARD</p>
                 </div>
+
                 <script>
-                    function redirectToAdminDashBoard(){
-                        window.location.href='Admin(DashBoard).html';
+                    function redirectToEmployeeDashBoard(){
+                        window.location.href='Employee(DashBoard).php';
                     }
                 </script>
-                <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
-                    <img src="assets/Icon/EmployeesList_Icon.png" class = "Icons">
-                    <p class = "Sidebar_Text"> EMPLOYEE <br> LIST </p>
+
+                <div class="Icons_Section" onclick="redirectToEmployeePaySlip()">
+                    <img src="assets/Icon/PaySlip_Icon.png" class="Icons img-responsive">
+                    <p class="Sidebar_Text">PAY<br>SLIP</p>                   
                 </div>
+
                 <script>
-                    function redirectToEmployeeListAdmin(){
-                        window.location.href='EmployeeList(Admin).html';
+                    function redirectToEmployeePaySlip(){
+                        window.location.href='Employee(PaySlip).html';
                     }
                 </script>
-                <div class="Icons_Section">
-                    <img src="assets/Icon/Messages_Icon.png" class = "Icons">
-                    <p class = "Sidebar_Text"> MESSAGES</p>
+
+                <div class="Icons_Section" onclick="redirectToEmployeePaySlipHistory()">
+                    <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
+                    <p class="Sidebar_Text">HISTORY</p>
                 </div>
+
+                <script>
+                    function redirectToEmployeePaySlipHistory(){
+                        window.location.href='Employee(PaySlip_History).html';
+                    }
+                </script>
+
+                <div class="Icons_Section" onclick="redirectToEmployeeProfile('Employee(Profile_EmployeeInfo).php')">
+                    <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
+                    <p class="Sidebar_Text">PROFILE</p>
+                </div>
+                <script>
+                    function redirectToEmployeeProfile(){
+                        window.location.href='Employee(Profile_EmployeeInfo).php';
+                    }
+                </script>
+
+                <div class="Icons_Section" onclick="redirectToEmployeeMessages()">
+                    <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
+                    <p class="Sidebar_Text">MESSAGES</p>
+                </div>
+
+                <script>
+                    function redirectToEmployeeMessages(){
+                        window.location.href='Employee(Messages).html';
+                    }
+                </script>
+
+                <div class="Icons_Section" onclick="redirectToLogin()">
                 <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                </div>
+                
+                <script>
+                    function redirectToLogin(){
+                        window.location.href='Login.php';
+                        
+                        
+                    }
+                </script>
+
             </div>
 
             <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
@@ -69,7 +129,7 @@
 
                 <!-- Drop Downs (Month, Semi, Pending) -->
                 <div class="dropdown">
-                    <button onclick="toggleMonthDropdown()" class="MonthDropDown"> MONTH </button>
+                    <button onclick="toggleMonthDropdown()" class="MonthDropDown"> MONTH: </button>
                     <div id="Month" class="dropdown-content">
                         <a href="#"> January </a>
                         <a href="#"> February </a>
@@ -86,48 +146,50 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button onclick="toggleSemiMonthlyDropdown()" class="SemiMonthlyDropDown"> SEMI-MONTHLY </button>
+                    <button onclick="toggleSemiMonthlyDropdown()" class="SemiMonthlyDropDown"> SEMI-MONTHLY: </button>
                     <div id="Semi-Monthly" class="dropdown-content">
                         <a href="#"> 1-15 </a>
                         <a href="#"> 15-31 </a>
                     </div>
                 </div>
- 
+                <div class="dropdown">
+                    <button onclick="togglePendingDropdown()" class="PendingDropDown"> PENDING: </button>
+                    <div id="Pending" class="dropdown-content">
+                        <a href="#"> idk </a>
+                        <a href="#"> dikoalam </a>
+                    </div>
+                </div>
                 <!-- End  Drop Downs -->
 
                 <!-- Pay Slip Receipt -->
                 <div class="Receipt">
                     <div class="PaySlip">
+                        <div class = "Payslip_Header">
+                            <img src="assets/Icon/UserPhoto.png" class="Logo">
+                            <span class="Swift_TextHeader"> SWIFT   </span> <span class="Pay_TextHeader"> PAY </span>
+                        </div>
+                        <p class="TagLine"> Pay Day your Way </p>
 
                         <!-- Start  Payslip Table -->
                         <div class="Table_PaySlip_Receipt">
                             <table>  
                                 <tr>
-                                    <th class="Date Text"> 01-01-2024 </th>
+                                    <th class="Date Text"> <?php echo $_SESSION['Date']; ?> </th>
                                     <th class="Table_Title TextHighLight"> PAY SLIP RECEIPT </th>
-                                    <th class="Table_Title TextHighLight"></th>
-                                    <th class="Receipt_Code Text"> RECEIPT CODE: 001 </th>
+                                    <th class="Receipt_Code Text"> RECEIPT CODE: <?php echo $_SESSION['Receipt_Code'];?> </th>
                                 </tr>
+                                <!-- asddddddddddddddddddddddddddddddddddddddddddddd -->
                                 <tr>
-                                    <td colspan="1"  class="Text"> EMPLOYEE NAME: </td>
-                                    <td colspan="1" class="Text"> --- </td>
-                                    <td colspan="1" class="Text"> Hourly Rate: </td>
-                                    <td colspan="1" class="Text"> --- </td>
+                                    <td colspan="1" class="Text"> EMPLOYEE NAME: </td>
+                                    <td colspan="2" class="Text"> <?php echo $_SESSION['EmployeeName']; ?> </td>
                                 </tr>
                                 <tr>
                                     <td colspan="1" class="Text"> DEPARTMENT: </td>
-                                    <td colspan="2" class="Text"> --- </td>
-                                    <td colspan=""></td>
+                                    <td colspan="2" class="Text"> <?php echo $_SESSION['Department']; ?> </td>
                                 </tr>
                                 <tr>
                                     <td colspan="1" class="Text"> EMPLOYEE ID: </td>
-                                    <td colspan="2" class="Text"> --- </td>
-                                    <td colspan=""></td>
-                                </tr>
-                                <tr>
-                                    <td colspan="1" class="Text"> DATE: </td>
-                                    <td colspan="2" class="Text"> --- </td>
-                                    <td colspan=""></td>
+                                    <td colspan="2" class="Text"> <?php echo $_SESSION['EmployeeID']; ?> </td>
                                 </tr>
                             </table>
                         </div>
@@ -143,9 +205,9 @@
                                         <td colspan="1" class="Text"> --- </td>
                                         <td colspan="1" class="Amount Text"> --- </td>
                                     </tr>
-                                    <tr > 
+                                    <tr>
                                         <td colspan="1"  class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>               
+                                        <td colspan="1" class="Amount Text"> --- </td>
                                     </tr>
                                     <tr>
                                         <td colspan="1" class="Text"> --- </td>
@@ -218,9 +280,7 @@
                 </div>
 
                 <!-- Download Button -->
-                <button class="Back_Button"> EMPLOYEE DETAILS </button>
-                <button class="Apply_Button"> APPLY</button>
-                <button class="Employee_Button">BACK</button>
+                <button class="Download_Button"> DOWNLOAD </button>
                 <!-- End of Download Button -->
 
                 <!-- End of Dashboard_Content -->
@@ -229,46 +289,58 @@
             <div class="col-xs-12 col-md-2 Messages_Tab">
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
-                        <p class="Notification_Text"> NOTIFICATION </p>
+                     <p class="Notification_Text"> NOTIFICATION </p>  
+                     <div class="Notification_Scroll_Bar">
+                     <?php  
+                        while($row = mysqli_fetch_assoc($result_message)){
+                            echo "<table class= NotificationTable>";
+                            
+                            echo  "<tr class= Notif>";
+                            echo     "<th class= Notif_Text>";
+                                        
+                            echo $row['fromName'];
+                                        
+                            echo       "</th>";
+                            echo    "</tr>";
+                            echo    "<trclass= Notif>";
+                            echo        "<td class= Notif_Message>";
+                                    
 
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th class="Notif_Text"> NEW MESSAGE </th>
-                            </tr>
-                            <tr>
-                                <td class="Notif_Message"> You have a new Message </td>
-                            </tr>
-                        </table>
-
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> NEW MESSAGE </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> You have a new Message </td>
-                            </tr>
-                        </table>
-
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> New Announcemnet </td>
-                            </tr>
-                        </table>
-                    </div>
+                            echo $row['Message'];
+                                    
+                                    
+                                    
+                            echo       "</td>";
+                            echo    "</tr>";
+                            echo "</table>";
+                        }
+                    
+                        ?>
+                        </div>
 
                     <div class="About_User">
-                        <img src="assets/images/Profile.jpg" class="UserImage">
-                        <div class="MessagesTab_Text">
-                            <p class="About_User_Text"> 202210178</p>
-                            <p class="About_User_Text"> ACCOUNT USERNAME </p>
-                            <br>
-                            <p class="About_User_Text"> CUSTOMER SERVICE</p>
-                            <p class="Position_Text"> SUPPORT SPECIALIST </p>
-                        </div>
-                    </div>                     
+                            <img src="assets/images/Profile.jpg" class="UserImage">
+                            <div class="MessagesTab_Text">
+                                <p class="About_User_Text"> <?php 
+                                echo  $_SESSION['Identity_No'];
+                                ?></p>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['FirstName'];
+                                
+                                ?> </p>
+                                <br>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['Position'];
+                                
+                                ?></p>
+                                <p class="Position_Text"> <?php 
+
+                                echo $_SESSION['Department'];
+                                
+                                ?> </p>
+                            </div>                   
                 <!-- End of Messages Tab  -->
             </div>
         </div>

@@ -11,8 +11,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/Employee(Profile_EmployeeInfo).css">
 
+<style>
+    .Icons_Section{
+        cursor: pointer;
+        transition: 0.3 ease;
+    }
+
+    .Icons_Section:hover{
+        background-color: #f0f0f0;
+    }
+
+    .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
+    }
+
+</style>
+
 </head>
 <body class="body">
+    <?php 
+    
+    
+    
+    
+    ?>
 
     <!-- Header -->
     <div class="Dashboard_Header"> 
@@ -26,27 +49,29 @@
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                 <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                <div class="Icons_Section">
+                <div class="Icons_Section" onclick="redirectTo('Employee(DashBoard).html')">
                     <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">DASH<br>BOARD</p>
                 </div>
-                <div class="Icons_Section">
+                <div class="Icons_Section" onclick="redirectTo('Employee(PaySlip).html')">
                     <img src="assets/Icon/PaySlip_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">PAY<br>SLIP</p>
                 </div>
-                <div class="Icons_Section">
+                <div class="Icons_Section" onclick="redirectTo('Employee(PaySlip_History).html')">
                     <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">HISTORY</p>
                 </div>
-                <div class="Icons_Section">
+                <div class="Icons_Section" onclick="redirectTo('Employee(Profile_EmployeeInfo).php')">
                     <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">PROFILE</p>
                 </div>
-                <div class="Icons_Section">
+                <div class="Icons_Section" onclick="redirectTo('Employee(Messages).html')">
                     <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">MESSAGES</p>
                 </div>
+                <div class="Icons_Section" onclick="redirectTo('Login.html')">
                 <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                </div>
             </div>
 
             <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
@@ -54,13 +79,13 @@
 
                 <!-- Buttons (EmployeeInfo, Earnings, Log) -->
                 <div class="Buttons">
-                    <button onclick="redirectTo('Employee(Profile_EmployeeInfo).html')" class="EmployeeInfoDropDown"> EMPLOYEE INFO: </button>
+                    <button onclick="redirectTo('Employee(Profile_EmployeeInfo).php')" class="EmployeeInfoDropDown"> EMPLOYEE INFO: </button>
                 </div>
                 <div class="Buttons">
-                    <button onclick="redirectTo('Employee(Profile_Earning).html')" class="EarningsDropDown"> EARNINGS: </button>
+                    <button onclick="redirectTo('Employee(Profile_Earning).php')" class="EarningsDropDown"> EARNINGS: </button>
                 </div>
                 <div class="Buttons">
-                    <button onclick="redirectTo('Employee(Profile_Logs).html')" class="LogsDropDown"> LOGS: </button>
+                    <button onclick="redirectTo('Employee(Profile_Logs).php')" class="LogsDropDown"> LOGS: </button>
                 </div>
                 <!-- End Buttons -->
 
@@ -94,15 +119,7 @@
                                     <p>Mobile Number:</p>   <p class="EmployeeInformation"> --- </p>
                                     <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
                                 </div>
-                                <div class="EmployeeInfo_Text3">
-                                    <p>Region: </p>         <p class="EmployeeInformation"> --- </p>
-                                    <p>Country: </p>        <p class="EmployeeInformation"> --- </p>
-                                    <p>Status: </p>         <p class="EmployeeInformation"> --- </p>
-                                    <p>Nationality:</p>     <p class="EmployeeInformation"> --- </p>
-                                    <p>Email: </p>          <p class="EmployeeInformation"> --- </p>
-                                    <p>Mobile Number: </p>  <p class="EmployeeInformation"> --- </p>
-                                    <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
-                                </div>
+
                             </div>
                         </div>
                     </div>                    
@@ -119,6 +136,8 @@
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
+                       
+                        <div class="EmployeeNotification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -145,6 +164,23 @@
                                 <td class="Notif_Message"> New Announcemnet </td>
                             </tr>
                         </table>
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                        </div>
                     </div>
 
                     <div class="About_User">
@@ -161,10 +197,11 @@
             </div>
         </div>
     </div>
+    <!-- End of DropDown Javascript -->
 
-    <!-- Pop Up Form -->
+        <!-- Pop Up Form -->
 
-    <div class="form-popup" id="myForm">
+        <div class="form-popup" id="myForm">
         <form class="form-container">
             <p class="Title"> CHANGE PASSWORD</p>
     
@@ -193,7 +230,6 @@
           document.getElementById("myForm").style.display = "none";
         }
     </script>
-
     <!-- Javascript for button redirect -->
     <script>
         function redirectTo(url) {
@@ -201,7 +237,5 @@
         }
     </script>
      <!-- End of Javascript for button redirect -->
-
-
 </body>
 </html>

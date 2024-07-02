@@ -112,12 +112,9 @@
 
 /* End of DashBoard CSS (Gonzales )*/
 
-.Buttons {
-  position: relative;
-  display: inline-block;
-  margin-right: -5px;
+.h1 ,h1 {
+  font-weight: 900;
 }
-
 .EmployeeInfoDropDown {
   margin-top: 20px;
   background-color: #242B31;
@@ -149,7 +146,6 @@
 
 
 
-
 .EmployeeInfoDropDown:hover,
 .EmployeeInfoDropDown:focus,
 .EarningsDropDown:hover,
@@ -176,6 +172,19 @@
   border: none;
   height: 60px;
   width: 300px;
+  border-radius: 20px;
+}
+
+.Change_Photo {
+  margin-top: 1%;
+  font-family: Commissioner, sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  color: #FEFEFE;
+  background-color: #FE654D;
+  border: none;
+  height: 60px;
+  width: 250px;
   border-radius: 20px;
 }
 
@@ -270,6 +279,7 @@
   font-weight: 800;
 }
 
+
 .EmployeeInfoInput {
   border: none;
   border-radius: 5px;
@@ -339,14 +349,14 @@
 
 /* Table for notification */
 
-.NotificationTable {
+table {
   border-collapse: collapse;
   width: 90%;
   margin: 20px auto; 
   color: #B5B2B2;
 }
 
-.Notif_Text, .Notif_Message {
+th, td {
   border: none;
   padding: 10px;
   text-align: left;
@@ -355,7 +365,7 @@
   
 }
 
-.Notif_Text {
+th {
   background-color: #474F56;
   font-size: 40px;
   border-radius: 20px 20px 0 0;
@@ -364,7 +374,7 @@
   font-family: Commissioner, sans-serif;
 }
 
-.Notif_Message {
+td {
   background-color: #474F56;
   font-size: 24px;
   font-weight: 700;

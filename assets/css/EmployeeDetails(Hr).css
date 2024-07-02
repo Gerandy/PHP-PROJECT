@@ -149,7 +149,6 @@
 
 
 
-
 .EmployeeInfoDropDown:hover,
 .EmployeeInfoDropDown:focus,
 .EarningsDropDown:hover,
@@ -165,19 +164,6 @@
 
 /* Button CSS End */
 
-.Download {
-  margin-left: 77%;
-  margin-top: 1%;
-  font-family: Commissioner, sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  color: #FEFEFE;
-  background-color: #FE654D;
-  border: none;
-  height: 60px;
-  width: 300px;
-  border-radius: 20px;
-}
 
 .Employee {
   background-color: #242B31;
@@ -268,12 +254,6 @@
   color: #FEFEFE;
   font-family: Commissioner, sans-serif;
   font-weight: 800;
-}
-
-.EmployeeInfoInput {
-  border: none;
-  border-radius: 5px;
-  height: 35px; width: 200px;
 }
 
 /* Messages Window CSS */
@@ -409,3 +389,5 @@
 }
 
 /* End of Messages Window CSS */
+
+

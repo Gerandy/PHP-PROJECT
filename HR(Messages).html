@@ -9,28 +9,28 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/Employee(Messages).css">
+    <link rel="stylesheet" href="assets/css/HR(Messages).css">
 
     <style>
         .Icons_Section{
             cursor: pointer;
             transition: 0.3 ease;
         }
-        
+    
         .Icons_Section:hover{
             background-color: #808080;
         }
-        
-        .EmployeeNotification_Scrollbar{
-        height: 510px;
-        overflow-y: auto;
-    }
 
-        .EmployeeMessages_Scrollbar{
-        height: 650px;
-        overflow-y: auto;
-    }
-    </style>
+        .HRNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
+        }
+
+        .HRMessage_Scrollbar{
+            height: 640px;
+            overflow-y: auto;
+        }
+    </style>   
 
 </head>
 <body class="body">
@@ -46,62 +46,37 @@
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                 <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                <div class="Icons_Section" onclick="redirectToEmployeeDashboard()">
+                <div class="Icons_Section" onclick="redirectToHRDashBoard()">
                     <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">DASH<br>BOARD</p>
                 </div>
                 
                 <script>
-                    function redirectToEmployeeDashboard(){
-                        window.location.href='Employee(DashBoard).html';
+                    function redirectToHRDashBoard(){
+                        window.location.href='HR(DashBoard).html';
                     }
                 </script>
 
-                <div class="Icons_Section" onclick="redirectToEmployeePaySlip()">
-                    <img src="assets/Icon/PaySlip_Icon.png" class="Icons img-responsive">
-                    <p class="Sidebar_Text">PAY<br>SLIP</p>
-                </div>
-                
-                <script>
-                    function redirectToEmployeePaySlip(){
-                        window.location.href='Employee(PaySlip).html';
-                    }
-                </script>
-
-                <div class="Icons_Section" onclick="redirectToEmployeePaySlipHistory()">
-                <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
-                <p class="Sidebar_Text">HISTORY</p>
-                </div>
-
-                <script>
-                    function redirectToEmployeePaySlipHistory(){
-                        window.location.href='Employee(PaySlip_History).html';
-                    }
-                </script>
-
-                <div class="Icons_Section" onclick="redirectToEmployeeProfile()">
-                <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
-                <p class="Sidebar_Text">PROFILE</p>
-                </div>
-                <script>
-                    function redirectToEmployeeProfile(){
-                        window.location.href='Employee(Profile_EmployeeInfo).php';
-                    }
-                </script>
-
-                <div class="Icons_Section" onclick="redirectToEmployeeMessages()">
-                <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
-                <p class="Sidebar_Text">MESSAGES</p>
-                </div>
-
-                <script>
-                    function redirectToEmployeeMessages(){
-                        window.location.href='Employee(Messages).html';
-                    }
-                </script>
-
-                <div class="Icons_Section" onclick="redirectToLogin()">
-                <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                <div class="Icons_Section" onclick="redirectToEmployeeListHR()">
+                        <img src="assets/Icon/EmployeesList_Icon.png" class="Icons img-responsive">
+                        <p class="Sidebar_Text">EMPLOYEE<br>LIST</p>
+                    </div>
+                    <script>
+                        function redirectToEmployeeListHR(){
+                            window.location.href='EmployeeList(Hr).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToHRMessages()">
+                        <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
+                        <p class="Sidebar_Text">MESSAGES</p>
+                    </div>
+                    <script>
+                        function redirectToHRMessages(){
+                            window.location.href='HR(Messages).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToLogin()">
+                    <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
                 </div>
                 <script>
                     function redirectToLogin(){
@@ -109,6 +84,7 @@
                     }
                 </script>
             </div>
+
             <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
             <!-- Dashboard Content Here -->
                 <!-- Earnings Start -->
@@ -117,16 +93,10 @@
                         <div class="TitleContainer">
                             <p class="Title"> MESSAGES </p>
                         </div>
-                        <div class="EmployeeMessages_Scrollbar">
+                        
+                        
                         <div class="Table_PaySlip_Receipt">
-                            <table class="LogTable clickableTable"> 
-                                <tr>
-                                    <th class="Date Text"> FROM: "HR NAME"</th>
-                                </tr> 
-                                <tr>
-                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
-                                </tr>
-                            </table>
+                            <div class="HRMessage_Scrollbar">
                             <table class="LogTable clickableTable"> 
                                 <tr>
                                     <th class="Date Text"> FROM: "HR NAME"</th>
@@ -173,7 +143,6 @@
                 </div>
                 
 
-
                 <!-- End of Dashboard_Content -->
             </div>
             
@@ -181,8 +150,8 @@
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
-                        
-                        <div class="EmployeeNotification_Scrollbar">
+
+                        <div class="HRNotification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -198,15 +167,6 @@
                             </tr>
                             <tr class="Notif">
                                 <td class="Notif_Message"> You have a new Message </td>
-                            </tr>
-                        </table>
-
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> New Announcemnet </td>
                             </tr>
                         </table>
 

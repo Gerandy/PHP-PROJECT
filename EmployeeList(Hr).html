@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets\css\EmployeeList(Admin).css">
+    <link rel="stylesheet" href="assets\css\EmployeeList(Hr).css">
 
     <style>
         .Icons_Section{
@@ -21,22 +21,16 @@
             background-color: #808080;
         }
 
-        .inside{
-            cursor: pointer;
-            transition: color 0.3 ease-in-out;
-
-        }
-
-        .AdminNotification_Scrollbar{
+        .HRNotification_Scrollbar{
             height: 510px;
             overflow-y: auto;
         }
 
-        .AdminListOfEmployee_Scrollbar{
-            height: 580px;
+        .HRListOfEmployee_Scrollbar{
+            height: 575px;
             overflow-y: auto;
         }
-    </style>
+    </style>   
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -49,43 +43,37 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
+                    <div class="Icons_Section" onclick="redirectToHRDashBoard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">DASH<br>BOARD</p>
                     </div>
                     <script>
-                        function redirectToAdminDashBoard(){
-                            window.location.href='Admin(DashBoard).html';
+                        function redirectToHRDashBoard(){
+                            window.location.href='HR(DashBoard).html';
                         }
                     </script>
-                    <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
+                    <div class="Icons_Section" onclick="redirectToEmployeeListHR()">
                         <img src="assets/Icon/EmployeesList_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> EMPLOYEE <br> LIST </p>
                     </div>
                     <script>
-                        function redirectToEmployeeListAdmin(){
-                            window.location.href='EmployeeList(Admin).html';
+                        function redirectToEmployeeListHR(){
+                            window.location.href='EmployeeList(Hr).html';
                         }
                     </script>
-                    <div class="Icons_Section" onclick="redirectToAdminMessage()">
+                    <div class="Icons_Section" onclick="redirectToHRMessage()">
                         <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
-                    <script>
-                        function redirectToAdminMessage(){
-                            window.location.href='Admin(Messages).html';
-                        }
-                    </script>
                     <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
                     </div>
-
                     <script>
-                        function redirectToLogin(){
-                            window.location.href='Login.html';
+                        function redirectToHRMessage(){
+                            window.location.href='HR(Messages).html';
                         }
                     </script>
-    
+
                 </div>
 
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
@@ -105,21 +93,8 @@
                                  <div class="text"><h3>POSITION</h3> </div>
                              </div>
 
-                             <div class="AdminListOfEmployee_Scrollbar">
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
-                             <script>
-                                function redirectToEmployeeDetailsAdmin(){
-                                    window.location.href='Employeedetails(ADMIN).html';
-                                }
-                             </script>
-
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
+                             <div class="HRListOfEmployee_Scrollbar">
+                             <div class="inside">
                                 <div class="text"><img src="" class="EmployeePhoto"></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
@@ -127,7 +102,7 @@
                                 <div class="text"><p> --- </p></div>
                              </div>
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
+                             <div class="inside">
                                 <div class="text"><img src="" class="EmployeePhoto"></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
@@ -135,7 +110,7 @@
                                 <div class="text"><p> --- </p></div>
                              </div>
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
+                             <div class="inside">
                                 <div class="text"><img src="" class="EmployeePhoto"></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
@@ -143,7 +118,7 @@
                                 <div class="text"><p> --- </p></div>
                              </div>
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
+                             <div class="inside">
                                 <div class="text"><img src="" class="EmployeePhoto"></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
@@ -151,22 +126,31 @@
                                 <div class="text"><p> --- </p></div>
                              </div>
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
+                             <div class="inside">
                                 <div class="text"><img src="" class="EmployeePhoto"></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
                              </div>
-                               <div class="inside">
 
-                                <!-- add button admin // pwede i comment nalang din para mawala yung add button  -->
-                                <div class="text"><p></p></div>
-                                <div class="text"><p> <a href="Admin(AddAccount).html"><img src="assets/Icon/plus.png" class="plus"></a></p></div>
-                                <div class="text"><p></p></div>
-                                <div class="text"><p></p></div>
+                             <div class="inside">
+                                <div class="text"><img src="" class="EmployeePhoto"></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
                              </div>
+
+                             <div class="inside">
+                                <div class="text"><img src="" class="EmployeePhoto"></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
                             </div>
+                            </div>
+  
                            </div>
                 </div>
 
@@ -174,46 +158,46 @@
                     <!-- Messages Tab Here -->
                         <div class="Notification_Panel"> 
                             <p class="Notification_Text"> NOTIFICATION </p>
-                            
-                            <div class="AdminNotification_Scrollbar">
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
+    
+                            <div class="HRNotification_Scrollbar">
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th class="Notif_Text"> NEW MESSAGE </th>
                                 </tr>
                                 <tr>
-                                    <td> You have a new Message </td>
+                                    <td class="Notif_Message"> You have a new Message </td>
+                                </tr>
+                            </table>
+    
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> NEW MESSAGE </th>
+                                </tr>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> You have a new Message </td>
+                                </tr>
+                            </table>
+    
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> New Announcemnet </td>
                                 </tr>
                             </table>
 
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> ANNOUNCEMENT </th>
                                 </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
-
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
-                                </tr>
-                            </table>
-
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> New Announcemnet </td>
                                 </tr>
                             </table>
                         </div>
                         </div>
-
+    
                         <div class="About_User">
                             <img src="assets/images/Profile.jpg" class="UserImage">
                             <div class="MessagesTab_Text">
