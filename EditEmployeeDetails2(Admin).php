@@ -34,6 +34,21 @@ include('config/php/datagetter.php');
             height: 510px;
             overflow-y: auto;
         }
+
+        .dropdown{
+            width: 450px;
+            height: 40px;
+        }
+
+        .EmployeeInfoInput{
+            width: 450px;
+            height: 40px;
+        }
+
+        .deductionDes{
+            width: 450px;
+            height: 40px;
+        }
     </style>
 </head>
        <body class="body">
@@ -103,7 +118,7 @@ include('config/php/datagetter.php');
                                     <div class="EmployeeInfo_Text">
                                         
                                     <p>Employee: </p>  <p class="EmployeeInformation"> 
-                                            <select name=EmployeeID>
+                                            <select class="dropdown" name=EmployeeID>
                                             <?php 
                                                 while($row = mysqli_fetch_assoc($result_EmployeeSalaryPerHour)){ ?>
                                                     <?php echo '<option value='.$row['EmployeeName'].'>'; ?>
@@ -113,23 +128,23 @@ include('config/php/datagetter.php');
                                              ?>
                                             
                                             </select></p>   
-                                        <p>Rate per Hour: </p>      <p class="EmployeeInformation"> <input type="text" name="RatePerHour" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Rate per Hour: </p>      <p class="EmployeeInformation"> <input type="text" required name="RatePerHour" placeholder="" class="EmployeeInfoInput"> </p>
                                         <p>Deduction: </p>  <p class="EmployeeInformation"> 
-                                            <select id="deductions1" name="deduction1">
+                                            <select class="deductionDes" id="deductions1" name="deduction1">
                                             <option value="TAX">TAX</option>
                                             <option value="PAG-IBIG">PAG-IBIG</option>
                                             <option value="SSS">SSS</option>
                                             <option value="">NONE</option>
                                             </select></p>
                                         <p>Deduction: </p>  <p class="EmployeeInformation"> 
-                                            <select id="deductions2" name="deduction2">
+                                            <select class="deductionDes" id="deductions2" name="deduction2">
                                             <option value="NONE">NONE</option>
                                             <option value="PAG-IBIG">PAG-IBIG</option>
                                             <option value="SSS">SSS</option>
                                             <option value="TAX">TAX</option>
                                             </select></p>
                                         <p>Deduction: </p>  <p class="EmployeeInformation"> 
-                                            <select id="deductions3" name="deduction3">
+                                            <select class="deductionDes" id="deductions3" name="deduction3">
                                             <option value="">NONE</option>
                                             <option value="PAG-IBIG">PAG-IBIG</option>
                                             <option value="SSS">SSS</option>
