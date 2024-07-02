@@ -3,6 +3,7 @@ include('config/php/addSalary.php');
 ?>
 <!DOCTYPE html>
 <html>
+    <!-- er -->
 <head>
     <title>Employee Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +26,10 @@ include('config/php/addSalary.php');
             background-color: #808080;
         }
         
-        
+        .AdminNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
+        }
     </style>
 </head>
        <body class="body">
@@ -79,12 +83,7 @@ include('config/php/addSalary.php');
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
                     <!-- Dashboard Content Here -->
                     <!-- Dito mo lagay delosreyes mga gawa mo-->
-                    <div class="Buttons">
-                        <button onclick="redirectTo('Employee(Profile_EmployeeInfo).php')" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
-                    </div>
-                    <div class="Buttons">
-                        <button onclick="redirectTo('Employee(Profile_Earning).php')" class="EarningsDropDown"> EARNINGS </button>
-                    </div>
+                    <h1>EDIT ACCOUNT</h1>
                   
                     <!-- End Buttons -->
 
@@ -150,6 +149,63 @@ include('config/php/addSalary.php');
 
                     <div class="col-xs-12 col-md-2 Messages_Tab">
                     <!-- Messages Tab Here -->
+                    <div class="Notification_Panel"> 
+                                <p class="Notification_Text"> NOTIFICATION </p>
+        
+                                <div class="AdminNotification_Scrollbar">
+                                <?php  
+                       while($row = mysqli_fetch_assoc($result_message)){
+                           echo "<table class= NotificationTable>";
+                           
+                           echo  "<tr class= Notif>";
+                           echo     "<th class= Notif_Text>";
+                                       
+                           echo $row['fromName'];
+                                       
+                           echo       "</th>";
+                           echo    "</tr>";
+                           echo    "<trclass= Notif>";
+                           echo        "<td class= Notif_Message>";
+                                   
+
+                           echo $row['Message'];
+                                   
+                                   
+                                   
+                           echo       "</td>";
+                           echo    "</tr>";
+                           echo "</table>";
+                       }
+                   
+                       ?>
+                            </div>
+                            </div>
+        
+                            <div class="About_User">
+                                <img src="assets/images/Profile.jpg" class="UserImage">
+                                <div class="MessagesTab_Text">
+                                <p class="About_User_Text"> <?php 
+                                echo  $_SESSION['Identity_No'];
+                                ?></p>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['FirstName'];
+                                
+                                ?> </p>
+                                <br>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['Position'];
+                                
+                                ?></p>
+                                <p class="Position_Text"> <?php 
+
+                                echo $_SESSION['Department'];
+                                
+                                ?> </p>
+                                </div>
+                            </div>      
+                            <!-- End of Messages Tab  -->
                  </div>
              </div>
         </div>
