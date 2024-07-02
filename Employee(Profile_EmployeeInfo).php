@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <?php 
 session_start();
-
+// nako po ubos na oras
 ?>
 <html>
 <head>
