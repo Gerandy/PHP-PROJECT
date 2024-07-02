@@ -356,6 +356,11 @@
 /* Messages Window CSS */
 
 .Notification_Panel {
+    
+    overflow:auto;
+    
+      
+      
     background-color: #B5B2B2;
     height: 600px;
     width: 98%;
