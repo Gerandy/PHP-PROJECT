@@ -18,7 +18,7 @@ if (isset($_GET['submit'])){
     echo $username;
     
     
-    $sql = "UPDATE editearningperhour SET ratePerHour = 'RatePerHour', Deduction1 = '$Deduction1', Deduction2 = '$Deduction2', Deduction3 = '$Deduction3' where username = '$username'";
+    $sql = "UPDATE editearningperhour SET ratePerHour = '$RatePerHour', Deduction1 = '$Deduction1', Deduction2 = '$Deduction2', Deduction3 = '$Deduction3' where username = '$username'";
     if (mysqli_query($conn, $sql)) {
         echo '<script>alert("SALARY SUCCESSFULLY UPDATED")</script>';
     } 
