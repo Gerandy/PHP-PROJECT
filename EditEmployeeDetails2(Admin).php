@@ -3,7 +3,7 @@ include('config/php/addSalary.php');
 ?>
 <!DOCTYPE html>
 <html>
-    <!-- er -->
+    
 <head>
     <title>Employee Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
