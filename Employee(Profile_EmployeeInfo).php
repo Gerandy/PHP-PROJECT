@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <?php 
-//nako po eqwe eqwe
 include('config/php/connect.php');
 include('config/php/logincomand.php');
 include('config/php/datagetter.php');
@@ -40,12 +39,6 @@ include('config/php/datagetter.php');
 
 </head>
 <body class="body">
-    <?php 
-    
-    
-    
-    
-    ?>
 
     <!-- Header -->
     <div class="Dashboard_Header"> 
