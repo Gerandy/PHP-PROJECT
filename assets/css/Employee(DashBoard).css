@@ -356,11 +356,6 @@
 /* Messages Window CSS */
 
 .Notification_Panel {
-    
-    overflow:auto;
-    
-      
-      
     background-color: #B5B2B2;
     height: 600px;
     width: 98%;
@@ -411,13 +406,6 @@
 }
 
 /* Table for notification */
-
-.NotificationTable {
-    border-collapse: collapse;
-    width: 90%;
-    margin: 20px auto; 
-    color: #B5B2B2;
-}
 
 table {
     border-collapse: collapse;

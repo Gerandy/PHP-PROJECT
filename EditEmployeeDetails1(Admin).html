@@ -10,6 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets\css\EditEmployeeDetails1(Admin).css">
+    
+    <style>
+        .Icons_Section{
+            cursor: pointer;
+            transition: 0.3 ease;
+        }
+    
+        .Icons_Section:hover{
+            background-color: #808080;
+        }
+</style>
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -22,19 +33,42 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                    <div class="Icons_Section">
+                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">DASH<br>BOARD</p>
                     </div>
-                    <div class="Icons_Section">
-                        <img src="assets/Icon/EmployeesList_Icon.png" class = "Icons">
-                        <p class = "Sidebar_Text"> EMPLOYEE <br> LIST </p>
+                    <script>
+                        function redirectToAdminDashBoard(){
+                            window.location.href='Admin(DashBoard).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
+                        <img src="assets/Icon/EmployeesList_Icon.png" class="Icons img-responsive">
+                        <p class="Sidebar_Text">EMPLOYEE<br>LIST</p>
                     </div>
-                    <div class="Icons_Section">
-                        <img src="assets/Icon/Messages_Icon.png" class = "Icons">
-                        <p class = "Sidebar_Text"> MESSAGES</p>
+                    <script>
+                        function redirectToEmployeeListAdmin(){
+                            window.location.href='EmployeeList(Admin).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToAdminMessage()">
+                        <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
+                        <p class="Sidebar_Text">MESSAGES</p>
                     </div>
+                    <script>
+                        function redirectToAdminMessage(){
+                            window.location.href='Admin(Messages).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                    </div>
+    
+                    <script>
+                        function redirectToLogin(){
+                            window.location.href='Login.html';
+                        }
+                    </script>
                 </div>
 
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
@@ -71,15 +105,7 @@
                                         <p>Mobile Number:</p>   <p class="EmployeeInformation"> --- </p>
                                         <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
                                     </div>
-                                    <div class="EmployeeInfo_Text3">
-                                        <p>Region: </p>         <p class="EmployeeInformation"> --- </p>
-                                        <p>Country: </p>        <p class="EmployeeInformation"> --- </p>
-                                        <p>Status: </p>         <p class="EmployeeInformation"> --- </p>
-                                        <p>Nationality:</p>     <p class="EmployeeInformation"> --- </p>
-                                        <p>Email: </p>          <p class="EmployeeInformation"> --- </p>
-                                        <p>Mobile Number: </p>  <p class="EmployeeInformation"> --- </p>
-                                        <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
-                                    </div>
+                                  
                                 </div>
                             </div>
                         </div>                    

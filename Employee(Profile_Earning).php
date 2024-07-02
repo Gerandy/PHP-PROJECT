@@ -108,9 +108,7 @@
                     </div>                    
                 </div>
 
-                <!-- Download Button -->
-                <button class="Download"> CHANGE PASSWORD </button>
-                <!-- End of Download Button -->
+
 
                 <!-- End of Dashboard_Content -->
             </div>

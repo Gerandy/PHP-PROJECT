@@ -62,10 +62,15 @@
                             window.location.href='EmployeeList(Admin).html';
                         }
                     </script>
-                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
+                    <div class="Icons_Section" onclick="redirectToAdminMessage()">
                         <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
+                    <script>
+                        function redirectToAdminMessage(){
+                            window.location.href='Admin(Messages)';
+                        }
+                    </script>
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
                 </div>
 
@@ -76,7 +81,7 @@
                         <button onclick="redirectToEmployeeInfoAdmin()" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
                         <script>
                             function redirectToEmployeeInfoAdmin(){
-                                window.location.href='Employee details (ADMIN).html';
+                                window.location.href='Employeedetails(ADMIN).html';
                             }
                         </script>
                     </div>
@@ -121,22 +126,20 @@
                                         <p>Mobile Number:</p>   <p class="EmployeeInformation"> --- </p>
                                         <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
                                     </div>
-                                    <div class="EmployeeInfo_Text3">
-                                        <p>Region: </p>         <p class="EmployeeInformation"> --- </p>
-                                        <p>Country: </p>        <p class="EmployeeInformation"> --- </p>
-                                        <p>Status: </p>         <p class="EmployeeInformation"> --- </p>
-                                        <p>Nationality:</p>     <p class="EmployeeInformation"> --- </p>
-                                        <p>Email: </p>          <p class="EmployeeInformation"> --- </p>
-                                        <p>Mobile Number: </p>  <p class="EmployeeInformation"> --- </p>
-                                        <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
-                                    </div>
+                              
                                 </div>
                             </div>
                         </div>                    
                     </div>
 
                     <!-- Download Button -->
-                    <button class="Download"> EDIT </button>
+                    <button class="Download" onclick="redirectToEditEmployeeAdmin()"> EDIT </button>
+                    <script>
+                        function redirectToEditEmployeeAdmin(){
+                            window.location.href='EditEmployeeDetails1(Admin).html';
+                        }
+                    </script>
+
                     <!-- End of Download Button -->
 
                     <!-- End of Dashboard_Content -->
