@@ -24,7 +24,11 @@
         .inside{
             cursor: pointer;
             transition: color 0.3 ease-in-out;
+        }
 
+        .AdminNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
         }
     </style>
 </head>
@@ -124,6 +128,7 @@
                             <div class="Notification_Panel"> 
                                 <p class="Notification_Text"> NOTIFICATION </p>
         
+                                <div class="AdminNotification_Scrollbar">
                                 <table class="NotificationTable">
                                     <tr class="Notif">
                                         <th class="Notif_Text"> NEW MESSAGE </th>
@@ -150,6 +155,16 @@
                                         <td class="Notif_Message"> New Announcemnet </td>
                                     </tr>
                                 </table>
+
+                                <table class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                    </tr>
+                                    <tr class="Notif">
+                                        <td class="Notif_Message"> New Announcemnet </td>
+                                    </tr>
+                                </table>
+                            </div>
                             </div>
         
                             <div class="About_User">
