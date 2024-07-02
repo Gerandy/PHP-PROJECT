@@ -19,12 +19,15 @@ while($row = mysqli_fetch_assoc($result_name)){
 }
 
 while($row = mysqli_fetch_assoc($result_earnings)){
-
+// PAY SLIP RECEIPT
  $_SESSION['Date'] = $row['Date'];
  $_SESSION['Receipt_Code'] = $row['Receipt_Code'];
  $_SESSION['EmployeeName'] = $row['EmployeeName'];
  $_SESSION['Department'] = $row['Department'];
  $_SESSION['EmployeeID'] = $row['EmployeeID'];
+// PAY SLIP RECEIPT END
+
+// EARNING
 
 
 

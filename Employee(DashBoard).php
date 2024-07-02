@@ -32,10 +32,6 @@ include('config/php/datagetter.php');
         background-color: #808080;
     }
     
-    .EmployeeNotification_Scrollbar{
-        height: 510px;
-        overflow-y: auto;
-    }
 
 
     
@@ -190,40 +186,35 @@ include('config/php/datagetter.php');
                     <div class="Messages_Window" >
                         
                         <div class="Notification_Panel"> 
-                            <p class="Notification_Text"> NOTIFICATION </p>
-                            <label class="Dropdown_Text">FILTER:</label>
-                            <select id="" class="Filter_Dropdown">
-                                <option value="" class="Drop_Text"> A-Z </option>
-                                <option value="" class="Drop_Text"> oldest </option>
-                                <option value="" class="Drop_Text"> newest </option>
-                            </select>
+                            <p class="Notification_Text"> NOTIFICATION </p>                    
 
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
-                                </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
+                            <div class="Notification_Scroll_Bar">
+                     <?php  
+                        while($row = mysqli_fetch_assoc($result_message)){
+                            echo "<table class= NotificationTable>";
+                            
+                            echo  "<tr class= Notif>";
+                            echo     "<th class= Notif_Text>";
+                                        
+                            echo $row['fromName'];
+                                        
+                            echo       "</th>";
+                            echo    "</tr>";
+                            echo    "<trclass= Notif>";
+                            echo        "<td class= Notif_Message>";
+                                    
 
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
-                                </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
-
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
-                                </tr>
-                            </table>
+                            echo $row['Message'];
+                                    
+                                    
+                                    
+                            echo       "</td>";
+                            echo    "</tr>";
+                            echo "</table>";
+                        }
+                    
+                        ?>
+                        </div>
                         </div>
 
                         <div class="About_User">
