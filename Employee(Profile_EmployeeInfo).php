@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <?php 
-session_start();
-// nako po ubos na oras
+
+include('config/php/connect.php');
+include('config/php/logincomand.php');
+include('config/php/datagetter.php');
+
+// $result = mysqli_query($conn, $sql_username);
+// $row = mysqli_fetch_assoc($result);
+
 ?>
 <html>
 <head>
@@ -109,19 +115,19 @@ session_start();
                                     <p>Firstname: </p>      <p class="EmployeeInformation"> <?php echo $_SESSION['FirstName']; ?> </p>
                                     <p>Middle Initial: </p> <p class="EmployeeInformation"> <?php echo $_SESSION['MiddleName']; ?></p>
                                     <p>Lastname: </p>       <p class="EmployeeInformation"> <?php echo $_SESSION['LastName']; ?> </p>
-                                    <p>Date of Birth: </p>  <p class="EmployeeInformation"> --- </p>
-                                    <p>Gender: </p>         <p class="EmployeeInformation"> --- </p>
-                                    <p>Address: </p>        <p class="EmployeeInformation"> --- </p>
-                                    <p>City: </p>           <p class="EmployeeInformation"> --- </p>
+                                    <p>Date of Birth: </p>  <p class="EmployeeInformation"> <?php echo $_SESSION['Date_of_Birth']; ?> </p>
+                                    <p>Gender: </p>         <p class="EmployeeInformation"> <?php echo $_SESSION['Gender']; ?> </p>
+                                    <p>Address: </p>        <p class="EmployeeInformation"> <?php echo $_SESSION['Address']; ?> </p>
+                                    <p>City: </p>           <p class="EmployeeInformation"> <?php echo $_SESSION['City']; ?> </p>
                                 </div>
                                 <div class="EmployeeInfo_Text2">
-                                    <p>Region: </p>         <p class="EmployeeInformation"> --- </p>
-                                    <p>Country: </p>        <p class="EmployeeInformation"> --- </p>
-                                    <p>Status: </p>         <p class="EmployeeInformation"> --- </p>
-                                    <p>Nationality:</p>     <p class="EmployeeInformation"> --- </p>
-                                    <p>Email: </p>          <p class="EmployeeInformation"> --- </p>
-                                    <p>Mobile Number:</p>   <p class="EmployeeInformation"> --- </p>
-                                    <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
+                                    <p>Region: </p>         <p class="EmployeeInformation"> <?php echo $_SESSION['Region']; ?> </p>
+                                    <p>Country: </p>        <p class="EmployeeInformation"> <?php echo $_SESSION['Country']; ?> </p>
+                                    <p>Status: </p>         <p class="EmployeeInformation"> <?php echo $_SESSION['Status']; ?> </p>
+                                    <p>Nationality:</p>     <p class="EmployeeInformation"> <?php echo $_SESSION['Nationality']; ?> </p>
+                                    <p>Email: </p>          <p class="EmployeeInformation"> <?php echo $_SESSION['Email']; ?> </p>
+                                    <p>Mobile Number:</p>   <p class="EmployeeInformation"> <?php echo $_SESSION['Mobile_No']; ?> </p>
+                                    <p>Identity No.: </p>   <p class="EmployeeInformation"> <?php echo $_SESSION['Identity_No']; ?> </p>
                                 </div>
 
                             </div>
@@ -142,59 +148,56 @@ session_start();
                         <p class="Notification_Text"> NOTIFICATION </p>
                        
                         <div class="EmployeeNotification_Scrollbar">
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th class="Notif_Text"> NEW MESSAGE </th>
-                            </tr>
-                            <tr>
-                                <td class="Notif_Message"> You have a new Message </td>
-                            </tr>
-                        </table>
+                        <?php  
+                        while($row = mysqli_fetch_assoc($result_message)){
+                            echo "<table class= NotificationTable>";
+                            
+                            echo  "<tr class= Notif>";
+                            echo     "<th class= Notif_Text>";
+                                        
+                            echo $row['fromName'];
+                                        
+                            echo       "</th>";
+                            echo    "</tr>";
+                            echo    "<trclass= Notif>";
+                            echo        "<td class= Notif_Message>";
+                                    
 
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> NEW MESSAGE </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> You have a new Message </td>
-                            </tr>
-                        </table>
-
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> New Announcemnet </td>
-                            </tr>
-                        </table>
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> New Announcemnet </td>
-                            </tr>
-                        </table>
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> New Announcemnet </td>
-                            </tr>
-                        </table>
+                            echo $row['Message'];
+                                    
+                                    
+                                    
+                            echo       "</td>";
+                            echo    "</tr>";
+                            echo "</table>";
+                        }
+                    
+                        ?>
                         </div>
                     </div>
 
                     <div class="About_User">
                         <img src="assets/images/Profile.jpg" class="UserImage">
                         <div class="MessagesTab_Text">
-                            <p class="About_User_Text"> 202210178</p>
-                            <p class="About_User_Text"> ACCOUNT USERNAME </p>
-                            <br>
-                            <p class="About_User_Text"> CUSTOMER SERVICE</p>
-                            <p class="Position_Text"> SUPPORT SPECIALIST </p>
+                        <p class="About_User_Text"> <?php 
+                                echo  $_SESSION['Identity_No'];
+                                ?></p>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['FirstName'];
+                                
+                                ?> </p>
+                                <br>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['Position'];
+                                
+                                ?></p>
+                                <p class="Position_Text"> <?php 
+
+                                echo $_SESSION['Department'];
+                                
+                                ?> </p>
                         </div>
                     </div>                     
                 <!-- End of Messages Tab  -->

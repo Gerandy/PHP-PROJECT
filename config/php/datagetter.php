@@ -1,5 +1,5 @@
 <?php 
-
+// ewqe
 include('connect.php');
 $usernamelogin = $_SESSION['username'];
 $sql_name = "select login.EmployeeID, hr_add_account.* from login inner join hr_add_account on login.EmployeeID = hr_add_account.EmployeeID where username ='$usernamelogin';";
@@ -37,7 +37,6 @@ while($row = mysqli_fetch_assoc($result_earnings)){
 
 while($row = mysqli_fetch_assoc($result_employeeinfo )){
     // PAY SLIP RECEIPT
-    echo $row['MiddleName'];
      $_SESSION['FirstName'] = $row['FirstName'];
      $_SESSION['MiddleName'] = $row['MiddleName'];
      $_SESSION['LastName'] = $row['LastName'];
