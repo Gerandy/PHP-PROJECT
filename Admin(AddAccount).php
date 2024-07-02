@@ -1,3 +1,6 @@
+<?php 
+include('config/php/addAccount.php');
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,29 +83,29 @@
                     <div class="Employee">
                         <div class="EmployeeInfo_Window">
                             
-                           <form  
+                           <form action="" method="GET">
                             <div class="EmployeeDetails">
                                 <div class="TextContainer">
                                     <!-- Add any additional text or content here -->
                                 </div>
                                 <div class="EmployeeInfo_Columns">
                                     <div class="EmployeeInfo_Text">
-                                        <p>Firstname: </p>      <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Middle Initial: </p> <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Lastname: </p>       <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Date of Birth: </p>  <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Gender: </p>         <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Address: </p>        <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>City: </p>           <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Firstname: </p>      <p class="EmployeeInfoInput"> <input type="text" class="EmployeeInfoInput" name="Firstname" placeholder=""  > </p>
+                                        <p>Middle Initial: </p> <p class="EmployeeInfoInput"> <input type="text" class="EmployeeInfoInput" name="Middle" placeholder="" > </p>
+                                        <p>Lastname: </p>       <p class="EmployeeInfoInput"> <input type="text" name="Lastname" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Date of Birth: </p>  <p class="EmployeeInfoInput"> <input type="text" name="DateofBirth" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Gender: </p>         <p class="EmployeeInfoInput"> <input type="text" name="Gender" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Address: </p>        <p class="EmployeeInfoInput"> <input type="text" name="Address" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>City: </p>           <p class="EmployeeInfoInput"> <input type="text" name="City" placeholder="" class="EmployeeInfoInput"> </p>
                                     </div>
                                     <div class="EmployeeInfo_Text2">
-                                        <p>Region: </p>         <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Country: </p>        <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Status: </p>         <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Nationality:</p>     <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Email: </p>          <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Mobile Number:</p>   <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Identity No.: </p>   <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Region: </p>         <p class="EmployeeInfoInput"> <input type="text" name="Region" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Country: </p>        <p class="EmployeeInfoInput"> <input type="text" name="Country" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Status: </p>         <p class="EmployeeInfoInput"> <input type="text" name="Status" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Nationality:</p>     <p class="EmployeeInfoInput"> <input type="text" name="Nationality" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Email: </p>          <p class="EmployeeInfoInput"> <input type="text" name="Email" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Mobile Number:</p>   <p class="EmployeeInfoInput"> <input type="text" name="MobileNumber" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Identity No.: </p>   <p class="EmployeeInfoInput"> <input type="text" name="IdentityNo" placeholder="" class="EmployeeInfoInput"> </p>
                                     </div>
                                 </div>
                             </div>
@@ -110,10 +113,11 @@
                     </div>
 
                     <!-- Download Button -->
-                    <button type="submit" value="submit" name="submit" class="Download"> APPLY </>
+                    <input type="submit" value="submit" name="submit" class="Download"> </input>
                     <!-- End of Download Button -->
 
                     <!-- End of Dashboard_Content -->
+                    </form>
                     </div>
 
                     <div class="col-xs-12 col-md-2 Messages_Tab">

@@ -1,29 +1,32 @@
 <?php 
-// include('config/php/connect.php');
+include('connect.php');
+if (isset($_GET['submit'])){
 
-// if (isset($_POST['submit'])){
-//     $username = $_POST['username'];  
-//     $password = $_POST['password'];
+    $Firstname = $_GET["Firstname"];
+    $MiddleInitial= $_GET["Middle"];
+    $Lastname = $_GET["Lastname"];
+    $DateofBirth = $_GET["DateofBirth"];
+    $Gender = $_GET["Gender"];
+    $Address = $_GET["Address"];
+    $City = $_GET["City"];
+    $Region = $_GET["Region"];
+    $Country = $_GET["Country"];
+    $Status = $_GET["Status"];
+    $Nationality = $_GET["Nationality"];
+    $Email = $_GET["Email"];
+    $Mobile = $_GET["MobileNumber"];
+    $IdentityNo = $_GET["IdentityNo"];
     
-//     $result = mysqli_query($conn, "SELECT * FROM login WHERE username = '$username'AND password= '$password'");
-//     $row = mysqli_fetch_assoc($result);
-    
 
-//     if($row == null){
-//      echo '<script>alert("INVALID USERNAME OR PASSWORD")</script>';
-//     }
-//     else if ($row['username'] == $username &&  $row['password'] == $password){
-//         $_SESSION['username'] = $username;
-//         header("location: Employee(DashBoard).php"); 
-//     }
-        
-        
-        
-        
-// }
+    $sql = " INSERT INTO hr_add_account (FirstName,MiddleInitial,LastName,Date_of_birth,Gender,Address,City,Region,Country,Status,Nationality,Email,Moblie_No,Identity_No) Values ('$Firstname','$MiddleInitial','$Lastname','$DateofBirth','$Gender','$Address','$City','$Region','$Country','$Status','$Nationality','$Email','$Mobile','$IdentityNo')";
+    if (mysqli_query($conn, $sql)) {
+        echo '<script>alert("ACCOUNT SUCCESSFULLY CREATED")</script>';
+    } 
+    else{
+        echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    }
 
-// $sql = "INSERT INTO hr_list_of_employee (EmployeeID,Employee_Name,Department,Position)" 
-
+}
 
 
 ?>
