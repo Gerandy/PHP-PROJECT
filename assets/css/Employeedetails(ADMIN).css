@@ -202,9 +202,12 @@
 .EmployeeInfo_Window {
   display: flex;
   align-items: flex-start;
+
+
   /* Align items to the top */
   padding: 20px;
 }
+
 
 .EmployeePhoto_Container {
   display: flex;
@@ -228,7 +231,7 @@
   font-size: 25px;
   text-align: center;
 }
-
+e
 .EmployeeDetails {
   display: flex;
   flex-direction: column;
