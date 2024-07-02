@@ -21,7 +21,15 @@
         background-color: #808080;
     }
 
+    .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
+    }
 
+    .EmployeeLogs_Scrollbar{
+        height: 700px;
+        overflow-y: auto;
+    }
 
 </style>
 
@@ -83,7 +91,9 @@
                 <!-- Earnings Start -->
                 <div class="Employee">
                     <div class="EmployeeInfo_Window">
+                        <div class="EmployeeLogs_Scrollbar">
                         <div class="Table_PaySlip_Receipt">
+                            
                             <table class="LogTable">  
                                 <tr>
                                     <th class="Date Text"> MM-DD-YYYY </th>
@@ -123,12 +133,51 @@
                                     <td colspan="2" class="Text"> “Employee ID” your password is change (2024-06-17) </td>
                                 </tr>
                             </table>
+                            <br>
+                            <table class="LogTable">  
+                                <tr>
+                                    <th class="Date Text"> MM-DD-YYYY </th>
+                                    <th class="LogChange Text"> PASSWORD CHANGE  </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Text"> “Employee ID” your password is change (2024-06-17) </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <table class="LogTable">  
+                                <tr>
+                                    <th class="Date Text"> MM-DD-YYYY </th>
+                                    <th class="LogChange Text"> PASSWORD CHANGE  </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Text"> “Employee ID” your password is change (2024-06-17) </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <table class="LogTable">  
+                                <tr>
+                                    <th class="Date Text"> MM-DD-YYYY </th>
+                                    <th class="LogChange Text"> PASSWORD CHANGE  </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Text"> “Employee ID” your password is change (2024-06-17) </td>
+                                </tr>
+                            </table>
+                            <br>
+                            <table class="LogTable">  
+                                <tr>
+                                    <th class="Date Text"> MM-DD-YYYY </th>
+                                    <th class="LogChange Text"> PASSWORD CHANGE  </th>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" class="Text"> “Employee ID” your password is change (2024-06-17) </td>
+                                </tr>
+                            </table>
+
+                            
+                            </div>
                         </div>
 
-                        <div class="Next_and_Back_Button"> 
-                            <button> NEXT </button>
-                            <button> BACK </button>
-                        </div>
                     </div>                    
                 </div>
 
@@ -139,13 +188,8 @@
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
-                        <label class="Dropdown_Text">FILTER:</label>
-                        <select id="" class="Filter_Dropdown">
-                            <option value="" class="Drop_Text"> A-Z </option>
-                            <option value="" class="Drop_Text"> oldest </option>
-                            <option value="" class="Drop_Text"> newest </option>
-                        </select>
 
+                        <div class="EmployeeNotification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -172,6 +216,23 @@
                                 <td class="Notif_Message"> New Announcemnet </td>
                             </tr>
                         </table>
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                    </div>
                     </div>
 
                     <div class="About_User">

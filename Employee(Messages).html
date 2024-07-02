@@ -21,6 +21,15 @@
             background-color: #808080;
         }
         
+        .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
+    }
+
+        .EmployeeMessages_Scrollbar{
+        height: 650px;
+        overflow-y: auto;
+    }
     </style>
 
 </head>
@@ -108,7 +117,7 @@
                         <div class="TitleContainer">
                             <p class="Title"> MESSAGES </p>
                         </div>
-                        
+                        <div class="EmployeeMessages_Scrollbar">
                         <div class="Table_PaySlip_Receipt">
                             <table class="LogTable clickableTable"> 
                                 <tr>
@@ -142,15 +151,28 @@
                                     <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
                                 </tr>
                             </table>
-                            <br>
+                            <table class="LogTable clickableTable"> 
+                                <tr>
+                                    <th class="Date Text"> FROM: "HR NAME"</th>
+                                </tr> 
+                                <tr>
+                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
+                                </tr>
+                            </table>
+                            <table class="LogTable clickableTable"> 
+                                <tr>
+                                    <th class="Date Text"> FROM: "HR NAME"</th>
+                                </tr> 
+                                <tr>
+                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
+                                </tr>
+                            </table>
+                        </div>
                         </div>
                     </div>                    
                 </div>
                 
-                <div class="Next_and_Back_Button"> 
-                    <button> NEXT </button>
-                    <button> BACK </button>
-                </div>
+
 
                 <!-- End of Dashboard_Content -->
             </div>
@@ -159,13 +181,8 @@
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
-                        <label class="Dropdown_Text">FILTER:</label>
-                        <select id="" class="Filter_Dropdown">
-                            <option value="" class="Drop_Text"> A-Z </option>
-                            <option value="" class="Drop_Text"> oldest </option>
-                            <option value="" class="Drop_Text"> newest </option>
-                        </select>
-
+                        
+                        <div class="EmployeeNotification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -192,6 +209,25 @@
                                 <td class="Notif_Message"> New Announcemnet </td>
                             </tr>
                         </table>
+
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                    </div>
                     </div>
 
                     <div class="About_User">

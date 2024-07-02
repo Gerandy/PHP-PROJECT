@@ -21,7 +21,10 @@
         background-color: #808080;
     }
 
-
+    .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
+    }
 
 </style>
 
@@ -116,13 +119,8 @@
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
-                        <label class="Dropdown_Text">FILTER:</label>
-                        <select id="" class="Filter_Dropdown">
-                            <option value="" class="Drop_Text"> A-Z </option>
-                            <option value="" class="Drop_Text"> oldest </option>
-                            <option value="" class="Drop_Text"> newest </option>
-                        </select>
-
+                        
+                        <div class="EmployeeNotification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -149,6 +147,23 @@
                                 <td class="Notif_Message"> New Announcemnet </td>
                             </tr>
                         </table>
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                    </div>
                     </div>
 
                     <div class="About_User">

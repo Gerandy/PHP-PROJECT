@@ -21,8 +21,9 @@
         background-color: #f0f0f0;
     }
 
-    .Notification_Scrollbar{
-        overflow: auto;
+    .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
     }
 
 </style>
@@ -118,22 +119,14 @@
                                     <p>Mobile Number:</p>   <p class="EmployeeInformation"> --- </p>
                                     <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
                                 </div>
-                                <div class="EmployeeInfo_Text3">
-                                    <p>Region: </p>         <p class="EmployeeInformation"> --- </p>
-                                    <p>Country: </p>        <p class="EmployeeInformation"> --- </p>
-                                    <p>Status: </p>         <p class="EmployeeInformation"> --- </p>
-                                    <p>Nationality:</p>     <p class="EmployeeInformation"> --- </p>
-                                    <p>Email: </p>          <p class="EmployeeInformation"> --- </p>
-                                    <p>Mobile Number: </p>  <p class="EmployeeInformation"> --- </p>
-                                    <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
-                                </div>
+
                             </div>
                         </div>
                     </div>                    
                 </div>
 
                 <!-- Download Button -->
-                <button class="Download" onclick=""> CHANGE PASSWORD </button>
+                <button class="Download" onclick="openForm()"> CHANGE PASSWORD </button>
                 <!-- End of Download Button -->
 
                 <!-- End of Dashboard_Content -->
@@ -144,7 +137,7 @@
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
                        
-                        <div class="Notification_Scrollbar">
+                        <div class="EmployeeNotification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -163,6 +156,22 @@
                             </tr>
                         </table>
 
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th  class="Notif_Text"> ANNOUNCEMENT </th>
@@ -190,6 +199,37 @@
     </div>
     <!-- End of DropDown Javascript -->
 
+        <!-- Pop Up Form -->
+
+        <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <p class="Title"> CHANGE PASSWORD</p>
+    
+            <input type="text" placeholder="User ID:" class="UserID" required>
+            
+            <textarea placeholder="Message:" class="Message" required></textarea>
+            
+            <p class="Note"> Your message will be sent to the administrator for password reset <br>
+                assistance. Please provide relevant details to help verify your request
+            </p>
+    
+            <button type="submit" class="SubmitButton"> SUBMIT </button>
+            <button type="button" class="BackButton" onclick="closeForm()"> BACK </button>
+        </form>
+    </div>
+    
+
+
+    <!-- Javascript for Pop Up -->
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
     <!-- Javascript for button redirect -->
     <script>
         function redirectTo(url) {
