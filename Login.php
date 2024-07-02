@@ -2,11 +2,7 @@
 <?php   
     include('config/php/connect.php');  
     include('config/php/logincomand.php');
-<<<<<<< HEAD
-    include('config/php/datagetter.php');
-=======
-    // include('config/php/datagetter.php');
->>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
+    
 ?>
 
 
@@ -44,18 +40,10 @@
                     
                     <form action="" method="POST">
                         <label class="sr-only">User ID</label>
-<<<<<<< HEAD
-<<<<<<<< HEAD:Login.php
+
+
                         <input type="text" placeholder="Username:" name="username" class="input_UserID" required>
-                        <br>                        
-========
-                        <input type="text" placeholder="User ID:" class="input_UserID" required>
-                        <br>
->>>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf:Login.html
-=======
-                        <input type="text" placeholder="Username:" name="username" class="input_UserID" required>
-                        <br>                        
->>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
+                        <br>                       
                         <br>
                         <label class="sr-only">Password</label>
                         <input type="password" placeholder="Password:" name="password" class="input" required>

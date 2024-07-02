@@ -21,17 +21,13 @@ include('config/php/datagetter.php');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/Employee(DashBoard).css">
-<<<<<<< HEAD
-<<<<<<<< HEAD:Employee(DashBoard).php
     <style>
         .Notification_Scroll_Bar{
             overflow-y: scroll;
             height:510px;
         }
     </style>
-========
-=======
->>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
+
 
 <style>
     .Icons_Section{
@@ -43,24 +39,16 @@ include('config/php/datagetter.php');
         background-color: #808080;
     }
     
-<<<<<<< HEAD
+
     .EmployeeNotification_Scrollbar{
         height: 510px;
         overflow-y: auto;
     }
 </style>
 
->>>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf:Employee(DashBoard).html
-=======
 
-
-    
-    .Notification_Scroll_Bar{
-            overflow-y: scroll;
-            height:510px;
-    }
     </style>
->>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
+
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -100,11 +88,9 @@ include('config/php/datagetter.php');
 
                     <script>
                         function redirectToEmployeePaySlip(){
-<<<<<<< HEAD
                             window.location.href='Employee(PaySlip).html';
-=======
+
                             window.location.href='Employee(PaySlip).php';
->>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
                         }
                     </script>
 
@@ -215,87 +201,7 @@ include('config/php/datagetter.php');
                     <div class="Messages_Window" >
                         
                         <div class="Notification_Panel"> 
-<<<<<<< HEAD
-                            <p class="Notification_Text"> NOTIFICATION </p>
 
-<<<<<<<< HEAD:Employee(DashBoard).php
-                        <div class="Notification_Scroll_Bar">
-                            
-                            <?php
-                            while($row = mysqli_fetch_assoc($result_message)){
-                                echo "<table>";
-                                
-                                echo  "<tr>";
-                                echo     "<th>";
-                                            
-                                            echo $row['fromName'];
-                                            
-                                echo       "</th>";
-                                echo    "</tr>";
-                                echo    "<tr>";
-                                echo        "<td>";
-                                        
-
-                                        echo $row['Message'];
-                                        
-                                        
-                                        
-                                echo       "</td>";
-                                echo    "</tr>";
-                                echo "</table>";
-                            }
-                            
-                            ?>
-                        </div>
-========
-                            <div class="EmployeeNotification_Scrollbar">
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
-                                </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
-
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
-                                </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
-
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
-                                </tr>
-                            </table>
-
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
-                                </tr>
-                            </table>
-
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
-                                </tr>
-                            </table>
-                            </div>
->>>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf:Employee(DashBoard).html
-=======
                             <p class="Notification_Text"> NOTIFICATION </p>                    
 
                             <div class="Notification_Scroll_Bar">
@@ -325,7 +231,6 @@ include('config/php/datagetter.php');
                     
                         ?>
                         </div>
->>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
                         </div>
 
                         <div class="About_User">
