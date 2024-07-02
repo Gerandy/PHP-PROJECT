@@ -1,4 +1,8 @@
 <!DOCTYPE html>
+<?php 
+session_start();
+
+?>
 <html>
 <head>
     <title>Employee Dashboard</title>
@@ -102,9 +106,9 @@
                             </div>
                             <div class="EmployeeInfo_Columns">
                                 <div class="EmployeeInfo_Text">
-                                    <p>Firstname: </p>      <p class="EmployeeInformation"> --- </p>
-                                    <p>Middle Initial: </p> <p class="EmployeeInformation"> --- </p>
-                                    <p>Lastname: </p>       <p class="EmployeeInformation"> --- </p>
+                                    <p>Firstname: </p>      <p class="EmployeeInformation"> <?php echo $_SESSION['FirstName']; ?> </p>
+                                    <p>Middle Initial: </p> <p class="EmployeeInformation"> <?php echo $_SESSION['MiddleName']; ?></p>
+                                    <p>Lastname: </p>       <p class="EmployeeInformation"> <?php echo $_SESSION['LastName']; ?> </p>
                                     <p>Date of Birth: </p>  <p class="EmployeeInformation"> --- </p>
                                     <p>Gender: </p>         <p class="EmployeeInformation"> --- </p>
                                     <p>Address: </p>        <p class="EmployeeInformation"> --- </p>
