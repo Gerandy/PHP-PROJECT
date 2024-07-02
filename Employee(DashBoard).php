@@ -121,7 +121,7 @@ include('config/php/datagetter.php');
                     
                     <script>
                         function redirectToLogin(){
-                            window.location.href='Login.html';
+                            window.location.href='Login.php';
                         }
                     </script>
 

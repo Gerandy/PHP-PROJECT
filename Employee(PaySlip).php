@@ -63,7 +63,7 @@ include('config/php/datagetter.php');
 
                 <script>
                     function redirectToEmployeeDashBoard(){
-                        window.location.href='Employee(DashBoard).html';
+                        window.location.href='Employee(DashBoard).php';
                     }
                 </script>
 
@@ -117,7 +117,7 @@ include('config/php/datagetter.php');
                 <script>
                     function redirectToLogin(){
                         window.location.href='Login.php';
-                        <?php  session_destroy(); ?>
+                        
                         
                     }
                 </script>
