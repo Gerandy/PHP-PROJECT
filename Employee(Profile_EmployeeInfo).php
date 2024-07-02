@@ -21,7 +21,9 @@
         background-color: #f0f0f0;
     }
 
-
+    .Notification_Scrollbar{
+        overflow: auto;
+    }
 
 </style>
 
@@ -131,7 +133,7 @@
                 </div>
 
                 <!-- Download Button -->
-                <button class="Download"> CHANGE PASSWORD </button>
+                <button class="Download" onclick=""> CHANGE PASSWORD </button>
                 <!-- End of Download Button -->
 
                 <!-- End of Dashboard_Content -->
@@ -141,13 +143,8 @@
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
-                        <label class="Dropdown_Text">FILTER:</label>
-                        <select id="" class="Filter_Dropdown">
-                            <option value="" class="Drop_Text"> A-Z </option>
-                            <option value="" class="Drop_Text"> oldest </option>
-                            <option value="" class="Drop_Text"> newest </option>
-                        </select>
-
+                       
+                        <div class="Notification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -174,6 +171,7 @@
                                 <td class="Notif_Message"> New Announcemnet </td>
                             </tr>
                         </table>
+                        </div>
                     </div>
 
                     <div class="About_User">
