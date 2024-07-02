@@ -32,6 +32,10 @@ include('config/php/datagetter.php');
         background-color: #808080;
     }
     
+    .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
+    }
 
 
     
@@ -187,35 +191,39 @@ include('config/php/datagetter.php');
                         
                         <div class="Notification_Panel"> 
                             <p class="Notification_Text"> NOTIFICATION </p>
+                            <label class="Dropdown_Text">FILTER:</label>
+                            <select id="" class="Filter_Dropdown">
+                                <option value="" class="Drop_Text"> A-Z </option>
+                                <option value="" class="Drop_Text"> oldest </option>
+                                <option value="" class="Drop_Text"> newest </option>
+                            </select>
 
-                        <div class="Notification_Scroll_Bar">
-                            
-                            <?php
-                            while($row = mysqli_fetch_assoc($result_message)){
-                                echo "<table>";
-                                
-                                echo  "<tr>";
-                                echo     "<th>";
-                                            
-                                echo $row['fromName'];
-                                            
-                                echo       "</th>";
-                                echo    "</tr>";
-                                echo    "<tr>";
-                                echo        "<td>";
-                                        
+                            <table>
+                                <tr>
+                                    <th> NEW MESSAGE </th>
+                                </tr>
+                                <tr>
+                                    <td> You have a new Message </td>
+                                </tr>
+                            </table>
 
-                                echo $row['Message'];
-                                        
-                                        
-                                        
-                                echo       "</td>";
-                                echo    "</tr>";
-                                echo "</table>";
-                            }
-                            
-                            ?>
-                        </div>
+                            <table>
+                                <tr>
+                                    <th> NEW MESSAGE </th>
+                                </tr>
+                                <tr>
+                                    <td> You have a new Message </td>
+                                </tr>
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <th> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr>
+                                    <td> New Announcemnet </td>
+                                </tr>
+                            </table>
                         </div>
 
                         <div class="About_User">

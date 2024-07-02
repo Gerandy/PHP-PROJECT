@@ -109,7 +109,7 @@
                 </div>
 
                 <!-- Download Button -->
-                <button class="Download"> CHANGE PASSWORD </button>
+                <button class="Download" onclick="openForm()"> CHANGE PASSWORD </button>
                 <!-- End of Download Button -->
 
                 <!-- End of Dashboard_Content -->
@@ -119,13 +119,6 @@
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
-                        <label class="Dropdown_Text">FILTER:</label>
-                        <select id="" class="Filter_Dropdown">
-                            <option value="" class="Drop_Text"> A-Z </option>
-                            <option value="" class="Drop_Text"> oldest </option>
-                            <option value="" class="Drop_Text"> newest </option>
-                        </select>
-
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -168,7 +161,38 @@
             </div>
         </div>
     </div>
-    <!-- End of DropDown Javascript -->
+
+    <!-- Pop Up Form -->
+
+    <div class="form-popup" id="myForm">
+        <form class="form-container">
+            <p class="Title"> CHANGE PASSWORD</p>
+    
+            <input type="text" placeholder="User ID:" class="UserID" required>
+            
+            <textarea placeholder="Message:" class="Message" required></textarea>
+            
+            <p class="Note"> Your message will be sent to the administrator for password reset <br>
+                assistance. Please provide relevant details to help verify your request
+            </p>
+    
+            <button type="submit" class="SubmitButton"> SUBMIT </button>
+            <button type="button" class="BackButton" onclick="closeForm()"> BACK </button>
+        </form>
+    </div>
+    
+
+
+    <!-- Javascript for Pop Up -->
+    <script>
+        function openForm() {
+          document.getElementById("myForm").style.display = "block";
+        }
+        
+        function closeForm() {
+          document.getElementById("myForm").style.display = "none";
+        }
+    </script>
 
     <!-- Javascript for button redirect -->
     <script>
@@ -177,5 +201,7 @@
         }
     </script>
      <!-- End of Javascript for button redirect -->
+
+
 </body>
 </html>

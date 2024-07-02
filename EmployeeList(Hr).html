@@ -20,6 +20,16 @@
         .Icons_Section:hover{
             background-color: #808080;
         }
+
+        .HRNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
+        }
+
+        .HRListOfEmployee_Scrollbar{
+            height: 575px;
+            overflow-y: auto;
+        }
     </style>   
 </head>
     <body class="body">
@@ -51,11 +61,19 @@
                             window.location.href='EmployeeList(Hr).html';
                         }
                     </script>
-                    <div class="Icons_Section" onclick="redirectToHRDashBoard()">
+                    <div class="Icons_Section" onclick="redirectToHRMessage()">
                         <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
+                    <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                    </div>
+                    <script>
+                        function redirectToHRMessage(){
+                            window.location.href='HR(Messages).html';
+                        }
+                    </script>
+
                 </div>
 
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
@@ -75,7 +93,7 @@
                                  <div class="text"><h3>POSITION</h3> </div>
                              </div>
 
-
+                             <div class="HRListOfEmployee_Scrollbar">
                              <div class="inside">
                                 <div class="text"><img src="" class="EmployeePhoto"></div>
                                 <div class="text"><p> --- </p></div>
@@ -123,6 +141,15 @@
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
                              </div>
+
+                             <div class="inside">
+                                <div class="text"><img src="" class="EmployeePhoto"></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
+                                <div class="text"><p> --- </p></div>
+                            </div>
+                            </div>
   
                            </div>
                 </div>
@@ -132,6 +159,7 @@
                         <div class="Notification_Panel"> 
                             <p class="Notification_Text"> NOTIFICATION </p>
     
+                            <div class="HRNotification_Scrollbar">
                             <table class="NotificationTable">
                                 <tr class="Notif">
                                     <th class="Notif_Text"> NEW MESSAGE </th>
@@ -158,6 +186,16 @@
                                     <td class="Notif_Message"> New Announcemnet </td>
                                 </tr>
                             </table>
+
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> New Announcemnet </td>
+                                </tr>
+                            </table>
+                        </div>
                         </div>
     
                         <div class="About_User">

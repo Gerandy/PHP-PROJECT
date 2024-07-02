@@ -35,6 +35,10 @@ include('config/php/datagetter.php');
             height:510px;
         }
         
+        .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
+    }
     </style>
 
 </head>
@@ -310,6 +314,54 @@ include('config/php/datagetter.php');
                         }
                     
                         ?>
+                        </div>
+                        <p class="Notification_Text"> NOTIFICATION </p>
+
+                        <div class="EmployeeNotification_Scrollbar">
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th class="Notif_Text"> NEW MESSAGE </th>
+                            </tr>
+                            <tr>
+                                <td class="Notif_Message"> You have a new Message </td>
+                            </tr>
+                        </table>
+
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> NEW MESSAGE </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> You have a new Message </td>
+                            </tr>
+                        </table>
+
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
                         </div>
                     </div>
 
