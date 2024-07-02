@@ -79,15 +79,8 @@
                     <!-- Employee Info Start -->
                     <div class="Employee">
                         <div class="EmployeeInfo_Window">
-<<<<<<< HEAD
                             
                             
-=======
-                            <div class="EmployeePhoto_Container">
-                                <img src="assets/images/Profile.jpg" class="EmployeePhoto">
-                                <p class="EmployeeName_Text"> <button class="Change_Photo"> APPLY PHOTO </button></p>
-                            </div>
->>>>>>> 6571af241cce689444b66ef70cfaebd73c8fea5a
                             <div class="EmployeeDetails">
                                 <div class="TextContainer">
                                     <!-- Add any additional text or content here -->
@@ -111,10 +104,6 @@
                                         <p>Mobile Number:</p>   <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
                                         <p>Identity No.: </p>   <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
                                     </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 6571af241cce689444b66ef70cfaebd73c8fea5a
                                 </div>
                             </div>
                         </div>                    
