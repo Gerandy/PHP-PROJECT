@@ -1,14 +1,3 @@
-<?php 
-
-include('config/php/connect.php');
-include('config/php/logincomand.php');
-include('config/php/datagetter.php');
-
-// $result = mysqli_query($conn, $sql_username);
-// $row = mysqli_fetch_assoc($result);
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,13 +10,6 @@ include('config/php/datagetter.php');
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/Employee(DashBoard).css">
-    <style>
-        .Notification_Scroll_Bar{
-            overflow-y: scroll;
-            height:510px;
-        }
-    </style>
-
 
 <style>
     .Icons_Section{
@@ -39,15 +21,11 @@ include('config/php/datagetter.php');
         background-color: #808080;
     }
     
-
     .EmployeeNotification_Scrollbar{
         height: 510px;
         overflow-y: auto;
     }
 </style>
-
-
-    </style>
 
 </head>
     <body class="body">
@@ -68,7 +46,7 @@ include('config/php/datagetter.php');
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-xs-3 col-xs-2 sidebar">
+                <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
                     <div class="Icons_Section" onclick="redirectToEmployeeDashBoard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
@@ -88,8 +66,6 @@ include('config/php/datagetter.php');
 
                     <script>
                         function redirectToEmployeePaySlip(){
-                            window.location.href='Employee(PaySlip).php';
-
                             window.location.href='Employee(PaySlip).php';
                         }
                     </script>
@@ -132,21 +108,17 @@ include('config/php/datagetter.php');
                     
                     <script>
                         function redirectToLogin(){
-<<<<<<< HEAD
                             window.location.href='Login.php';
-=======
-                            window.location.href='Login.php';
->>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
                         }
                     </script>
 
                 </div>
 
-                <div class="col-xs-12 col-xs-9 col-xs-8 Dashboard_Content">
+                <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
                     <!-- Dashboard Content Here -->
                     <div class="AccountGreeting">
                         <p class="Dashboard_Text"> WELCOME </p> <br>
-                        <p class="Dashboard_Text Employee"> <?php echo $_SESSION['FirstName']." ".$_SESSION['MiddleInitial']." ".$_SESSION['LastName'] ; ?> </p>
+                        <p class="Dashboard_Text Employee"> "EMPLOYEE NAME"</p>
                     </div>
                     <div class="Main_Container">
                         <div class="Image_Carousel">
@@ -196,65 +168,69 @@ include('config/php/datagetter.php');
                     </div>
                 </div>
                 
-                <div class="col-xs-12 col-xs-2 Messages_Tab">
+                <div class="col-xs-12 col-md-2 Messages_Tab">
                     <!-- Messages Tab Here -->
-                    <div class="Messages_Window" >
+                    <div class="Messages_Window">
                         
                         <div class="Notification_Panel"> 
+                            <p class="Notification_Text"> NOTIFICATION </p>
 
-                            <p class="Notification_Text"> NOTIFICATION </p>                    
+                            <div class="EmployeeNotification_Scrollbar">
+                            <table>
+                                <tr>
+                                    <th> NEW MESSAGE </th>
+                                </tr>
+                                <tr>
+                                    <td> You have a new Message </td>
+                                </tr>
+                            </table>
 
-                            <div class="Notification_Scroll_Bar">
-                     <?php  
-                        while($row = mysqli_fetch_assoc($result_message)){
-                            echo "<table class= NotificationTable>";
-                            
-                            echo  "<tr class= Notif>";
-                            echo     "<th class= Notif_Text>";
-                                        
-                            echo $row['fromName'];
-                                        
-                            echo       "</th>";
-                            echo    "</tr>";
-                            echo    "<trclass= Notif>";
-                            echo        "<td class= Notif_Message>";
-                                    
+                            <table>
+                                <tr>
+                                    <th> NEW MESSAGE </th>
+                                </tr>
+                                <tr>
+                                    <td> You have a new Message </td>
+                                </tr>
+                            </table>
 
-                            echo $row['Message'];
-                                    
-                                    
-                                    
-                            echo       "</td>";
-                            echo    "</tr>";
-                            echo "</table>";
-                        }
-                    
-                        ?>
-                        </div>
+                            <table>
+                                <tr>
+                                    <th> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr>
+                                    <td> New Announcemnet </td>
+                                </tr>
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <th> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr>
+                                    <td> New Announcemnet </td>
+                                </tr>
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <th> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr>
+                                    <td> New Announcemnet </td>
+                                </tr>
+                            </table>
+                            </div>
                         </div>
 
                         <div class="About_User">
                             <img src="assets/images/Profile.jpg" class="UserImage">
                             <div class="MessagesTab_Text">
-                                <p class="About_User_Text"> <?php 
-                                echo  $_SESSION['Identity_No'];
-                                ?></p>
-                                <p class="About_User_Text"> <?php 
-
-                                echo $_SESSION['FirstName'];
-                                
-                                ?> </p>
+                                <p class="About_User_Text"> 202210178</p>
+                                <p class="About_User_Text"> ACCOUNT USERNAME </p>
                                 <br>
-                                <p class="About_User_Text"> <?php 
-
-                                echo $_SESSION['Position'];
-                                
-                                ?></p>
-                                <p class="Position_Text"> <?php 
-
-                                echo $_SESSION['Department'];
-                                
-                                ?> </p>
+                                <p class="About_User_Text"> CUSTOMER SERVICE</p>
+                                <p class="Position_Text"> SUPPORT SPECIALIST </p>
                             </div>
                         </div>                     
                     </div>

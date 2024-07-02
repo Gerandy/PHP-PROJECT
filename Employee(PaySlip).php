@@ -74,7 +74,7 @@ include('config/php/datagetter.php');
 
                 <script>
                     function redirectToEmployeePaySlip(){
-                        window.location.href='Employee(PaySlip).html';
+                        window.location.href='Employee(PaySlip).php';
                     }
                 </script>
 
@@ -85,7 +85,7 @@ include('config/php/datagetter.php');
 
                 <script>
                     function redirectToEmployeePaySlipHistory(){
-                        window.location.href='Employee(PaySlip_History).html';
+                        window.location.href='Employee(PaySlip_History).php';
                     }
                 </script>
 
@@ -106,7 +106,7 @@ include('config/php/datagetter.php');
 
                 <script>
                     function redirectToEmployeeMessages(){
-                        window.location.href='Employee(Messages).html';
+                        window.location.href='Employee(Messages).php';
                     }
                 </script>
 

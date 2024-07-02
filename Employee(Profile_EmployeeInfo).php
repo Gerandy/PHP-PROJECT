@@ -49,15 +49,15 @@
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                 <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                <div class="Icons_Section" onclick="redirectTo('Employee(DashBoard).html')">
+                <div class="Icons_Section" onclick="redirectTo('Employee(DashBoard).php')">
                     <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">DASH<br>BOARD</p>
                 </div>
-                <div class="Icons_Section" onclick="redirectTo('Employee(PaySlip).html')">
+                <div class="Icons_Section" onclick="redirectTo('Employee(PaySlip).php')">
                     <img src="assets/Icon/PaySlip_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">PAY<br>SLIP</p>
                 </div>
-                <div class="Icons_Section" onclick="redirectTo('Employee(PaySlip_History).html')">
+                <div class="Icons_Section" onclick="redirectTo('Employee(PaySlip_History).php')">
                     <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">HISTORY</p>
                 </div>
@@ -65,11 +65,11 @@
                     <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">PROFILE</p>
                 </div>
-                <div class="Icons_Section" onclick="redirectTo('Employee(Messages).html')">
+                <div class="Icons_Section" onclick="redirectTo('Employee(Messages).php')">
                     <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">MESSAGES</p>
                 </div>
-                <div class="Icons_Section" onclick="redirectTo('Login.html')">
+                <div class="Icons_Section" onclick="redirectTo('Login.php')">
                 <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
                 </div>
             </div>

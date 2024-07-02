@@ -9,8 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets\css\EditEmployeeDetails1(Admin).css">
+    <link rel="stylesheet" href="assets\css\Employee details (ADMIN).css">
     
+
     <style>
         .Icons_Section{
             cursor: pointer;
@@ -20,7 +21,18 @@
         .Icons_Section:hover{
             background-color: #808080;
         }
-</style>
+
+        .inside{
+            cursor: pointer;
+            transition: color 0.3 ease-in-out;
+
+        }
+
+        .AdminNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
+        }
+    </style>
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -43,8 +55,8 @@
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
-                        <img src="assets/Icon/EmployeesList_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">EMPLOYEE<br>LIST</p>
+                        <img src="assets/Icon/EmployeesList_Icon.png" class = "Icons">
+                        <p class = "Sidebar_Text"> EMPLOYEE <br> LIST </p>
                     </div>
                     <script>
                         function redirectToEmployeeListAdmin(){
@@ -52,35 +64,45 @@
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToAdminMessage()">
-                        <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">MESSAGES</p>
+                        <img src="assets/Icon/Messages_Icon.png" class = "Icons">
+                        <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
                     <script>
                         function redirectToAdminMessage(){
                             window.location.href='Admin(Messages).php';
                         }
                     </script>
-                    <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
-                    </div>
-    
-                    <script>
-                        function redirectToLogin(){
-                            window.location.href='Login.php';
-                        }php
-                    </script>
                 </div>
 
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
                     <!-- Dashboard Content Here -->
                     <!-- Dito mo lagay delosreyes mga gawa mo-->
-                  <h1>ADD ACCCOUNT</h1>
+                    <div class="Buttons">
+                        <button onclick="redirectToEmployeeInfoAdmin()" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
+                        <script>
+                            function redirectToEmployeeInfoAdmin(){
+                                window.location.href='Employeedetails(ADMIN).php';
+                            }
+                        </script>
+                    </div>
+                    <div class="Buttons">
+                        <button onclick="redirectToEarningsAdmin()" class="EarningsDropDown"> EARNINGS </button>
+                        <script>
+                            function redirectToEarningsAdmin(){
+                                window.location.href='Earnings(Admin).php';
+                            }
+                        </script>
+                    </div>
+
+                    <!-- End Buttons -->
+
                     <!-- Employee Info Start -->
                     <div class="Employee">
                         <div class="EmployeeInfo_Window">
                             <div class="EmployeePhoto_Container">
                                 <img src="assets/images/Profile.jpg" class="EmployeePhoto">
-                                <p class="EmployeeName_Text"> <button class="Change_Photo"> APPLY PHOTO </button></p>
+                                <p class="EmployeeName_Text">Employee Name</p>
                             </div>
                             <div class="EmployeeDetails">
                                 <div class="TextContainer">
@@ -105,21 +127,83 @@
                                         <p>Mobile Number:</p>   <p class="EmployeeInformation"> --- </p>
                                         <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
                                     </div>
-                                  
+                              
                                 </div>
                             </div>
                         </div>                    
                     </div>
 
                     <!-- Download Button -->
-                    <button class="Download"> APPLY </button>
+                    <button class="Download" onclick="redirectToEditEmployeeAdmin()"> EDIT </button>
+                    <script>
+                        function redirectToEditEmployeeAdmin(){
+                            window.location.href='EditEmployeeDetails1(Admin).php';
+                        }
+                    </script>
+
                     <!-- End of Download Button -->
 
                     <!-- End of Dashboard_Content -->
+
+                    
                     </div>
 
                     <div class="col-xs-12 col-md-2 Messages_Tab">
-                    <!-- Messages Tab Here -->
+                        <!-- Messages Tab Here -->
+                        <div class="Notification_Panel"> 
+                            <p class="Notification_Text"> NOTIFICATION </p>
+    
+                            <div class="AdminNotification_Scrollbar">
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th class="Notif_Text"> NEW MESSAGE </th>
+                                </tr>
+                                <tr>
+                                    <td class="Notif_Message"> You have a new Message </td>
+                                </tr>
+                            </table>
+    
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> NEW MESSAGE </th>
+                                </tr>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> You have a new Message </td>
+                                </tr>
+                            </table>
+    
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> New Announcemnet </td>
+                                </tr>
+                            </table>
+
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> New Announcemnet </td>
+                                </tr>
+                            </table>
+                        </div>
+                        </div>
+    
+                        <div class="About_User">
+                            <img src="assets/images/Profile.jpg" class="UserImage">
+                            <div class="MessagesTab_Text">
+                                <p class="About_User_Text"> 202210178</p>
+                                <p class="About_User_Text"> ACCOUNT USERNAME </p>
+                                <br>
+                                <p class="About_User_Text"> CUSTOMER SERVICE</p>
+                                <p class="Position_Text"> SUPPORT SPECIALIST </p>
+                            </div>
+                        </div>
+                                         
+                <!-- End of Messages Tab  -->
                     </div>
                     </div>
         </div>
