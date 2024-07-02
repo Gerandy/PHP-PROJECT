@@ -274,13 +274,14 @@
 }
 
 .EmployeeInformation {
-  color: #FEFEFE;
+  color: #0a0a0a;
   font-family: Commissioner, sans-serif;
   font-weight: 800;
 }
 
 
 .EmployeeInfoInput {
+  color: #0a0a0a;
   border: none;
   border-radius: 5px;
   height: 35px; width: 200px;
