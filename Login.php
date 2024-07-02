@@ -1,3 +1,13 @@
+
+<?php   
+    include('config/php/connect.php');  
+    include('config/php/logincomand.php');
+    
+?>
+
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +22,7 @@
     </head>
 
     <body class="body">
+    
         <div class="container Whole_Window">
             
             <div class="image-container">
@@ -26,21 +37,22 @@
                 </div>
 
                 <div class="LogIn_Box">
-                    <form>
+                    
+                    <form action="" method="POST">
                         <label class="sr-only">User ID</label>
-                        <input type="text" placeholder="User ID:" class="input_UserID" required>
-                        <br>
-                        <label class="sr-only">Email</label>
-                        <input type="email" placeholder="Email:" class="input" required>
+
+
+                        <input type="text" placeholder="Username:" name="username" class="input_UserID" required>
+                        <br>                       
                         <br>
                         <label class="sr-only">Password</label>
-                        <input type="password" placeholder="Password:" class="input" required>
+                        <input type="password" placeholder="Password:" name="password" class="input" required>
                         <br>
                         <input type="checkbox">
                         <label class="Text"> Remember Me </label>
                         <a href="#" class="Forgot_Password_Link" onclick="openForm()"> Forgot Password? </a>
                         <br>
-                        <button type="submit" class="LogIn_Button"> LOGIN </button>
+                        <button type="submit" value="submit" name="submit" class="LogIn_Button"> LOGIN </button>
                     </form>
                 </div>
 
@@ -48,7 +60,7 @@
                     <span class="Swift_Text_Footer"> SWIFT </span> 
                     <span class="Pay_Text_Footer"> PAY </span>
                     <span style="color: #B4C8C7;"> | </span>
-                    <a href="#" class="AboutUs_Link"> About Us </a>
+                    <a href="About_Us.html" class="AboutUs_Link"> About Us </a>
                 </div>
             </div>
         </div>
@@ -72,9 +84,9 @@
                 <button type="button" class="BackButton" onclick="closeForm()"> BACK </button>
             </form>
         </div>
-        
+   
 
-
+    
         <!-- Javascript for Pop Up -->
         <script>
             function openForm() {
@@ -84,9 +96,12 @@
             function closeForm() {
               document.getElementById("myForm").style.display = "none";
             }
+            
         </script>
-
+        
+        
+           
     </body>
-
+    
 
 </html>

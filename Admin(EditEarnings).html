@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets\css\Earnings(HR).css">
+    <link rel="stylesheet" href="assets\css\Admin(EditEarnings).css">
 </head>
        <body class="body">
         <!-- Side Bar -->
@@ -64,10 +64,10 @@
                                 </div>
                                 <div class="EmployeeInfo_Columns">
                                     <div class="EmployeeInfo_Text">
-                                        <p>Rate per Hour: </p>      <p class="EmployeeInformation"> --- </p>
-                                        <p>Position: </p> <p class="EmployeeInformation"> --- </p>
-                                        <p>Salary: </p>       <p class="EmployeeInformation"> --- </p>
-                                        <p>Deduction: </p>  <p class="EmployeeInformation"> --- </p>
+                                        <p>Rate per Hour: </p>      <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Position: </p> <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Salary: </p>       <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
+                                        <p>Deduction: </p>  <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
                                     </div>
 
                                 </div>
@@ -83,8 +83,50 @@
                     </div>
 
                     <div class="col-xs-12 col-md-2 Messages_Tab">
-                    <!-- Messages Tab Here -->
-                 </div>
+                        <!-- Messages Tab Here -->
+                            <div class="Notification_Panel"> 
+                                <p class="Notification_Text"> NOTIFICATION </p>
+        
+                                <table class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th class="Notif_Text"> NEW MESSAGE </th>
+                                    </tr>
+                                    <tr>
+                                        <td class="Notif_Message"> You have a new Message </td>
+                                    </tr>
+                                </table>
+        
+                                <table class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> NEW MESSAGE </th>
+                                    </tr>
+                                    <tr class="Notif">
+                                        <td class="Notif_Message"> You have a new Message </td>
+                                    </tr>
+                                </table>
+        
+                                <table class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                    </tr>
+                                    <tr class="Notif">
+                                        <td class="Notif_Message"> New Announcemnet </td>
+                                    </tr>
+                                </table>
+                            </div>
+        
+                            <div class="About_User">
+                                <img src="assets/images/Profile.jpg" class="UserImage">
+                                <div class="MessagesTab_Text">
+                                    <p class="About_User_Text"> 202210178</p>
+                                    <p class="About_User_Text"> ACCOUNT USERNAME </p>
+                                    <br>
+                                    <p class="About_User_Text"> CUSTOMER SERVICE</p>
+                                    <p class="Position_Text"> SUPPORT SPECIALIST </p>
+                                </div>
+                            </div>                     
+                        <!-- End of Messages Tab  -->
+                    </div>
              </div>
         </div>
     </body>

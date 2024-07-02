@@ -1,3 +1,14 @@
+<?php 
+
+include('config/php/connect.php');
+include('config/php/logincomand.php');
+include('config/php/datagetter.php');
+
+// $result = mysqli_query($conn, $sql_username);
+// $row = mysqli_fetch_assoc($result);
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,6 +21,34 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/Employee(DashBoard).css">
+    <style>
+        .Notification_Scroll_Bar{
+            overflow-y: scroll;
+            height:510px;
+        }
+    </style>
+
+
+<style>
+    .Icons_Section{
+        cursor: pointer;
+        transition: 0.3 ease;
+    }
+    
+    .Icons_Section:hover{
+        background-color: #808080;
+    }
+    
+
+    .EmployeeNotification_Scrollbar{
+        height: 510px;
+        overflow-y: auto;
+    }
+</style>
+
+
+    </style>
+
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -29,36 +68,85 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
+                <div class="col-xs-12 col-xs-3 col-xs-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                    <div class="Icons_Section">
+                    <div class="Icons_Section" onclick="redirectToEmployeeDashBoard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">DASH<br>BOARD</p>
                     </div>
-                    <div class="Icons_Section">
+
+                    <script>
+                        function redirectToEmployeeDashBoard(){
+                            window.location.href='Employee(DashBoard).html';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToEmployeePaySlip()">
                         <img src="assets/Icon/PaySlip_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">PAY<br>SLIP</p>
+                        <p class="Sidebar_Text">PAY<br>SLIP</p>                   
                     </div>
-                    <div class="Icons_Section">
+
+                    <script>
+                        function redirectToEmployeePaySlip(){
+                            window.location.href='Employee(PaySlip).html';
+
+                            window.location.href='Employee(PaySlip).php';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToEmployeePaySlipHistory()">
                         <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">HISTORY</p>
                     </div>
-                    <div class="Icons_Section">
+
+                    <script>
+                        function redirectToEmployeePaySlipHistory(){
+                            window.location.href='Employee(PaySlip_History).html';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToEmployeeProfile('Employee(Profile_EmployeeInfo).php')">
                         <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">PROFILE</p>
                     </div>
-                    <div class="Icons_Section">
+                    <script>
+                        function redirectToEmployeeProfile(){
+                            window.location.href='Employee(Profile_EmployeeInfo).php';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToEmployeeMessages()">
                         <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">MESSAGES</p>
                     </div>
+
+                    <script>
+                        function redirectToEmployeeMessages(){
+                            window.location.href='Employee(Messages).html';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                    </div>
+                    
+                    <script>
+                        function redirectToLogin(){
+<<<<<<< HEAD
+                            window.location.href='Login.html';
+=======
+                            window.location.href='Login.php';
+>>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
+                        }
+                    </script>
+
                 </div>
 
-                <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
+                <div class="col-xs-12 col-xs-9 col-xs-8 Dashboard_Content">
                     <!-- Dashboard Content Here -->
                     <div class="AccountGreeting">
                         <p class="Dashboard_Text"> WELCOME </p> <br>
-                        <p class="Dashboard_Text Employee"> "EMPLOYEE NAME"</p>
+                        <p class="Dashboard_Text Employee"> <?php echo $_SESSION['FirstName']." ".$_SESSION['MiddleInitial']." ".$_SESSION['LastName'] ; ?> </p>
                     </div>
                     <div class="Main_Container">
                         <div class="Image_Carousel">
@@ -108,55 +196,65 @@
                     </div>
                 </div>
                 
-                <div class="col-xs-12 col-md-2 Messages_Tab">
+                <div class="col-xs-12 col-xs-2 Messages_Tab">
                     <!-- Messages Tab Here -->
-                    <div class="Messages_Window">
+                    <div class="Messages_Window" >
                         
                         <div class="Notification_Panel"> 
-                            <p class="Notification_Text"> NOTIFICATION </p>
-                            <label class="Dropdown_Text">FILTER:</label>
-                            <select id="" class="Filter_Dropdown">
-                                <option value="" class="Drop_Text"> A-Z </option>
-                                <option value="" class="Drop_Text"> oldest </option>
-                                <option value="" class="Drop_Text"> newest </option>
-                            </select>
 
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
-                                </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
+                            <p class="Notification_Text"> NOTIFICATION </p>                    
 
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
-                                </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
+                            <div class="Notification_Scroll_Bar">
+                     <?php  
+                        while($row = mysqli_fetch_assoc($result_message)){
+                            echo "<table class= NotificationTable>";
+                            
+                            echo  "<tr class= Notif>";
+                            echo     "<th class= Notif_Text>";
+                                        
+                            echo $row['fromName'];
+                                        
+                            echo       "</th>";
+                            echo    "</tr>";
+                            echo    "<trclass= Notif>";
+                            echo        "<td class= Notif_Message>";
+                                    
 
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
-                                </tr>
-                            </table>
+                            echo $row['Message'];
+                                    
+                                    
+                                    
+                            echo       "</td>";
+                            echo    "</tr>";
+                            echo "</table>";
+                        }
+                    
+                        ?>
+                        </div>
                         </div>
 
                         <div class="About_User">
                             <img src="assets/images/Profile.jpg" class="UserImage">
                             <div class="MessagesTab_Text">
-                                <p class="About_User_Text"> 202210178</p>
-                                <p class="About_User_Text"> ACCOUNT USERNAME </p>
+                                <p class="About_User_Text"> <?php 
+                                echo  $_SESSION['Identity_No'];
+                                ?></p>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['FirstName'];
+                                
+                                ?> </p>
                                 <br>
-                                <p class="About_User_Text"> CUSTOMER SERVICE</p>
-                                <p class="Position_Text"> SUPPORT SPECIALIST </p>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['Position'];
+                                
+                                ?></p>
+                                <p class="Position_Text"> <?php 
+
+                                echo $_SESSION['Department'];
+                                
+                                ?> </p>
                             </div>
                         </div>                     
                     </div>
