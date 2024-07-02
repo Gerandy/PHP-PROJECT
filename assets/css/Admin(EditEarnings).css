@@ -139,14 +139,24 @@
   font-size: 20px;
   border: none;
   cursor: pointer;
-  border-radius: 0px 20px 0px 0px;
   width: 250px;
   height: 60px;
   font-family: Commissioner, sans-serif;
   font-weight: 700;
 }
 
-
+.LogsDropDown {
+    margin-top: 20px;
+    background-color: #242B31;
+    color: white;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0px 20px 0px 0px;
+    width: 250px; height: 60px;
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+}
 
 
 
@@ -215,6 +225,12 @@
   /* Space between photo container and text */
 }
 
+.EmployeeInfoInput {
+  border: none;
+  border-radius: 5px;
+  height: 35px; width: 200px;
+}
+
 .EmployeePhoto {
   height: 250px;
   width: 250px;
@@ -268,12 +284,6 @@
   color: #FEFEFE;
   font-family: Commissioner, sans-serif;
   font-weight: 800;
-}
-
-.EmployeeInfoInput {
-  border: none;
-  border-radius: 5px;
-  height: 35px; width: 200px;
 }
 
 /* Messages Window CSS */
@@ -409,3 +419,4 @@
 }
 
 /* End of Messages Window CSS */
+
