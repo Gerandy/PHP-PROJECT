@@ -116,7 +116,9 @@ include('config/php/datagetter.php');
                 
                 <script>
                     function redirectToLogin(){
-                        window.location.href='Login.html';
+                        window.location.href='Login.php';
+                        <?php  session_destroy(); ?>
+                        
                     }
                 </script>
 
@@ -317,15 +319,28 @@ include('config/php/datagetter.php');
                         </div>
 
                     <div class="About_User">
-                        <img src="assets/images/Profile.jpg" class="UserImage">
-                        <div class="MessagesTab_Text">
-                            <p class="About_User_Text"> 202210178</p>
-                            <p class="About_User_Text"> ACCOUNT USERNAME </p>
-                            <br>
-                            <p class="About_User_Text"> CUSTOMER SERVICE</p>
-                            <p class="Position_Text"> SUPPORT SPECIALIST </p>
-                        </div>
-                    </div>                     
+                            <img src="assets/images/Profile.jpg" class="UserImage">
+                            <div class="MessagesTab_Text">
+                                <p class="About_User_Text"> <?php 
+                                echo  $_SESSION['Identity_No'];
+                                ?></p>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['FirstName'];
+                                
+                                ?> </p>
+                                <br>
+                                <p class="About_User_Text"> <?php 
+
+                                echo $_SESSION['Position'];
+                                
+                                ?></p>
+                                <p class="Position_Text"> <?php 
+
+                                echo $_SESSION['Department'];
+                                
+                                ?> </p>
+                            </div>                   
                 <!-- End of Messages Tab  -->
             </div>
         </div>
