@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php 
-//nako po
+//nako po eqwe
 include('config/php/connect.php');
 include('config/php/logincomand.php');
 include('config/php/datagetter.php');
