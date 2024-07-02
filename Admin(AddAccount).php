@@ -2,6 +2,7 @@
 include('config/php/connect.php');
 include('config/php/logincomand.php');
 include('config/php/datagetter.php');
+include('config/php/addAccount.php');
 
 // $result = mysqli_query($conn, $sql_username);
 // $row = mysqli_fetch_assoc($result);
