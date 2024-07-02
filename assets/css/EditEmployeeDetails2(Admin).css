@@ -192,6 +192,12 @@
   border-radius: 20px;
 }
 
+.EmployeeInfoInput {
+  color: #0a0a0a;
+  border: none;
+  border-radius: 5px;
+  height: 35px; width: 200px;
+}
 .Employee {
   background-color: #242B31;
   margin-top: -2px;
@@ -278,7 +284,8 @@
 }
 
 .EmployeeInformation {
-  color: #FEFEFE;
+  color: #0a0a0a;
   font-family: Commissioner, sans-serif;
   font-weight: 800;
 }
+
