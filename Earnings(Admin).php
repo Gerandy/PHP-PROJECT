@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets\css\EditEmployeeDetails2(Admin).css">
+    <link rel="stylesheet" href="assets\css\Earnings(Admin).css">
+
     <style>
         .Icons_Section{
             cursor: pointer;
@@ -19,8 +20,16 @@
         .Icons_Section:hover{
             background-color: #808080;
         }
-        
-        
+
+        .inside{
+            cursor: pointer;
+            transition: color 0.3 ease-in-out;
+        }
+
+        .AdminNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
+        }
     </style>
 </head>
        <body class="body">
@@ -52,7 +61,7 @@
                             window.location.href='EmployeeList(Admin).php';
                         }
                     </script>
-                    <div class="Icons_Section" onclick="redirectToAdminMessage()">
+                     <div class="Icons_Section" onclick="redirectToAdminMessage()">
                         <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
@@ -75,7 +84,12 @@
                     <!-- Dashboard Content Here -->
                     <!-- Dito mo lagay delosreyes mga gawa mo-->
                     <div class="Buttons">
-                        <button onclick="redirectTo('Employee(Profile_EmployeeInfo).php')" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
+                        <button onclick="redirectToEmployeeDetailsAdmin()" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
+                        <script>
+                            function redirectToEmployeeDetailsAdmin(){
+                                window.location.href='Employeedetails(ADMIN).php';
+                            }
+                        </script>
                     </div>
                     <div class="Buttons">
                         <button onclick="redirectTo('Employee(Profile_Earning).php')" class="EarningsDropDown"> EARNINGS </button>
@@ -88,7 +102,7 @@
                         <div class="EmployeeInfo_Window">
                             <div class="EmployeePhoto_Container">
                                 <img src="assets/images/Profile.jpg" class="EmployeePhoto">
-                                <p class="EmployeeName_Text"> <button class="Change_Photo">CHANGE PHOTO</button></p>
+                                <p class="EmployeeName_Text">Employee Name</p>
                             </div>
                             <div class="EmployeeDetails">
                                 <div class="TextContainer">
@@ -96,10 +110,10 @@
                                 </div>
                                 <div class="EmployeeInfo_Columns">
                                     <div class="EmployeeInfo_Text">
-                                        <p>Rate per Hour: </p>      <p class="EmployeeInformation"> --- </p>
-                                        <p>Position: </p> <p class="EmployeeInformation"> --- </p>
-                                        <p>Salary: </p>       <p class="EmployeeInformation"> --- </p>
-                                        <p>Deduction: </p>  <p class="EmployeeInformation"> --- </p>
+                                        <p>Rate per Hour: </p>      <p class="EmployeeInformation"> PHP 150  </p>
+                                        <p>Position: </p> <p class="EmployeeInformation"> JUNIOR DATA ANALYST   </p>
+                                        <p>Salary: </p>       <p class="EmployeeInformation">  PHP 25,000 per month    </p>
+                                        <p>Deduction: </p>  <p class="EmployeeInformation"> INCOME TAX <br> UIF <br> PAG-IBIG <br> SSS   </p>
                                     </div>
 
                                 </div>
@@ -108,15 +122,73 @@
                     </div>
 
                     <!-- Download Button -->
-                    <button class="Download"> APPLY </button>
+                    <button class="Download" onclick="redirectToEditEmployeeAdmin()"> EDIT </button>
+                    <script>
+                        function redirectToEditEmployeeAdmin(){
+                            window.location.href='EditEmployeeDetails2(Admin).php';
+                        }
+                    </script>
                     <!-- End of Download Button -->
 
                     <!-- End of Dashboard_Content -->
                     </div>
 
                     <div class="col-xs-12 col-md-2 Messages_Tab">
-                    <!-- Messages Tab Here -->
-                 </div>
+                        <!-- Messages Tab Here -->
+                            <div class="Notification_Panel"> 
+                                <p class="Notification_Text"> NOTIFICATION </p>
+        
+                                <div class="AdminNotification_Scrollbar">
+                                <table class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th class="Notif_Text"> NEW MESSAGE </th>
+                                    </tr>
+                                    <tr>
+                                        <td class="Notif_Message"> You have a new Message </td>
+                                    </tr>
+                                </table>
+        
+                                <table class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> NEW MESSAGE </th>
+                                    </tr>
+                                    <tr class="Notif">
+                                        <td class="Notif_Message"> You have a new Message </td>
+                                    </tr>
+                                </table>
+        
+                                <table class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                    </tr>
+                                    <tr class="Notif">
+                                        <td class="Notif_Message"> New Announcemnet </td>
+                                    </tr>
+                                </table>
+
+                                <table class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                    </tr>
+                                    <tr class="Notif">
+                                        <td class="Notif_Message"> New Announcemnet </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </div>
+        
+                            <div class="About_User">
+                                <img src="assets/images/Profile.jpg" class="UserImage">
+                                <div class="MessagesTab_Text">
+                                    <p class="About_User_Text"> 202210178</p>
+                                    <p class="About_User_Text"> ACCOUNT USERNAME </p>
+                                    <br>
+                                    <p class="About_User_Text"> CUSTOMER SERVICE</p>
+                                    <p class="Position_Text"> SUPPORT SPECIALIST </p>
+                                </div>
+                            </div>                     
+                        <!-- End of Messages Tab  -->
+                    </div>
              </div>
         </div>
     </body>

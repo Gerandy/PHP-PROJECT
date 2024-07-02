@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets\css\EditEmployeeDetails2(Admin).css">
+    <link rel="stylesheet" href="assets\css\Employee details (ADMIN).css">
+
     <style>
         .Icons_Section{
             cursor: pointer;
@@ -19,11 +20,15 @@
         .Icons_Section:hover{
             background-color: #808080;
         }
-        
-        
+
+        .inside{
+            cursor: pointer;
+            transition: color 0.3 ease-in-out;
+
+        }
     </style>
 </head>
-       <body class="body">
+    <body class="body">
         <!-- Side Bar -->
         <div class="Dashboard_Header"> 
             <p class="Swift_Text">SWIFT</p>
@@ -52,35 +57,33 @@
                             window.location.href='EmployeeList(Admin).php';
                         }
                     </script>
-                    <div class="Icons_Section" onclick="redirectToAdminMessage()">
+                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
                         <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
-                    <script>
-                        function redirectToAdminMessage(){
-                            window.location.href='Admin(Messages).php';
-                        }
-                    </script>
-                    <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
-                    </div>
-                    <script>
-                        function redirectToLogin(){
-                            window.location.href='Login.php';
-                        }
-                    </script>
                 </div>
 
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
                     <!-- Dashboard Content Here -->
                     <!-- Dito mo lagay delosreyes mga gawa mo-->
                     <div class="Buttons">
-                        <button onclick="redirectTo('Employee(Profile_EmployeeInfo).php')" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
+                        <button onclick="redirectToEmployeeInfoAdmin()" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
+                        <script>
+                            function redirectToEmployeeInfoAdmin(){
+                                window.location.href='Employee details (ADMIN).php';
+                            }
+                        </script>
                     </div>
                     <div class="Buttons">
-                        <button onclick="redirectTo('Employee(Profile_Earning).php')" class="EarningsDropDown"> EARNINGS </button>
+                        <button onclick="redirectToEarningsAdmin()" class="EarningsDropDown"> EARNINGS </button>
+                        <script>
+                            function redirectToEarningsAdmin(){
+                                window.location.href='Earnings(Admin).php';
+                            }
+                        </script>
                     </div>
-                  
+
                     <!-- End Buttons -->
 
                     <!-- Employee Info Start -->
@@ -88,7 +91,7 @@
                         <div class="EmployeeInfo_Window">
                             <div class="EmployeePhoto_Container">
                                 <img src="assets/images/Profile.jpg" class="EmployeePhoto">
-                                <p class="EmployeeName_Text"> <button class="Change_Photo">CHANGE PHOTO</button></p>
+                                <p class="EmployeeName_Text">Employee Name</p>
                             </div>
                             <div class="EmployeeDetails">
                                 <div class="TextContainer">
@@ -96,19 +99,39 @@
                                 </div>
                                 <div class="EmployeeInfo_Columns">
                                     <div class="EmployeeInfo_Text">
-                                        <p>Rate per Hour: </p>      <p class="EmployeeInformation"> --- </p>
-                                        <p>Position: </p> <p class="EmployeeInformation"> --- </p>
-                                        <p>Salary: </p>       <p class="EmployeeInformation"> --- </p>
-                                        <p>Deduction: </p>  <p class="EmployeeInformation"> --- </p>
+                                        <p>Firstname: </p>      <p class="EmployeeInformation"> --- </p>
+                                        <p>Middle Initial: </p> <p class="EmployeeInformation"> --- </p>
+                                        <p>Lastname: </p>       <p class="EmployeeInformation"> --- </p>
+                                        <p>Date of Birth: </p>  <p class="EmployeeInformation"> --- </p>
+                                        <p>Gender: </p>         <p class="EmployeeInformation"> --- </p>
+                                        <p>Address: </p>        <p class="EmployeeInformation"> --- </p>
+                                        <p>City: </p>           <p class="EmployeeInformation"> --- </p>
                                     </div>
-
+                                    <div class="EmployeeInfo_Text2">
+                                        <p>Region: </p>         <p class="EmployeeInformation"> --- </p>
+                                        <p>Country: </p>        <p class="EmployeeInformation"> --- </p>
+                                        <p>Status: </p>         <p class="EmployeeInformation"> --- </p>
+                                        <p>Nationality:</p>     <p class="EmployeeInformation"> --- </p>
+                                        <p>Email: </p>          <p class="EmployeeInformation"> --- </p>
+                                        <p>Mobile Number:</p>   <p class="EmployeeInformation"> --- </p>
+                                        <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
+                                    </div>
+                                    <div class="EmployeeInfo_Text3">
+                                        <p>Region: </p>         <p class="EmployeeInformation"> --- </p>
+                                        <p>Country: </p>        <p class="EmployeeInformation"> --- </p>
+                                        <p>Status: </p>         <p class="EmployeeInformation"> --- </p>
+                                        <p>Nationality:</p>     <p class="EmployeeInformation"> --- </p>
+                                        <p>Email: </p>          <p class="EmployeeInformation"> --- </p>
+                                        <p>Mobile Number: </p>  <p class="EmployeeInformation"> --- </p>
+                                        <p>Identity No.: </p>   <p class="EmployeeInformation"> --- </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>                    
                     </div>
 
                     <!-- Download Button -->
-                    <button class="Download"> APPLY </button>
+                    <button class="Download"> EDIT </button>
                     <!-- End of Download Button -->
 
                     <!-- End of Dashboard_Content -->
@@ -116,8 +139,8 @@
 
                     <div class="col-xs-12 col-md-2 Messages_Tab">
                     <!-- Messages Tab Here -->
-                 </div>
-             </div>
+                    </div>
+                    </div>
         </div>
     </body>
 </html>

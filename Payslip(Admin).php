@@ -9,24 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/Employee(PaySlip).css">
+    <link rel="stylesheet" href="assets\css\Payslip(Admin).css">
 
     <style>
         .Icons_Section{
             cursor: pointer;
             transition: 0.3 ease;
         }
-        
+    
         .Icons_Section:hover{
             background-color: #808080;
         }
-        
-        .EmployeeNotification_Scrollbar{
-        height: 510px;
-        overflow-y: auto;
-    }
+    
+    
+    
     </style>
-
 </head>
 <body class="body">
 
@@ -42,70 +39,29 @@
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                 <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                <div class="Icons_Section" onclick="redirectToEmployeeDashBoard()">
+                <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
                     <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">DASH<br>BOARD</p>
                 </div>
-
                 <script>
-                    function redirectToEmployeeDashBoard(){
-                        window.location.href='Employee(DashBoard).php';
+                    function redirectToAdminDashBoard(){
+                        window.location.href='Admin(DashBoard).php';
                     }
                 </script>
-
-                <div class="Icons_Section" onclick="redirectToEmployeePaySlip()">
-                    <img src="assets/Icon/PaySlip_Icon.png" class="Icons img-responsive">
-                    <p class="Sidebar_Text">PAY<br>SLIP</p>                   
-                </div>
-
-                <script>
-                    function redirectToEmployeePaySlip(){
-                        window.location.href='Employee(PaySlip).php';
-                    }
-                </script>
-
-                <div class="Icons_Section" onclick="redirectToEmployeePaySlipHistory()">
-                    <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
-                    <p class="Sidebar_Text">HISTORY</p>
-                </div>
-
-                <script>
-                    function redirectToEmployeePaySlipHistory(){
-                        window.location.href='Employee(PaySlip_History).php';
-                    }
-                </script>
-
-                <div class="Icons_Section" onclick="redirectToEmployeeProfile('Employee(Profile_EmployeeInfo).php')">
-                    <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
-                    <p class="Sidebar_Text">PROFILE</p>
+                <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
+                    <img src="assets/Icon/EmployeesList_Icon.png" class = "Icons">
+                    <p class = "Sidebar_Text"> EMPLOYEE <br> LIST </p>
                 </div>
                 <script>
-                    function redirectToEmployeeProfile(){
-                        window.location.href='Employee(Profile_EmployeeInfo).php';
+                    function redirectToEmployeeListAdmin(){
+                        window.location.href='EmployeeList(Admin).php';
                     }
                 </script>
-
-                <div class="Icons_Section" onclick="redirectToEmployeeMessages()">
-                    <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
-                    <p class="Sidebar_Text">MESSAGES</p>
+                <div class="Icons_Section">
+                    <img src="assets/Icon/Messages_Icon.png" class = "Icons">
+                    <p class = "Sidebar_Text"> MESSAGES</p>
                 </div>
-
-                <script>
-                    function redirectToEmployeeMessages(){
-                        window.location.href='Employee(Messages).php';
-                    }
-                </script>
-
-                <div class="Icons_Section" onclick="redirectToLogin()">
                 <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
-                </div>
-                
-                <script>
-                    function redirectToLogin(){
-                        window.location.href='Login.php';
-                    }
-                </script>
-
             </div>
 
             <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
@@ -113,7 +69,7 @@
 
                 <!-- Drop Downs (Month, Semi, Pending) -->
                 <div class="dropdown">
-                    <button onclick="toggleMonthDropdown()" class="MonthDropDown"> MONTH: </button>
+                    <button onclick="toggleMonthDropdown()" class="MonthDropDown"> MONTH </button>
                     <div id="Month" class="dropdown-content">
                         <a href="#"> January </a>
                         <a href="#"> February </a>
@@ -130,29 +86,18 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                    <button onclick="toggleSemiMonthlyDropdown()" class="SemiMonthlyDropDown"> SEMI-MONTHLY: </button>
+                    <button onclick="toggleSemiMonthlyDropdown()" class="SemiMonthlyDropDown"> SEMI-MONTHLY </button>
                     <div id="Semi-Monthly" class="dropdown-content">
                         <a href="#"> 1-15 </a>
                         <a href="#"> 15-31 </a>
                     </div>
                 </div>
-                <div class="dropdown">
-                    <button onclick="togglePendingDropdown()" class="PendingDropDown"> PENDING: </button>
-                    <div id="Pending" class="dropdown-content">
-                        <a href="#"> idk </a>
-                        <a href="#"> dikoalam </a>
-                    </div>
-                </div>
+ 
                 <!-- End  Drop Downs -->
 
                 <!-- Pay Slip Receipt -->
                 <div class="Receipt">
                     <div class="PaySlip">
-                        <div class = "Payslip_Header">
-                            <img src="assets/Icon/UserPhoto.png" class="Logo">
-                            <span class="Swift_TextHeader"> SWIFT   </span> <span class="Pay_TextHeader"> PAY </span>
-                        </div>
-                        <p class="TagLine"> Pay Day your Way </p>
 
                         <!-- Start  Payslip Table -->
                         <div class="Table_PaySlip_Receipt">
@@ -160,19 +105,29 @@
                                 <tr>
                                     <th class="Date Text"> 01-01-2024 </th>
                                     <th class="Table_Title TextHighLight"> PAY SLIP RECEIPT </th>
+                                    <th class="Table_Title TextHighLight"></th>
                                     <th class="Receipt_Code Text"> RECEIPT CODE: 001 </th>
                                 </tr>
                                 <tr>
-                                    <td colspan="1" class="Text"> EMPLOYEE NAME: </td>
-                                    <td colspan="2" class="Text"> --- </td>
+                                    <td colspan="1"  class="Text"> EMPLOYEE NAME: </td>
+                                    <td colspan="1" class="Text"> --- </td>
+                                    <td colspan="1" class="Text"> Hourly Rate: </td>
+                                    <td colspan="1" class="Text"> --- </td>
                                 </tr>
                                 <tr>
                                     <td colspan="1" class="Text"> DEPARTMENT: </td>
                                     <td colspan="2" class="Text"> --- </td>
+                                    <td colspan=""></td>
                                 </tr>
                                 <tr>
                                     <td colspan="1" class="Text"> EMPLOYEE ID: </td>
                                     <td colspan="2" class="Text"> --- </td>
+                                    <td colspan=""></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="1" class="Text"> DATE: </td>
+                                    <td colspan="2" class="Text"> --- </td>
+                                    <td colspan=""></td>
                                 </tr>
                             </table>
                         </div>
@@ -188,9 +143,9 @@
                                         <td colspan="1" class="Text"> --- </td>
                                         <td colspan="1" class="Amount Text"> --- </td>
                                     </tr>
-                                    <tr>
+                                    <tr > 
                                         <td colspan="1"  class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
+                                        <td colspan="1" class="Amount Text"> --- </td>               
                                     </tr>
                                     <tr>
                                         <td colspan="1" class="Text"> --- </td>
@@ -263,7 +218,9 @@
                 </div>
 
                 <!-- Download Button -->
-                <button class="Download_Button"> DOWNLOAD </button>
+                <button class="Back_Button"> EMPLOYEE DETAILS </button>
+                <button class="Apply_Button"> APPLY</button>
+                <button class="Employee_Button">BACK</button>
                 <!-- End of Download Button -->
 
                 <!-- End of Dashboard_Content -->
@@ -274,7 +231,6 @@
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
 
-                        <div class="EmployeeNotification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -301,25 +257,6 @@
                                 <td class="Notif_Message"> New Announcemnet </td>
                             </tr>
                         </table>
-
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> New Announcemnet </td>
-                            </tr>
-                        </table>
-
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> New Announcemnet </td>
-                            </tr>
-                        </table>
-                        </div>
                     </div>
 
                     <div class="About_User">

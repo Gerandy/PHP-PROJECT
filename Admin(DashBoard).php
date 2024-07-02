@@ -1,18 +1,7 @@
-<?php 
-
-include('config/php/connect.php');
-include('config/php/logincomand.php');
-include('config/php/datagetter.php');
-
-// $result = mysqli_query($conn, $sql_username);
-// $row = mysqli_fetch_assoc($result);
-
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Employee Dashboard</title>
+    <title>Admin Dashboard</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -20,35 +9,24 @@ include('config/php/datagetter.php');
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/Employee(DashBoard).css">
+    <link rel="stylesheet" href="assets/css/Admin(DashBoard).css">
+
     <style>
-        .Notification_Scroll_Bar{
-            overflow-y: scroll;
-            height:510px;
+        .Icons_Section{
+            cursor: pointer;
+            transition: 0.3 ease;
         }
-    </style>
-
-
-<style>
-    .Icons_Section{
-        cursor: pointer;
-        transition: 0.3 ease;
-    }
     
-    .Icons_Section:hover{
-        background-color: #808080;
-    }
+        .Icons_Section:hover{
+            background-color: #808080;
+        }
     
-
-    .EmployeeNotification_Scrollbar{
-        height: 510px;
-        overflow-y: auto;
-    }
-</style>
-
-
+        .AdminNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
+        }
+    
     </style>
-
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -68,85 +46,52 @@ include('config/php/datagetter.php');
 
         <div class="container-fluid">
             <div class="row">
-                <div class="col-xs-12 col-xs-3 col-xs-2 sidebar">
+                <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                    <div class="Icons_Section" onclick="redirectToEmployeeDashBoard()">
+                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">DASH<br>BOARD</p>
                     </div>
-
                     <script>
-                        function redirectToEmployeeDashBoard(){
-                            window.location.href='Employee(DashBoard).php';
+                        function redirectToAdminDashBoard(){
+                            window.location.href='Admin(DashBoard).php';
                         }
                     </script>
-
-                    <div class="Icons_Section" onclick="redirectToEmployeePaySlip()">
-                        <img src="assets/Icon/PaySlip_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">PAY<br>SLIP</p>                   
-                    </div>
-
-                    <script>
-                        function redirectToEmployeePaySlip(){
-                            window.location.href='Employee(PaySlip).php';
-
-                            window.location.href='Employee(PaySlip).php';
-                        }
-                    </script>
-
-                    <div class="Icons_Section" onclick="redirectToEmployeePaySlipHistory()">
-                        <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">HISTORY</p>
-                    </div>
-
-                    <script>
-                        function redirectToEmployeePaySlipHistory(){
-                            window.location.href='Employee(PaySlip_History).php';
-                        }
-                    </script>
-
-                    <div class="Icons_Section" onclick="redirectToEmployeeProfile('Employee(Profile_EmployeeInfo).php')">
-                        <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">PROFILE</p>
+                    <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
+                        <img src="assets/Icon/EmployeesList_Icon.png" class="Icons img-responsive">
+                        <p class="Sidebar_Text">EMPLOYEE<br>LIST</p>
                     </div>
                     <script>
-                        function redirectToEmployeeProfile(){
-                            window.location.href='Employee(Profile_EmployeeInfo).php';
+                        function redirectToEmployeeListAdmin(){
+                            window.location.href='EmployeeList(Admin).php';
                         }
                     </script>
-
-                    <div class="Icons_Section" onclick="redirectToEmployeeMessages()">
+                    <div class="Icons_Section" onclick="redirectToAdminMessage()">
                         <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">MESSAGES</p>
                     </div>
-
                     <script>
-                        function redirectToEmployeeMessages(){
-                            window.location.href='Employee(Messages).php';
+                        function redirectToAdminMessage(){
+                            window.location.href='Admin(Messages).php';
                         }
                     </script>
-
                     <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
                     </div>
-                    
+
                     <script>
                         function redirectToLogin(){
-<<<<<<< HEAD
                             window.location.href='Login.php';
-=======
-                            window.location.href='Login.php';
->>>>>>> 26bad1990e27addd1a9e90bcc887002deb7a2bdf
                         }
                     </script>
 
                 </div>
 
-                <div class="col-xs-12 col-xs-9 col-xs-8 Dashboard_Content">
+                <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
                     <!-- Dashboard Content Here -->
                     <div class="AccountGreeting">
                         <p class="Dashboard_Text"> WELCOME </p> <br>
-                        <p class="Dashboard_Text Employee"> <?php echo $_SESSION['FirstName']." ".$_SESSION['MiddleInitial']." ".$_SESSION['LastName'] ; ?> </p>
+                        <p class="Dashboard_Text Employee"> "ADMIN NAME"</p>
                     </div>
                     <div class="Main_Container">
                         <div class="Image_Carousel">
@@ -196,73 +141,66 @@ include('config/php/datagetter.php');
                     </div>
                 </div>
                 
-                <div class="col-xs-12 col-xs-2 Messages_Tab">
+                <div class="col-xs-12 col-md-2 Messages_Tab">
                     <!-- Messages Tab Here -->
-                    <div class="Messages_Window" >
-                        
                         <div class="Notification_Panel"> 
-
-                            <p class="Notification_Text"> NOTIFICATION </p>                    
-
-                            <div class="Notification_Scroll_Bar">
-                     <?php  
-                        while($row = mysqli_fetch_assoc($result_message)){
-                            echo "<table class= NotificationTable>";
+                            <p class="Notification_Text"> NOTIFICATION </p>
                             
-                            echo  "<tr class= Notif>";
-                            echo     "<th class= Notif_Text>";
-                                        
-                            echo $row['fromName'];
-                                        
-                            echo       "</th>";
-                            echo    "</tr>";
-                            echo    "<trclass= Notif>";
-                            echo        "<td class= Notif_Message>";
-                                    
+                            <div class="AdminNotification_Scrollbar">
+                            <table>
+                                <tr>
+                                    <th> NEW MESSAGE </th>
+                                </tr>
+                                <tr>
+                                    <td> You have a new Message </td>
+                                </tr>
+                            </table>
 
-                            echo $row['Message'];
-                                    
-                                    
-                                    
-                            echo       "</td>";
-                            echo    "</tr>";
-                            echo "</table>";
-                        }
-                    
-                        ?>
+                            <table>
+                                <tr>
+                                    <th> NEW MESSAGE </th>
+                                </tr>
+                                <tr>
+                                    <td> You have a new Message </td>
+                                </tr>
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <th> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr>
+                                    <td> New Announcemnet </td>
+                                </tr>
+                            </table>
+
+                            <table>
+                                <tr>
+                                    <th> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr>
+                                    <td> New Announcemnet </td>
+                                </tr>
+                            </table>
                         </div>
                         </div>
 
                         <div class="About_User">
                             <img src="assets/images/Profile.jpg" class="UserImage">
                             <div class="MessagesTab_Text">
-                                <p class="About_User_Text"> <?php 
-                                echo  $_SESSION['Identity_No'];
-                                ?></p>
-                                <p class="About_User_Text"> <?php 
-
-                                echo $_SESSION['FirstName'];
-                                
-                                ?> </p>
+                                <p class="About_User_Text"> 202210178</p>
+                                <p class="About_User_Text"> ACCOUNT USERNAME </p>
                                 <br>
-                                <p class="About_User_Text"> <?php 
-
-                                echo $_SESSION['Position'];
-                                
-                                ?></p>
-                                <p class="Position_Text"> <?php 
-
-                                echo $_SESSION['Department'];
-                                
-                                ?> </p>
+                                <p class="About_User_Text"> CUSTOMER SERVICE</p>
+                                <p class="Position_Text"> SUPPORT SPECIALIST </p>
                             </div>
                         </div>                     
-                    </div>
                     <!-- End of Messages Tab  -->
                 </div>
 
                 <!-- Javascript for calendar widget -->
                 <script>
+                    //<script>
                     // clock header
                     function updateClock() {
                         const now = new Date();
@@ -278,6 +216,9 @@ include('config/php/datagetter.php');
 
                     setInterval(updateClock, 1000);
                     updateClock();
+                    // End of clock in header
+                    //<script>
+
 
                     //Calendar Widget 
                     const calendarHeaderMonth = document.querySelector('.month');
