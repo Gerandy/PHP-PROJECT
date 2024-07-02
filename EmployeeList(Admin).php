@@ -67,10 +67,15 @@
                             window.location.href='EmployeeList(Admin).html';
                         }
                     </script>
-                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
+                    <div class="Icons_Section" onclick="redirectToAdminMessage()">
                         <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
+                    <script>
+                        function redirectToAdminMessage(){
+                            window.location.href='Admin(Messages).html';
+                        }
+                    </script>
                     <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
                     </div>
@@ -110,7 +115,7 @@
                              </div>
                              <script>
                                 function redirectToEmployeeDetailsAdmin(){
-                                    window.location.href='Employee details (ADMIN).html';
+                                    window.location.href='Employeedetails(ADMIN).html';
                                 }
                              </script>
 
