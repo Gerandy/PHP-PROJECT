@@ -9,7 +9,24 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets\css\EditEmployeeDetails(Admin).css">
+    <link rel="stylesheet" href="assets\css\Employee details (ADMIN).css">
+
+    <style>
+        .Icons_Section{
+            cursor: pointer;
+            transition: 0.3 ease;
+        }
+    
+        .Icons_Section:hover{
+            background-color: #808080;
+        }
+
+        .inside{
+            cursor: pointer;
+            transition: color 0.3 ease-in-out;
+
+        }
+    </style>
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -22,15 +39,25 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                    <div class="Icons_Section">
+                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">DASH<br>BOARD</p>
                     </div>
-                    <div class="Icons_Section">
+                    <script>
+                        function redirectToAdminDashBoard(){
+                            window.location.href='Admin(DashBoard).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
                         <img src="assets/Icon/EmployeesList_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> EMPLOYEE <br> LIST </p>
                     </div>
-                    <div class="Icons_Section">
+                    <script>
+                        function redirectToEmployeeListAdmin(){
+                            window.location.href='EmployeeList(Admin).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
                         <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
@@ -41,10 +68,20 @@
                     <!-- Dashboard Content Here -->
                     <!-- Dito mo lagay delosreyes mga gawa mo-->
                     <div class="Buttons">
-                        <button onclick="redirectTo('Employee(Profile_EmployeeInfo).html')" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
+                        <button onclick="redirectToEmployeeInfoAdmin()" class="EmployeeInfoDropDown"> EMPLOYEE INFO </button>
+                        <script>
+                            function redirectToEmployeeInfoAdmin(){
+                                window.location.href='Employee details (ADMIN).html';
+                            }
+                        </script>
                     </div>
                     <div class="Buttons">
-                        <button onclick="redirectTo('Employee(Profile_Earning).html')" class="EarningsDropDown"> EARNINGS </button>
+                        <button onclick="redirectToEarningsAdmin()" class="EarningsDropDown"> EARNINGS </button>
+                        <script>
+                            function redirectToEarningsAdmin(){
+                                window.location.href='Earnings(Admin).html';
+                            }
+                        </script>
                     </div>
 
                     <!-- End Buttons -->
@@ -54,7 +91,7 @@
                         <div class="EmployeeInfo_Window">
                             <div class="EmployeePhoto_Container">
                                 <img src="assets/images/Profile.jpg" class="EmployeePhoto">
-                                <p class="EmployeeName_Text"> <button class="Change_Photo"> CHANGE PHOTO </button></p>
+                                <p class="EmployeeName_Text">Employee Name</p>
                             </div>
                             <div class="EmployeeDetails">
                                 <div class="TextContainer">
@@ -94,7 +131,7 @@
                     </div>
 
                     <!-- Download Button -->
-                    <button class="Download"> APPLY </button>
+                    <button class="Download"> EDIT </button>
                     <!-- End of Download Button -->
 
                     <!-- End of Dashboard_Content -->

@@ -58,7 +58,7 @@
                     <span class="Swift_Text_Footer"> SWIFT </span> 
                     <span class="Pay_Text_Footer"> PAY </span>
                     <span style="color: #B4C8C7;"> | </span>
-                    <a href="#" class="AboutUs_Link"> About Us </a>
+                    <a href="About_Us.html" class="AboutUs_Link"> About Us </a>
                 </div>
             </div>
         </div>

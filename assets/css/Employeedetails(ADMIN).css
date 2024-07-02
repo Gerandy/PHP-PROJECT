@@ -1,5 +1,5 @@
 .body {
-  background-image: url("assets/Icon/CoinBg.png");
+  background-image: url("../images/CoinBg.png");
   background-size: 600px;
   margin-top: 10px;
   margin-left: auto;
@@ -175,19 +175,6 @@
   border: none;
   height: 60px;
   width: 300px;
-  border-radius: 20px;
-}
-
-.Change_Photo {
-  margin-top: 1%;
-  font-family: Commissioner, sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  color: #FEFEFE;
-  background-color: #FE654D;
-  border: none;
-  height: 60px;
-  width: 250px;
   border-radius: 20px;
 }
 

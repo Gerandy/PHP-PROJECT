@@ -10,6 +10,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets\css\EmployeeList(Hr).css">
+
+    <style>
+        .Icons_Section{
+            cursor: pointer;
+            transition: 0.3 ease;
+        }
+    
+        .Icons_Section:hover{
+            background-color: #808080;
+        }
+    </style>   
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -22,15 +33,25 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                    <div class="Icons_Section">
+                    <div class="Icons_Section" onclick="redirectToHRDashBoard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">DASH<br>BOARD</p>
                     </div>
-                    <div class="Icons_Section">
+                    <script>
+                        function redirectToHRDashBoard(){
+                            window.location.href='HR(DashBoard).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToEmployeeListHR()">
                         <img src="assets/Icon/EmployeesList_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> EMPLOYEE <br> LIST </p>
                     </div>
-                    <div class="Icons_Section">
+                    <script>
+                        function redirectToEmployeeListHR(){
+                            window.location.href='EmployeeList(Hr).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToHRDashBoard()">
                         <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                         <p class = "Sidebar_Text"> MESSAGES</p>
                     </div>
@@ -108,7 +129,48 @@
 
                 <div class="col-xs-12 col-md-2 Messages_Tab">
                     <!-- Messages Tab Here -->
-                    <!-- Wag na muna pakialaman or maglagay dito -->
+                        <div class="Notification_Panel"> 
+                            <p class="Notification_Text"> NOTIFICATION </p>
+    
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th class="Notif_Text"> NEW MESSAGE </th>
+                                </tr>
+                                <tr>
+                                    <td class="Notif_Message"> You have a new Message </td>
+                                </tr>
+                            </table>
+    
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> NEW MESSAGE </th>
+                                </tr>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> You have a new Message </td>
+                                </tr>
+                            </table>
+    
+                            <table class="NotificationTable">
+                                <tr class="Notif">
+                                    <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                </tr>
+                                <tr class="Notif">
+                                    <td class="Notif_Message"> New Announcemnet </td>
+                                </tr>
+                            </table>
+                        </div>
+    
+                        <div class="About_User">
+                            <img src="assets/images/Profile.jpg" class="UserImage">
+                            <div class="MessagesTab_Text">
+                                <p class="About_User_Text"> 202210178</p>
+                                <p class="About_User_Text"> ACCOUNT USERNAME </p>
+                                <br>
+                                <p class="About_User_Text"> CUSTOMER SERVICE</p>
+                                <p class="Position_Text"> SUPPORT SPECIALIST </p>
+                            </div>
+                        </div>                     
+                    <!-- End of Messages Tab  -->
                 </div>
             </div>
         </div>

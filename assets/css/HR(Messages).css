@@ -1,0 +1,660 @@
+.body {
+    background-image: url("../images/CoinBg.png");
+    background-size: 600px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Side Bar */
+
+.sidebar {
+    background-color: #242B31;
+    height: 900px; width: 5%;
+    margin-right: auto; margin-top: 10px;
+    margin-left: 1%;
+    display: block;
+    border-radius: 10px;
+
+}
+
+.Sidebar_Text {
+    font-family: Commissioner, sans-serif;
+    color: #FFFFFF;
+    font-weight: 550;
+    margin-top: 1px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Images an Icons */
+
+.Icons {
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.LogOff_Icon {
+    width: 40px;
+    height: 40px;
+    margin-left: auto; margin-right: auto;
+    margin-bottom: 10px;
+    margin-top: 180px;
+    display: block;
+}
+
+.UserPhoto {
+    width: 60px;
+    height: 60px;
+    margin-top: 30px;
+    margin-bottom: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+/* Dashboard*/
+
+.Dashboard_Content {
+    border-radius: 20px;
+    background-color: #B4C8C7;
+    height: 900px; width: 1380px;
+    margin-top: 10px; margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.Swift_Text {
+    font-family: Commissioner, sans-serif;
+    color: #B4C8C7;
+    font-weight: 800;
+    line-height: 30px;
+    font-size: 30px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+
+.Pay_Text {
+    font-family: Commissioner, sans-serif;
+    color: #EDB547;
+    font-weight: 800;
+    line-height: 1px;
+    font-size: 30px;
+    margin-left: 20px;
+}
+
+.Dashboard_Header {
+    background-color: #242B31;
+    width: 98%; height: 90px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 1%;
+    display: block;
+}
+
+.Messages_Tab {
+    background-color: #373f46;
+    margin-top: 10px;
+    height: 900px; width: 20%;
+    margin-left: 10px; 
+    border-radius: 20px;
+}
+
+/* Employee Pay Slip */
+
+/* Button CSS End */
+.Messages {
+    background-color: #242B31;
+    margin-top: -2px;
+    height: 90%;
+    border-radius: 20px;
+    padding-top: 30px;
+    margin-top: 1%;
+}
+
+.Messages_Window {
+    background-color: #CECECE;
+    margin-left: auto; margin-right: auto;
+    width: 97%; height: 97%;
+    border-radius: 20px;
+    padding-left: 3%;
+    padding-top: 2%;
+}
+
+/* Messages Start */
+
+.TitleContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Title {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 900;
+    font-family: Commissioner, sans-serif;
+}
+
+
+/* Table for messages */
+
+.Text  {
+    font-weight: 800;
+    font-size: 20px;
+    font-family: Commissioner, sans-serif;
+}
+
+.TextHighLight {
+    font-weight: 900;
+    font-size: 20px;
+    font-family: Commissioner, sans-serif;
+}
+
+.Table_PaySlip_Receipt {
+    margin-top: 1%;
+    width: 98%;
+    border: none;
+}
+
+.Table_PaySlip_Receipt table {
+    width: 100%;
+    border-collapse: collapse;
+    
+}
+
+.Table_PaySlip_Receipt th, .Table_PaySlip_Receipt td {
+    padding: 5px;
+}
+
+.Table_PaySlip_Receipt td {
+    background-color: #7D7D7D;
+}
+
+.Date, .Deduction, .Earning {
+    background-color: #7D7D7D;
+    text-align: center;
+}
+
+.LogChange, .Amount  {
+    text-align: right;
+    background-color: #7D7D7D;
+    color: #FFFFFF;
+}
+
+.LogTable {
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.Profile_Photo {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+/* Making the table look like a button */
+
+.clickableTable {
+    cursor: pointer;
+}
+
+.clickableTable:hover {
+    background-color: #f0f0f0;
+}
+
+/* End of Table for message */
+
+
+/* Next And Back Button */
+
+.Next_and_Back_Button {
+    margin-top: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.Next_and_Back_Button button {
+    font-size: 15px; 
+    font-family: Commissioner, sans-serif;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    height: 60px; width: 10%;
+    background-color: #FE654D;
+    color: #FFFFFF;
+    margin-bottom: 1%;
+}
+
+.Log_Text {
+    color: #242B31;
+    font-size: 24px;
+}
+
+/* Messages Window CSS */
+
+.Messages_Tab {
+    background-color: #373f46;
+    margin-top: 10px;
+    height: 900px; width: 27%;
+    margin-left: 10px; 
+    border-radius: 20px;
+}
+
+
+.Notification_Panel {
+    background-color: #B5B2B2;
+    height: 600px;
+    width: 98%;
+    margin-left: auto; margin-right: auto;
+    margin-top: 5%; 
+    border-radius: 20px;
+}
+
+.About_User {
+    background-color: #ececec;
+    height: 220px;
+    width: 98%;
+    margin-left: auto; margin-right: auto;
+    margin-top: 5%; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Notification_Text {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: Commissioner, sans-serif;
+    color: #242B31;
+    margin-left: 16%;
+
+}
+
+.Dropdown_Text {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Commissioner, sans-serif; 
+    margin-left: 4%;
+}
+
+
+.Drop_Text {
+    height: 50px; width: 70%;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Commissioner, sans-serif; 
+}
+
+.Filter_Dropdown {
+    background-color: #ffffff;
+    height: 50px; width: 70%;
+    border: none; 
+    border-radius: 10px;
+}
+
+/* Table for notification */
+
+.NotificationTable {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto; 
+    color: #B5B2B2;
+}
+
+.Notif_Text, .Notif_Message {
+    border: none;
+    padding: 10px;
+    text-align: left;
+    background-color: #474F56;
+    font-size: 20px;
+    
+}
+
+.Notif_Text {
+    background-color: #474F56;
+    font-size: 40px;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 5px;
+    font-weight: 900;
+    font-family: Commissioner, sans-serif;
+}
+
+.Notif_Message {
+    background-color: #474F56;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 0 0 20px 20px;
+    font-family: Commissioner, sans-serif;
+}
+
+
+/* End of Table for Notification */
+
+.MessagesTab_Text {
+    margin-top: 8%;
+}
+
+.About_User_Text {
+    margin-top: 2%;
+    margin-left: 40%; 
+    line-height: 1; 
+    font-family: Commissioner, sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+
+}
+
+.Position_Text {
+    color: #EDB547;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: Commissioner, sans-serif;
+    margin-left: 40%; 
+
+}
+
+.UserImage {
+    height: 80%;
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 4%;
+    border: 5px solid #242B31;
+    border-radius: 20px;
+    float: left;
+}
+
+/* End of Messages Window CSS */
+
+/* PopUp CSS message */
+
+/* Pop Up for Checking Message */
+
+.DateText {
+    font-family: 'Commissioner', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 2%;
+    padding-top: 2%;
+    margin-left: 37%;
+}
+
+.Sender_Profile {
+    height: 60px; width: 60px;
+    
+}
+
+.form-popup {
+    display: none;
+    position: fixed;
+    top: 17%;
+    left: 35%;
+    background-color: #242B31;
+    height: 800px;
+    width: 700px;
+    border-radius: 20px;
+}
+
+
+.form-container {
+    padding: 10px;
+    background-color: #CECECE;
+    height: 740px;
+    width: 650px;
+    margin-left: 3.5%;
+    margin-top: 4.5%;
+    border-radius: 20px;
+}
+
+.Memo {
+    background-color: #7D7D7D;
+    width: 98%; height: 85%;
+    border-radius: 20px;
+    margin-left: 1%;
+    font-weight: 800;
+}
+
+.UserID, .Message {
+    padding: 10px;
+    margin-left: 3%;
+    margin-top: 2%;
+    border: none;
+    background-color: #ffffff;
+    border-radius: 10px;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    width: 92%;
+}
+
+.UserID {
+    height: 60px;
+}
+
+.Message {
+    height: 200px;
+    resize: none;
+    line-height: 1.5;
+    overflow-y: auto;
+}
+
+
+.UserID, .Message:focus {
+    background-color: #ffffff;
+    outline: none;
+}
+
+.message-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; 
+}
+
+.Sender_Profile {
+    margin-right: 10px;
+    margin-left: 3%;
+    border-radius: 50%; 
+    width: 50px;
+    height: 50px;
+     
+}
+
+
+.Note {
+    font-weight: 800;
+    font-family: 'Commissioner', sans-serif;
+    margin-top: 4%;
+    font-size: 20px;
+    text-align: left;
+    opacity: 80%;
+    margin-left: 3%;
+    color: #f0f0f0;
+}
+
+.MessageBox {
+    background-color: #9D9D9D;
+    height: 70%; width: 95%;
+    margin-left: 2.5%;
+    border-radius: 20px;
+}
+
+.Mail {
+    font-family: 'Commissioner', sans-serif;
+    padding-top: 4%;
+    padding-left: 2%;
+    font-weight: 700;
+    font-size: 20px;
+    color: #242B31;
+}
+
+
+.form-container .SubmitButton, .BackButton {
+    background-color: #EDB547;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    margin-bottom: 10px;
+    margin-top: 2%;
+    height: 80px;
+    width: 220px;
+    margin-left: 3%;
+    font-weight: 700;
+    font-family: 'Commissioner', sans-serif;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.BackButton {
+    margin-left: 25%;
+}
+
+.form-container .BackButton {
+    background-color: #FE654D;
+}
+
+/* Messages Window CSS */
+
+.Messages_Tab {
+    background-color: #373f46;
+    margin-top: 10px;
+    height: 900px; width: 27%;
+    margin-left: 10px; 
+    border-radius: 20px;
+}
+
+
+.Notification_Panel {
+    background-color: #B5B2B2;
+    height: 600px;
+    width: 98%;
+    margin-left: auto; margin-right: auto;
+    margin-top: 5%; 
+    border-radius: 20px;
+}
+
+.About_User {
+    background-color: #ececec;
+    height: 220px;
+    width: 98%;
+    margin-left: auto; margin-right: auto;
+    margin-top: 5%; 
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.Notification_Text {
+    font-size: 50px;
+    font-weight: 900;
+    font-family: Commissioner, sans-serif;
+    color: #242B31;
+    margin-left: 16%;
+
+}
+
+.Dropdown_Text {
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Commissioner, sans-serif; 
+    margin-left: 4%;
+}
+
+
+.Drop_Text {
+    height: 50px; width: 70%;
+    font-size: 20px;
+    font-weight: 700;
+    font-family: Commissioner, sans-serif; 
+}
+
+.Filter_Dropdown {
+    background-color: #ffffff;
+    height: 50px; width: 70%;
+    border: none; 
+    border-radius: 10px;
+}
+
+/* Table for notification */
+
+.NotificationTable {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto; 
+    color: #B5B2B2;
+}
+
+.Notif_Text, .Notif_Message {
+    border: none;
+    padding: 10px;
+    text-align: left;
+    background-color: #474F56;
+    font-size: 20px;
+    
+}
+
+.Notif_Text {
+    background-color: #474F56;
+    font-size: 40px;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 5px;
+    font-weight: 900;
+    font-family: Commissioner, sans-serif;
+}
+
+.Notif_Message {
+    background-color: #474F56;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 0 0 20px 20px;
+    font-family: Commissioner, sans-serif;
+}
+
+
+/* End of Table for Notification */
+
+.MessagesTab_Text {
+    margin-top: 8%;
+}
+
+.About_User_Text {
+    margin-top: 2%;
+    margin-left: 40%; 
+    line-height: 1; 
+    font-family: Commissioner, sans-serif;
+    font-weight: 900;
+    font-size: 15px;
+
+}
+
+.Position_Text {
+    color: #EDB547;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: Commissioner, sans-serif;
+    margin-left: 40%; 
+
+}
+
+.UserImage {
+    height: 80%;
+    width: 30%;
+    margin-left: 5%;
+    margin-top: 4%;
+    border: 5px solid #242B31;
+    border-radius: 20px;
+    float: left;
+}
+
+/* End of Messages Window CSS */
+
+
