@@ -80,7 +80,7 @@
                     <div class="Employee">
                         <div class="EmployeeInfo_Window">
                             
-                            
+                           <form  
                             <div class="EmployeeDetails">
                                 <div class="TextContainer">
                                     <!-- Add any additional text or content here -->
@@ -110,7 +110,7 @@
                     </div>
 
                     <!-- Download Button -->
-                    <button class="Download"> APPLY </button>
+                    <button type="submit" value="submit" name="submit" class="Download"> APPLY </>
                     <!-- End of Download Button -->
 
                     <!-- End of Dashboard_Content -->

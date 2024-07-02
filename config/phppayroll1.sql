@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2024 at 05:04 PM
+-- Generation Time: Jul 02, 2024 at 09:12 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `payroll`
+-- Database: `phppayroll1`
 --
 
 -- --------------------------------------------------------
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `employee_deduction_payslip` (
-  `EmployeeID` varchar(50) NOT NULL,
-  `Receipt_Code` varchar(50) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
+  `Receipt_Code` int(50) NOT NULL,
   `Deduction` varchar(50) NOT NULL,
   `Amount` decimal(8,2) NOT NULL,
   `Total_Deduction` decimal(10,2) NOT NULL
@@ -42,8 +42,8 @@ CREATE TABLE `employee_deduction_payslip` (
 --
 
 CREATE TABLE `employee_earning_payslip` (
-  `EmployeeID` varchar(50) NOT NULL,
-  `Receipt_Code` varchar(50) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
+  `Receipt_Code` int(50) NOT NULL,
   `Earning` varchar(50) NOT NULL,
   `Amount` decimal(10,2) NOT NULL,
   `Total_Earning` decimal(10,2) NOT NULL,
@@ -57,11 +57,11 @@ CREATE TABLE `employee_earning_payslip` (
 --
 
 CREATE TABLE `employee_history` (
-  `EmployeeID` varchar(50) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `No` int(50) NOT NULL,
   `Subject` varchar(50) NOT NULL,
   `Date` date NOT NULL,
-  `receipt_code` varchar(50) NOT NULL,
+  `Receipt_Code` int(50) NOT NULL,
   `status` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -72,7 +72,7 @@ CREATE TABLE `employee_history` (
 --
 
 CREATE TABLE `employee_information` (
-  `EmployeeID` varchar(100) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `EmployeeName` varchar(100) NOT NULL,
   `FirstName` varchar(100) NOT NULL,
   `MiddleName` varchar(100) NOT NULL,
@@ -88,10 +88,15 @@ CREATE TABLE `employee_information` (
   `Email` varchar(100) NOT NULL,
   `Mobile_No` varchar(100) NOT NULL,
   `Identity_No` varchar(100) NOT NULL,
-  `Employment_Type` varchar(100) NOT NULL,
-  `Designation` varchar(100) NOT NULL,
-  `IdentityDocument` varchar(100) NOT NULL
+  `Employment_Type` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `employee_information`
+--
+
+INSERT INTO `employee_information` (`EmployeeID`, `EmployeeName`, `FirstName`, `MiddleName`, `LastName`, `Date_of_Birth`, `Gender`, `Address`, `City`, `Region`, `Country`, `Status`, `Nationality`, `Email`, `Mobile_No`, `Identity_No`, `Employment_Type`) VALUES
+(1, 'Gerandy', 'Gerandy Ernest', 'Jamanila', 'Buensuceso', '2024-12-09', 'Male', '594 Batong Dalig Kawit Cavite', 'Kawit', 'CALABARZON', 'Philippines', 'Single', 'Filipino', 'gerandyb2k18@gmail.com', '09927274046', '202210881', 'Human Resources');
 
 -- --------------------------------------------------------
 
@@ -100,7 +105,7 @@ CREATE TABLE `employee_information` (
 --
 
 CREATE TABLE `employee_info_earnings` (
-  `EmployeeID` varchar(50) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `EmployeeName` varchar(100) NOT NULL,
   `Rate_per_hour` decimal(8,2) NOT NULL,
   `Position` varchar(50) NOT NULL,
@@ -115,6 +120,7 @@ CREATE TABLE `employee_info_earnings` (
 --
 
 CREATE TABLE `employee_log` (
+  `EmployeeID` int(50) NOT NULL,
   `Date` date NOT NULL,
   `Message` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -127,10 +133,10 @@ CREATE TABLE `employee_log` (
 
 CREATE TABLE `employee_payslip_receipt` (
   `Date` date NOT NULL,
-  `Receipt_Code` varchar(50) NOT NULL,
+  `Receipt_Code` int(50) NOT NULL,
   `EmployeeName` varchar(50) NOT NULL,
   `Department` varchar(50) NOT NULL,
-  `EmployeeID` varchar(50) NOT NULL
+  `EmployeeID` int(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -140,7 +146,7 @@ CREATE TABLE `employee_payslip_receipt` (
 --
 
 CREATE TABLE `hr_add_account` (
-  `EmployeeID` varchar(100) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `EmployeeName` varchar(100) NOT NULL,
   `FirstName` varchar(100) NOT NULL,
   `MiddleInitial` varchar(100) NOT NULL,
@@ -157,11 +163,16 @@ CREATE TABLE `hr_add_account` (
   `Moblie_No` varchar(100) NOT NULL,
   `Identity_No` varchar(100) NOT NULL,
   `Employment_type` varchar(100) NOT NULL,
-  `Designation` varchar(100) NOT NULL,
-  `Identity_Document` varchar(100) NOT NULL,
   `Position` varchar(100) NOT NULL,
   `Department` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `hr_add_account`
+--
+
+INSERT INTO `hr_add_account` (`EmployeeID`, `EmployeeName`, `FirstName`, `MiddleInitial`, `LastName`, `Date_of_birth`, `Gender`, `Address`, `City`, `Region`, `Country`, `Status`, `Nationality`, `Email`, `Moblie_No`, `Identity_No`, `Employment_type`, `Position`, `Department`) VALUES
+(1, 'Gerandy', 'Gerandy Ernest', 'J.', 'Buensuceso', '2004-12-09', 'Male', '594 Batong Dalig Kawit Cavite', 'Kawit', 'CALABARZON', 'Philippines', 'Single', 'Filipino', 'gerandyb2k18@gmail.com', '09927274046', '20221081', 'Human Resources', 'Head Human Resources', 'Company Department');
 
 -- --------------------------------------------------------
 
@@ -170,8 +181,8 @@ CREATE TABLE `hr_add_account` (
 --
 
 CREATE TABLE `hr_deduction_payslip` (
-  `Receipt_Code` varchar(100) NOT NULL,
-  `EmployeeID` varchar(100) NOT NULL,
+  `Receipt_Code` int(50) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `Deduction` varchar(100) NOT NULL,
   `Amount` decimal(10,2) NOT NULL,
   `Total_Deduction` decimal(10,2) NOT NULL
@@ -184,8 +195,8 @@ CREATE TABLE `hr_deduction_payslip` (
 --
 
 CREATE TABLE `hr_earning_payslip` (
-  `Receipt_Code` varchar(100) NOT NULL,
-  `EmployeeID` varchar(100) NOT NULL,
+  `Receipt_Code` int(50) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `Earning` varchar(100) NOT NULL,
   `Amount` decimal(10,2) NOT NULL,
   `Total_Earning` decimal(10,2) NOT NULL,
@@ -199,7 +210,7 @@ CREATE TABLE `hr_earning_payslip` (
 --
 
 CREATE TABLE `hr_employee_info` (
-  `EmployeeID` varchar(100) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `EmployeeName` varchar(100) NOT NULL,
   `FirstName` varchar(100) NOT NULL,
   `MiddleName` varchar(100) NOT NULL,
@@ -227,7 +238,7 @@ CREATE TABLE `hr_employee_info` (
 --
 
 CREATE TABLE `hr_employee_info_earnings` (
-  `EmployeeID` varchar(100) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `EmployeeName` varchar(100) NOT NULL,
   `Rate_per_hour` decimal(10,2) NOT NULL,
   `Postion` varchar(100) NOT NULL,
@@ -242,7 +253,7 @@ CREATE TABLE `hr_employee_info_earnings` (
 --
 
 CREATE TABLE `hr_employee_info_edit` (
-  `EmployeeID` varchar(100) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `FirstName` varchar(100) NOT NULL,
   `MiddleName` varchar(100) NOT NULL,
   `LastName` varchar(100) NOT NULL,
@@ -269,7 +280,7 @@ CREATE TABLE `hr_employee_info_edit` (
 --
 
 CREATE TABLE `hr_emp_info_earnings_edit` (
-  `EmployeeID` varchar(100) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `Rate_per_hour` decimal(10,2) NOT NULL,
   `Position` varchar(100) NOT NULL,
   `Salary` decimal(10,2) NOT NULL,
@@ -283,7 +294,7 @@ CREATE TABLE `hr_emp_info_earnings_edit` (
 --
 
 CREATE TABLE `hr_list_of_employee` (
-  `EmployeeID` varchar(50) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `Employee_Name` varchar(50) NOT NULL,
   `Department` varchar(50) NOT NULL,
   `Position` varchar(50) NOT NULL
@@ -297,13 +308,33 @@ CREATE TABLE `hr_list_of_employee` (
 
 CREATE TABLE `hr_payslip_receipt` (
   `Issued_Date` date NOT NULL,
-  `Receipt_Code` varchar(100) NOT NULL,
+  `Receipt_Code` int(50) NOT NULL,
   `Employee_Name` varchar(100) NOT NULL,
   `Department` varchar(100) NOT NULL,
-  `EmployeeID` varchar(100) NOT NULL,
+  `EmployeeID` int(50) NOT NULL,
   `Date` date NOT NULL,
   `HourlyRate` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `EmployeeID` int(55) NOT NULL,
+  `username` varchar(55) NOT NULL,
+  `password` varchar(55) NOT NULL,
+  `Employment_Type` varchar(55) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`EmployeeID`, `username`, `password`, `Employment_Type`) VALUES
+(1, 'bibs', '123', 'Human Resources');
 
 --
 -- Indexes for dumped tables
@@ -313,41 +344,47 @@ CREATE TABLE `hr_payslip_receipt` (
 -- Indexes for table `employee_deduction_payslip`
 --
 ALTER TABLE `employee_deduction_payslip`
-  ADD KEY `EmployeeID` (`EmployeeID`),
+  ADD KEY `1edfr` (`EmployeeID`),
   ADD KEY `Receipt_Code` (`Receipt_Code`);
 
 --
 -- Indexes for table `employee_earning_payslip`
 --
 ALTER TABLE `employee_earning_payslip`
-  ADD KEY `EmployeeID` (`EmployeeID`),
+  ADD KEY `2edfr` (`EmployeeID`),
   ADD KEY `Receipt_Code` (`Receipt_Code`);
 
 --
 -- Indexes for table `employee_history`
 --
 ALTER TABLE `employee_history`
-  ADD KEY `EmployeeID` (`EmployeeID`),
-  ADD KEY `receipt_code` (`receipt_code`);
+  ADD KEY `3edfr` (`EmployeeID`),
+  ADD KEY `Receipt_Code` (`Receipt_Code`);
 
 --
 -- Indexes for table `employee_information`
 --
 ALTER TABLE `employee_information`
-  ADD KEY `EmployeeID` (`EmployeeID`);
+  ADD KEY `4edfr` (`EmployeeID`);
 
 --
 -- Indexes for table `employee_info_earnings`
 --
 ALTER TABLE `employee_info_earnings`
-  ADD KEY `EmployeeID` (`EmployeeID`);
+  ADD KEY `5edfr` (`EmployeeID`);
+
+--
+-- Indexes for table `employee_log`
+--
+ALTER TABLE `employee_log`
+  ADD KEY `logfr` (`EmployeeID`);
 
 --
 -- Indexes for table `employee_payslip_receipt`
 --
 ALTER TABLE `employee_payslip_receipt`
-  ADD KEY `Receipt_Code` (`Receipt_Code`),
-  ADD KEY `EmployeeID` (`EmployeeID`);
+  ADD KEY `6edfr` (`EmployeeID`),
+  ADD KEY `Receipt_Code` (`Receipt_Code`);
 
 --
 -- Indexes for table `hr_add_account`
@@ -359,52 +396,164 @@ ALTER TABLE `hr_add_account`
 -- Indexes for table `hr_deduction_payslip`
 --
 ALTER TABLE `hr_deduction_payslip`
-  ADD KEY `Receipt_Code` (`Receipt_Code`),
-  ADD KEY `hr_deduction_payslip_ibfk_2` (`EmployeeID`);
+  ADD KEY `7edfr` (`EmployeeID`),
+  ADD KEY `Receipt_Code` (`Receipt_Code`);
 
 --
 -- Indexes for table `hr_earning_payslip`
 --
 ALTER TABLE `hr_earning_payslip`
-  ADD KEY `Receipt_Code` (`Receipt_Code`),
-  ADD KEY `hr_earning_payslip_ibfk_2` (`EmployeeID`);
+  ADD KEY `8edfr` (`EmployeeID`),
+  ADD KEY `Receipt_Code` (`Receipt_Code`);
 
 --
 -- Indexes for table `hr_employee_info`
 --
 ALTER TABLE `hr_employee_info`
-  ADD KEY `hr_employee_info_ibfk_1` (`EmployeeID`);
+  ADD KEY `9edfr` (`EmployeeID`);
 
 --
 -- Indexes for table `hr_employee_info_earnings`
 --
 ALTER TABLE `hr_employee_info_earnings`
-  ADD KEY `hr_employee_info_earnings_ibfk_1` (`EmployeeID`);
+  ADD KEY `10edfr` (`EmployeeID`);
 
 --
 -- Indexes for table `hr_employee_info_edit`
 --
 ALTER TABLE `hr_employee_info_edit`
-  ADD KEY `hr_employee_info_edit_ibfk_1` (`EmployeeID`);
+  ADD KEY `11edfr` (`EmployeeID`);
 
 --
 -- Indexes for table `hr_emp_info_earnings_edit`
 --
 ALTER TABLE `hr_emp_info_earnings_edit`
-  ADD KEY `hr_emp_info_earnings_edit_ibfk_1` (`EmployeeID`);
+  ADD KEY `12edfr` (`EmployeeID`);
 
 --
 -- Indexes for table `hr_list_of_employee`
 --
 ALTER TABLE `hr_list_of_employee`
-  ADD KEY `EmployeeID` (`EmployeeID`);
+  ADD KEY `13edfr` (`EmployeeID`);
 
 --
 -- Indexes for table `hr_payslip_receipt`
 --
 ALTER TABLE `hr_payslip_receipt`
   ADD PRIMARY KEY (`Receipt_Code`),
-  ADD KEY `hr_payslip_receipt_ibfk_1` (`EmployeeID`);
+  ADD KEY `14edfr` (`EmployeeID`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`EmployeeID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `employee_deduction_payslip`
+--
+ALTER TABLE `employee_deduction_payslip`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `employee_earning_payslip`
+--
+ALTER TABLE `employee_earning_payslip`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `employee_history`
+--
+ALTER TABLE `employee_history`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `employee_information`
+--
+ALTER TABLE `employee_information`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `employee_info_earnings`
+--
+ALTER TABLE `employee_info_earnings`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `employee_log`
+--
+ALTER TABLE `employee_log`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `employee_payslip_receipt`
+--
+ALTER TABLE `employee_payslip_receipt`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hr_add_account`
+--
+ALTER TABLE `hr_add_account`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `hr_deduction_payslip`
+--
+ALTER TABLE `hr_deduction_payslip`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hr_earning_payslip`
+--
+ALTER TABLE `hr_earning_payslip`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hr_employee_info`
+--
+ALTER TABLE `hr_employee_info`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hr_employee_info_earnings`
+--
+ALTER TABLE `hr_employee_info_earnings`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hr_employee_info_edit`
+--
+ALTER TABLE `hr_employee_info_edit`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hr_emp_info_earnings_edit`
+--
+ALTER TABLE `hr_emp_info_earnings_edit`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hr_list_of_employee`
+--
+ALTER TABLE `hr_list_of_employee`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `hr_payslip_receipt`
+--
+ALTER TABLE `hr_payslip_receipt`
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `EmployeeID` int(55) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -414,22 +563,22 @@ ALTER TABLE `hr_payslip_receipt`
 -- Constraints for table `employee_deduction_payslip`
 --
 ALTER TABLE `employee_deduction_payslip`
-  ADD CONSTRAINT `employee_deduction_payslip_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
-  ADD CONSTRAINT `employee_deduction_payslip_ibfk_2` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
+  ADD CONSTRAINT `employee_deduction_payslip_ibfk_3` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
+  ADD CONSTRAINT `employee_deduction_payslip_ibfk_4` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
 
 --
 -- Constraints for table `employee_earning_payslip`
 --
 ALTER TABLE `employee_earning_payslip`
-  ADD CONSTRAINT `employee_earning_payslip_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
-  ADD CONSTRAINT `employee_earning_payslip_ibfk_2` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
+  ADD CONSTRAINT `employee_earning_payslip_ibfk_3` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
+  ADD CONSTRAINT `employee_earning_payslip_ibfk_4` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
 
 --
 -- Constraints for table `employee_history`
 --
 ALTER TABLE `employee_history`
-  ADD CONSTRAINT `employee_history_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
-  ADD CONSTRAINT `employee_history_ibfk_2` FOREIGN KEY (`receipt_code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
+  ADD CONSTRAINT `employee_history_ibfk_3` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
+  ADD CONSTRAINT `employee_history_ibfk_4` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
 
 --
 -- Constraints for table `employee_information`
@@ -444,25 +593,31 @@ ALTER TABLE `employee_info_earnings`
   ADD CONSTRAINT `employee_info_earnings_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`);
 
 --
+-- Constraints for table `employee_log`
+--
+ALTER TABLE `employee_log`
+  ADD CONSTRAINT `employee_log_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`);
+
+--
 -- Constraints for table `employee_payslip_receipt`
 --
 ALTER TABLE `employee_payslip_receipt`
-  ADD CONSTRAINT `employee_payslip_receipt_ibfk_1` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`),
-  ADD CONSTRAINT `employee_payslip_receipt_ibfk_2` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`);
+  ADD CONSTRAINT `employee_payslip_receipt_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
+  ADD CONSTRAINT `employee_payslip_receipt_ibfk_2` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
 
 --
 -- Constraints for table `hr_deduction_payslip`
 --
 ALTER TABLE `hr_deduction_payslip`
-  ADD CONSTRAINT `hr_deduction_payslip_ibfk_1` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`),
-  ADD CONSTRAINT `hr_deduction_payslip_ibfk_2` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`);
+  ADD CONSTRAINT `hr_deduction_payslip_ibfk_2` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
+  ADD CONSTRAINT `hr_deduction_payslip_ibfk_3` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
 
 --
 -- Constraints for table `hr_earning_payslip`
 --
 ALTER TABLE `hr_earning_payslip`
-  ADD CONSTRAINT `hr_earning_payslip_ibfk_1` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`),
-  ADD CONSTRAINT `hr_earning_payslip_ibfk_2` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`);
+  ADD CONSTRAINT `hr_earning_payslip_ibfk_2` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
+  ADD CONSTRAINT `hr_earning_payslip_ibfk_3` FOREIGN KEY (`Receipt_Code`) REFERENCES `hr_payslip_receipt` (`Receipt_Code`);
 
 --
 -- Constraints for table `hr_employee_info`
@@ -499,6 +654,12 @@ ALTER TABLE `hr_list_of_employee`
 --
 ALTER TABLE `hr_payslip_receipt`
   ADD CONSTRAINT `hr_payslip_receipt_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`);
+
+--
+-- Constraints for table `login`
+--
+ALTER TABLE `login`
+  ADD CONSTRAINT `login_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `employee_information` (`EmployeeID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
