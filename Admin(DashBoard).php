@@ -54,7 +54,7 @@
                     </div>
                     <script>
                         function redirectToAdminDashBoard(){
-                            window.location.href='Admin(DashBoard).html';
+                            window.location.href='Admin(DashBoard).php';
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
@@ -63,7 +63,7 @@
                     </div>
                     <script>
                         function redirectToEmployeeListAdmin(){
-                            window.location.href='EmployeeList(Admin).html';
+                            window.location.href='EmployeeList(Admin).php';
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToAdminMessage()">
@@ -72,7 +72,7 @@
                     </div>
                     <script>
                         function redirectToAdminMessage(){
-                            window.location.href='Admin(Messages).html';
+                            window.location.href='Admin(Messages).php';
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToLogin()">
@@ -81,7 +81,7 @@
 
                     <script>
                         function redirectToLogin(){
-                            window.location.href='Login.html';
+                            window.location.href='Login.php';
                         }
                     </script>
 

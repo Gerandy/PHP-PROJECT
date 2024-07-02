@@ -44,7 +44,7 @@
                     </div>
                     <script>
                         function redirectToAdminDashBoard(){
-                            window.location.href='Admin(DashBoard).html';
+                            window.location.href='Admin(DashBoard).php';
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
@@ -53,7 +53,7 @@
                     </div>
                     <script>
                         function redirectToEmployeeListAdmin(){
-                            window.location.href='EmployeeList(Admin).html';
+                            window.location.href='EmployeeList(Admin).php';
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
@@ -66,7 +66,7 @@
 
                     <script>
                         function redirectToLogin(){
-                            window.location.href='Login.html';
+                            window.location.href='Login.php';
                         }
                     </script>
     
@@ -79,10 +79,8 @@
                     <!-- Employee Info Start -->
                     <div class="Employee">
                         <div class="EmployeeInfo_Window">
-                            <div class="EmployeePhoto_Container">
-                                <img src="assets/images/Profile.jpg" class="EmployeePhoto">
-                                <p class="EmployeeName_Text"> <button class="Change_Photo"> APPLY PHOTO </button></p>
-                            </div>
+                            
+                            
                             <div class="EmployeeDetails">
                                 <div class="TextContainer">
                                     <!-- Add any additional text or content here -->
@@ -104,15 +102,6 @@
                                         <p>Nationality:</p>     <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
                                         <p>Email: </p>          <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
                                         <p>Mobile Number:</p>   <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Identity No.: </p>   <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                    </div>
-                                    <div class="EmployeeInfo_Text3">
-                                        <p>Region: </p>         <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Country: </p>        <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Status: </p>         <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Nationality:</p>     <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Email: </p>          <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
-                                        <p>Mobile Number: </p>  <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
                                         <p>Identity No.: </p>   <p class="EmployeeInformation"> <input type="text" placeholder="" class="EmployeeInfoInput"> </p>
                                     </div>
                                 </div>

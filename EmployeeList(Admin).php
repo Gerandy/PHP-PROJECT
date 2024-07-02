@@ -55,7 +55,7 @@
                     </div>
                     <script>
                         function redirectToAdminDashBoard(){
-                            window.location.href='Admin(DashBoard).html';
+                            window.location.href='Admin(DashBoard).php';
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
@@ -64,7 +64,7 @@
                     </div>
                     <script>
                         function redirectToEmployeeListAdmin(){
-                            window.location.href='EmployeeList(Admin).html';
+                            window.location.href='EmployeeList(Admin).php';
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToAdminMessage()">
@@ -73,7 +73,7 @@
                     </div>
                     <script>
                         function redirectToAdminMessage(){
-                            window.location.href='Admin(Messages).html';
+                            window.location.href='Admin(Messages).php';
                         }
                     </script>
                     <div class="Icons_Section" onclick="redirectToLogin()">
@@ -82,7 +82,7 @@
 
                     <script>
                         function redirectToLogin(){
-                            window.location.href='Login.html';
+                            window.location.href='Login.php';
                         }
                     </script>
     
@@ -115,7 +115,7 @@
                              </div>
                              <script>
                                 function redirectToEmployeeDetailsAdmin(){
-                                    window.location.href='Employeedetails(ADMIN).html';
+                                    window.location.href='Employeedetails(ADMIN).php';
                                 }
                              </script>
 
@@ -124,7 +124,7 @@
 
                                 <!-- add button admin // pwede i comment nalang din para mawala yung add button  -->
                                 <div class="text"><p></p></div>
-                                <div class="text"><p> <a href="Admin(AddAccount).html"><img src="assets/Icon/plus.png" class="plus"></a></p></div>
+                                <div class="text"><p> <a href="Admin(AddAccount).php"><img src="assets/Icon/plus.png" class="plus"></a></p></div>
                                 <div class="text"><p></p></div>
                                 <div class="text"><p></p></div>
                              </div>
