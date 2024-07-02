@@ -412,6 +412,13 @@
 
 /* Table for notification */
 
+.NotificationTable {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 20px auto; 
+    color: #B5B2B2;
+}
+
 table {
     border-collapse: collapse;
     width: 90%;

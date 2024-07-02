@@ -32,13 +32,13 @@ include('config/php/datagetter.php');
         background-color: #808080;
     }
     
-</style>
 
-    <style>
-        .Notification_Scroll_Bar{
+
+    
+    .Notification_Scroll_Bar{
             overflow-y: scroll;
             height:510px;
-        }
+    }
     </style>
 </head>
     <body class="body">
@@ -79,7 +79,7 @@ include('config/php/datagetter.php');
 
                     <script>
                         function redirectToEmployeePaySlip(){
-                            window.location.href='Employee(PaySlip).html';
+                            window.location.href='Employee(PaySlip).php';
                         }
                     </script>
 
@@ -197,7 +197,7 @@ include('config/php/datagetter.php');
                                 echo  "<tr>";
                                 echo     "<th>";
                                             
-                                            echo $row['fromName'];
+                                echo $row['fromName'];
                                             
                                 echo       "</th>";
                                 echo    "</tr>";
@@ -205,7 +205,7 @@ include('config/php/datagetter.php');
                                 echo        "<td>";
                                         
 
-                                        echo $row['Message'];
+                                echo $row['Message'];
                                         
                                         
                                         

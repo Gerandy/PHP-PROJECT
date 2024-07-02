@@ -1,3 +1,13 @@
+<?php 
+
+include('config/php/connect.php');
+include('config/php/logincomand.php');
+include('config/php/datagetter.php');
+
+// $result = mysqli_query($conn, $sql_username);
+// $row = mysqli_fetch_assoc($result);
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +29,10 @@
         
         .Icons_Section:hover{
             background-color: #808080;
+        }
+        .Notification_Scroll_Bar{
+            overflow-y: scroll;
+            height:510px;
         }
         
     </style>
@@ -154,21 +168,22 @@
                         <div class="Table_PaySlip_Receipt">
                             <table>  
                                 <tr>
-                                    <th class="Date Text"> 01-01-2024 </th>
+                                    <th class="Date Text"> <?php echo $_SESSION['Date']; ?> </th>
                                     <th class="Table_Title TextHighLight"> PAY SLIP RECEIPT </th>
-                                    <th class="Receipt_Code Text"> RECEIPT CODE: 001 </th>
+                                    <th class="Receipt_Code Text"> RECEIPT CODE: <?php echo $_SESSION['Receipt_Code'];?> </th>
                                 </tr>
+                                <!-- asddddddddddddddddddddddddddddddddddddddddddddd -->
                                 <tr>
                                     <td colspan="1" class="Text"> EMPLOYEE NAME: </td>
-                                    <td colspan="2" class="Text"> --- </td>
+                                    <td colspan="2" class="Text"> <?php echo $_SESSION['EmployeeName']; ?> </td>
                                 </tr>
                                 <tr>
                                     <td colspan="1" class="Text"> DEPARTMENT: </td>
-                                    <td colspan="2" class="Text"> --- </td>
+                                    <td colspan="2" class="Text"> <?php echo $_SESSION['Department']; ?> </td>
                                 </tr>
                                 <tr>
                                     <td colspan="1" class="Text"> EMPLOYEE ID: </td>
-                                    <td colspan="2" class="Text"> --- </td>
+                                    <td colspan="2" class="Text"> <?php echo $_SESSION['EmployeeID']; ?> </td>
                                 </tr>
                             </table>
                         </div>
@@ -268,40 +283,34 @@
             <div class="col-xs-12 col-md-2 Messages_Tab">
                 <!-- Messages Tab Here -->
                     <div class="Notification_Panel"> 
-                        <p class="Notification_Text"> NOTIFICATION </p>
-                        <label class="Dropdown_Text">FILTER:</label>
-                        <select id="" class="Filter_Dropdown">
-                            <option value="" class="Drop_Text"> A-Z </option>
-                            <option value="" class="Drop_Text"> oldest </option>
-                            <option value="" class="Drop_Text"> newest </option>
-                        </select>
+                     <p class="Notification_Text"> NOTIFICATION </p>  
+                     <div class="Notification_Scroll_Bar">
+                     <?php  
+                        while($row = mysqli_fetch_assoc($result_message)){
+                            echo "<table class= NotificationTable>";
+                            
+                            echo  "<tr class= Notif>";
+                            echo     "<th class= Notif_Text>";
+                                        
+                            echo $row['fromName'];
+                                        
+                            echo       "</th>";
+                            echo    "</tr>";
+                            echo    "<trclass= Notif>";
+                            echo        "<td class= Notif_Message>";
+                                    
 
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th class="Notif_Text"> NEW MESSAGE </th>
-                            </tr>
-                            <tr>
-                                <td class="Notif_Message"> You have a new Message </td>
-                            </tr>
-                        </table>
-
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> NEW MESSAGE </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> You have a new Message </td>
-                            </tr>
-                        </table>
-
-                        <table class="NotificationTable">
-                            <tr class="Notif">
-                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
-                            </tr>
-                            <tr class="Notif">
-                                <td class="Notif_Message"> New Announcemnet </td>
-                            </tr>
-                        </table>
+                            echo $row['Message'];
+                                    
+                                    
+                                    
+                            echo       "</td>";
+                            echo    "</tr>";
+                            echo "</table>";
+                        }
+                    
+                        ?>
+                        </div>
                     </div>
 
                     <div class="About_User">
