@@ -11,6 +11,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/HR(Messages).css">
 
+    <style>
+        .Icons_Section{
+            cursor: pointer;
+            transition: 0.3 ease;
+        }
+    
+        .Icons_Section:hover{
+            background-color: #808080;
+        }
+
+        .HRNotification_Scrollbar{
+            height: 510px;
+            overflow-y: auto;
+        }
+
+        .HRMessage_Scrollbar{
+            height: 640px;
+            overflow-y: auto;
+        }
+    </style>   
+
 </head>
 <body class="body">
 
@@ -25,19 +46,43 @@
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                 <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                <div class="Icons_Section">
+                <div class="Icons_Section" onclick="redirectToHRDashBoard()">
                     <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">DASH<br>BOARD</p>
                 </div>
-                <div class="Icons_Section">
-                    <img src="assets/Icon/EmployeesList_Icon.png" class="Icons img-responsive">
-                    <p class="Sidebar_Text">EMPLOYEE <br> LIST</p>
+                
+                <script>
+                    function redirectToHRDashBoard(){
+                        window.location.href='HR(DashBoard).html';
+                    }
+                </script>
+
+                <div class="Icons_Section" onclick="redirectToEmployeeListHR()">
+                        <img src="assets/Icon/EmployeesList_Icon.png" class="Icons img-responsive">
+                        <p class="Sidebar_Text">EMPLOYEE<br>LIST</p>
+                    </div>
+                    <script>
+                        function redirectToEmployeeListHR(){
+                            window.location.href='EmployeeList(Hr).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToHRMessages()">
+                        <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
+                        <p class="Sidebar_Text">MESSAGES</p>
+                    </div>
+                    <script>
+                        function redirectToHRMessages(){
+                            window.location.href='HR(Messages).html';
+                        }
+                    </script>
+                    <div class="Icons_Section" onclick="redirectToLogin()">
+                    <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
                 </div>
-                <div class="Icons_Section">
-                    <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
-                    <p class="Sidebar_Text">MESSAGES</p>
-                </div>
-                <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                <script>
+                    function redirectToLogin(){
+                        window.location.href='Login.html';
+                    }
+                </script>
             </div>
 
             <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
@@ -49,7 +94,9 @@
                             <p class="Title"> MESSAGES </p>
                         </div>
                         
+                        
                         <div class="Table_PaySlip_Receipt">
+                            <div class="HRMessage_Scrollbar">
                             <table class="LogTable clickableTable"> 
                                 <tr>
                                     <th class="Date Text"> FROM: "HR NAME"</th>
@@ -82,15 +129,19 @@
                                     <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
                                 </tr>
                             </table>
-                            <br>
+                            <table class="LogTable clickableTable"> 
+                                <tr>
+                                    <th class="Date Text"> FROM: "HR NAME"</th>
+                                </tr> 
+                                <tr>
+                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
+                                </tr>
+                            </table>
+                        </div>
                         </div>
                     </div>                    
                 </div>
                 
-                <div class="Next_and_Back_Button"> 
-                    <button> NEXT </button>
-                    <button> BACK </button>
-                </div>
 
                 <!-- End of Dashboard_Content -->
             </div>
@@ -100,6 +151,7 @@
                     <div class="Notification_Panel"> 
                         <p class="Notification_Text"> NOTIFICATION </p>
 
+                        <div class="HRNotification_Scrollbar">
                         <table class="NotificationTable">
                             <tr class="Notif">
                                 <th class="Notif_Text"> NEW MESSAGE </th>
@@ -126,6 +178,16 @@
                                 <td class="Notif_Message"> New Announcemnet </td>
                             </tr>
                         </table>
+
+                        <table class="NotificationTable">
+                            <tr class="Notif">
+                                <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                            </tr>
+                            <tr class="Notif">
+                                <td class="Notif_Message"> New Announcemnet </td>
+                            </tr>
+                        </table>
+                    </div>
                     </div>
 
                     <div class="About_User">
