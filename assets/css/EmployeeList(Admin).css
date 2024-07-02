@@ -1,5 +1,5 @@
 .body {
-  background-image: url("assets/Icon/CoinBg.png");
+  background-image: url("../images/CoinBg.png");
   background-size: 600px;
   margin-top: 10px;
   margin-left: auto;
@@ -169,7 +169,6 @@ font-family: Commissioner, sans-serif;
   background: #7D7D7D;
   padding: 5px;
 }
-
 
 
 .EmployeePhoto {

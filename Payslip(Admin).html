@@ -11,6 +11,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets\css\Payslip(Admin).css">
 
+    <style>
+        .Icons_Section{
+            cursor: pointer;
+            transition: 0.3 ease;
+        }
+    
+        .Icons_Section:hover{
+            background-color: #808080;
+        }
+    
+    
+    
+    </style>
 </head>
 <body class="body">
 
@@ -26,14 +39,24 @@
         <div class="row">
             <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                 <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                <div class="Icons_Section">
+                <div class="Icons_Section" onclick="redirectToAdminDashBoard()">
                     <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                     <p class="Sidebar_Text">DASH<br>BOARD</p>
                 </div>
-                <div class="Icons_Section">
+                <script>
+                    function redirectToAdminDashBoard(){
+                        window.location.href='Admin(DashBoard).html';
+                    }
+                </script>
+                <div class="Icons_Section" onclick="redirectToEmployeeListAdmin()">
                     <img src="assets/Icon/EmployeesList_Icon.png" class = "Icons">
                     <p class = "Sidebar_Text"> EMPLOYEE <br> LIST </p>
                 </div>
+                <script>
+                    function redirectToEmployeeListAdmin(){
+                        window.location.href='EmployeeList(Admin).html';
+                    }
+                </script>
                 <div class="Icons_Section">
                     <img src="assets/Icon/Messages_Icon.png" class = "Icons">
                     <p class = "Sidebar_Text"> MESSAGES</p>

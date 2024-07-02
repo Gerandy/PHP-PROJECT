@@ -10,6 +10,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/Employee(PaySlip_History).css">
+
+    <style>
+        .Icons_Section{
+            cursor: pointer;
+            transition: 0.3 ease;
+        }
+        
+        .Icons_Section:hover{
+            background-color: #808080;
+        }
+        
+    </style>
+
 </head>
     <body class="body">
         <!-- Side Bar -->
@@ -22,27 +35,68 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-3 col-md-2 sidebar">
                     <img src="assets/Icon/UserPhoto.png" class="UserPhoto img-responsive">
-                    <div class="Icons_Section">
+                    <div class="Icons_Section" onclick="redirectToEmployeeDashboard()">
                         <img src="assets/Icon/DashBoard_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">DASH<br>BOARD</p>
                     </div>
-                    <div class="Icons_Section">
+                    
+                    <script>
+                        function redirectToEmployeeDashboard(){
+                            window.location.href='Employee(DashBoard).html';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToEmployeePaySlip()">
                         <img src="assets/Icon/PaySlip_Icon.png" class="Icons img-responsive">
                         <p class="Sidebar_Text">PAY<br>SLIP</p>
                     </div>
-                    <div class="Icons_Section">
-                        <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">HISTORY</p>
+                    
+                    <script>
+                        function redirectToEmployeePaySlip(){
+                            window.location.href='Employee(PaySlip).html';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToEmployeePaySlipHistory()">
+                    <img src="assets/Icon/History_Icon.png" class="Icons img-responsive">
+                    <p class="Sidebar_Text">HISTORY</p>
                     </div>
-                    <div class="Icons_Section">
-                        <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">PROFILE</p>
+
+                    <script>
+                        function redirectToEmployeePaySlipHistory(){
+                            window.location.href='Employee(PaySlip_History).html';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToEmployeeProfile()">
+                    <img src="assets/Icon/Profile_Icon.png" class="Icons img-responsive">
+                    <p class="Sidebar_Text">PROFILE</p>
                     </div>
-                    <div class="Icons_Section">
-                        <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
-                        <p class="Sidebar_Text">MESSAGES</p>
+                    <script>
+                        function redirectToEmployeeProfile(){
+                            window.location.href='Employee(Profile_EmployeeInfo).php';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToEmployeeMessages()">
+                    <img src="assets/Icon/Messages_Icon.png" class="Icons img-responsive">
+                    <p class="Sidebar_Text">MESSAGES</p>
                     </div>
+
+                    <script>
+                        function redirectToEmployeeMessages(){
+                            window.location.href='Employee(Messages).html';
+                        }
+                    </script>
+
+                    <div class="Icons_Section" onclick="redirectToLogin()">
                     <img src="assets/Icon/LogOut_Icon.png" class="LogOff_Icon img-responsive">
+                    </div>
+                    <script>
+                        function redirectToLogin(){
+                            window.location.href='Login.html';
+                        }
+                    </script>
                 </div>
 
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
