@@ -102,7 +102,7 @@
 
                              <div class="AdminListOfEmployee_Scrollbar">
                              <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
+                                <div class="text"></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
                                 <div class="text"><p> --- </p></div>
@@ -114,45 +114,7 @@
                                 }
                              </script>
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
-
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
-
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
-
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
-
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
+                             
                                <div class="inside">
 
                                 <!-- add button admin // pwede i comment nalang din para mawala yung add button  -->
