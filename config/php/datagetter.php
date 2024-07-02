@@ -6,12 +6,14 @@ $sql_name = "select login.EmployeeID, hr_add_account.* from login inner join hr_
 $sql_message = "select login.EmployeeID, employee_log.* from login inner join employee_log on login.EmployeeID = employee_log.EmployeeID where username = '$usernamelogin'";
 $sql_earnings = "select login.EmployeeID, employee_payslip_receipt.*, employee_earning_payslip.*, employee_deduction_payslip.* from login inner join employee_payslip_receipt on login.EmployeeID = employee_payslip_receipt.EmployeeID inner join  employee_earning_payslip on employee_earning_payslip.EmployeeID = employee_payslip_receipt.EmployeeID inner join employee_deduction_payslip on employee_earning_payslip.EmployeeID = employee_deduction_payslip.EmployeeID where username = '$usernamelogin'";
 $sql_employeeinfo = "select login.EmployeeID, employee_information.* from login inner join employee_information on login.EmployeeID = employee_information.EmployeeID where username ='$usernamelogin';";
+$sql_employeeearning ="select login.EmployeeID, employee_info_earnings.* from login inner join employee_info_earnings on employee_info_earnings.EmployeeID = login.EmployeeID where username ='$usernamelogin';";
+
 
 $result_name = mysqli_query($conn,$sql_name);
 $result_message = mysqli_query($conn,$sql_message);
 $result_earnings = mysqli_query($conn,$sql_earnings);
 $result_employeeinfo = mysqli_query($conn,$sql_employeeinfo);
-            
+$result_employeeearning = mysqli_query($conn,$sql_employeeearning);
 
 while($row = mysqli_fetch_assoc($result_name)){
     $_SESSION['Identity_No'] = $row['Identity_No'];
@@ -53,9 +55,14 @@ while($row = mysqli_fetch_assoc($result_employeeinfo )){
      $_SESSION['Identity_No'] = $row['Identity_No'];
     }
 
-
-
-
+while($row = mysqli_fetch_assoc($result_employeeearning )){
+    // EMPLOYEE EARNING
+    $_SESSION['EmployeeName'] = $row['EmployeeName'];
+    $_SESSION['Rate_per_hour'] = $row['Rate_per_hour'];
+    $_SESSION['Position'] = $row['Position'];
+    $_SESSION['Salary'] = $row['Salary'];
+    $_SESSION['Deductions'] = $row['Deductions'];
+    }
 
 
 

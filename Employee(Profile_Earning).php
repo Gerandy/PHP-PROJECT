@@ -1,6 +1,4 @@
-<!DOCTYPE html>
 <?php 
-
 include('config/php/connect.php');
 include('config/php/logincomand.php');
 include('config/php/datagetter.php');
@@ -9,6 +7,7 @@ include('config/php/datagetter.php');
 // $row = mysqli_fetch_assoc($result);
 
 ?>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Employee Dashboard</title>
@@ -105,20 +104,20 @@ include('config/php/datagetter.php');
                     <div class="EmployeeInfo_Window">
                         <div class="EmployeePhoto_Container">
                             <img src="assets/images/Profile.jpg" class="EmployeePhoto">
-                            <p class="EmployeeName_Text">Employee Name</p>
+                            <p class="EmployeeName_Text"><?php echo $_SESSION['EmployeeName']?></p>
                         </div>
                         <div class="EmployeeDetails">
                             <div class="EmployeeInfo_Columns">
                                 <div class="EmployeeInfo_Text">
-                                    <p>Rate Per Hour: </p>      <p class="EmployeeInformation"> --- </p>
-                                    <p>Position: </p>           <p class="EmployeeInformation"> --- </p>
-                                    <p>Salary: </p>             <p class="EmployeeInformation"> --- </p>
+                                    <p>Rate Per Hour: </p>      <p class="EmployeeInformation"> <?php echo $_SESSION['Rate_per_hour']?> </p>
+                                    <p>Position: </p>           <p class="EmployeeInformation"> <?php echo $_SESSION['Position']?> </p>
+                                    <p>Salary: </p>             <p class="EmployeeInformation"> <?php echo $_SESSION['Salary']?> </p>
                                     
                                 </div>
                                 <div class="EmployeeInfo_Text2">
-                                    <p>Deductions: </p>         <p class="EmployeeInformation"> --- </p>
-                                                                <p class="EmployeeInformation"> --- </p>
-                                                                <p class="EmployeeInformation"> --- </p>
+                                    <p>Deductions: </p>         <p class="EmployeeInformation"> <?php echo $_SESSION['Deductions']?> </p>
+                                                                <p class="EmployeeInformation"> <?php echo $_SESSION['Deductions']?> </p>
+                                                                <p class="EmployeeInformation"> <?php echo $_SESSION['Deductions']?> </p>
                                 </div>
                             </div>
                         </div>
