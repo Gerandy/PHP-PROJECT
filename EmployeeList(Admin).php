@@ -113,15 +113,20 @@ include('config/php/datagetter.php');
                                <div class="text"><h3>DEPARTMENT</h3> </div>
                                  <div class="text"><h3>POSITION</h3> </div>
                              </div>
-
-                             <div class="AdminListOfEmployee_Scrollbar">
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
+                            
+                            
+                            <div class=AdminListOfEmployee_Scrollbar>
+                            <div class= inside onclick=redirectToEmployeeDetailsAdmin()>                       
+                            <div class= text></div>   
+                                                
+                            <div class=text><p> .$row['EmployeeID']. "</p></div>
+                            <div class=text><p>" .$row['EmployeeName'].  "</p></div>
+                            <div class=text><p>" .$row['Department'].  "</p></div>
+                            <div class=text><p>" .$row['Position'].  "</p></div>
+                            
+                            </div>
+                            
+                          
                              <script>
                                 function redirectToEmployeeDetailsAdmin(){
                                     window.location.href='Employeedetails(ADMIN).php';
