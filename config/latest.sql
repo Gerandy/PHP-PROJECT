@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 03, 2024 at 01:36 AM
+-- Generation Time: Jul 03, 2024 at 06:36 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -54,6 +54,12 @@ CREATE TABLE `employee_deduction_payslip` (
   `Receipt_Code` int(50) NOT NULL,
   `Deduction` varchar(50) NOT NULL,
   `Amount` decimal(8,2) NOT NULL,
+  `Deduction2` varchar(55) NOT NULL,
+  `Amount2` int(55) NOT NULL,
+  `Deduction3` varchar(55) NOT NULL,
+  `Amount3` int(55) NOT NULL,
+  `Deduction4` varchar(55) NOT NULL,
+  `Amount4` int(55) NOT NULL,
   `Total_Deduction` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -110,15 +116,17 @@ CREATE TABLE `employee_information` (
   `Email` varchar(100) NOT NULL,
   `Mobile_No` varchar(100) NOT NULL,
   `Identity_No` varchar(100) NOT NULL,
-  `Employment_Type` varchar(100) NOT NULL
+  `Employment_Type` varchar(100) NOT NULL,
+  `accNO` int(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `employee_information`
 --
 
-INSERT INTO `employee_information` (`EmployeeID`, `EmployeeName`, `FirstName`, `MiddleName`, `LastName`, `Date_of_Birth`, `Gender`, `Address`, `City`, `Region`, `Country`, `Status`, `Nationality`, `Email`, `Mobile_No`, `Identity_No`, `Employment_Type`) VALUES
-(1, 'Gerandy', 'Gerandy Ernest', 'Jamanila', 'Buensuceso', '2024-12-09', 'Male', '594 Batong Dalig Kawit Cavite', 'Kawit', 'CALABARZON', 'Philippines', 'Single', 'Filipino', 'gerandyb2k18@gmail.com', '09927274046', '202210881', 'Human Resources');
+INSERT INTO `employee_information` (`EmployeeID`, `EmployeeName`, `FirstName`, `MiddleName`, `LastName`, `Date_of_Birth`, `Gender`, `Address`, `City`, `Region`, `Country`, `Status`, `Nationality`, `Email`, `Mobile_No`, `Identity_No`, `Employment_Type`, `accNO`) VALUES
+(1, 'Gerandy', 'Gerandy Ernest', 'Jamanila', 'Buensuceso', '2024-12-09', 'Male', '594 Batong Dalig Kawit Cavite', 'Kawit', 'CALABARZON', 'Philippines', 'Single', 'Filipino', 'gerandyb2k18@gmail.com', '09927274046', '202210881', 'Human Resources', 0),
+(2, 'Ken', 'Ken Orosco', 'M. ', 'Orosco', '2003-12-23', 'Male', 'Palico', 'Imus', 'CALABARZON', 'PHILIPPINES', 'SINGLE', 'Filipino', 'ken@email.com', '0992723321', '2022108321', 'Employee', 0);
 
 -- --------------------------------------------------------
 
@@ -153,7 +161,8 @@ CREATE TABLE `employee_log` (
 --
 
 INSERT INTO `employee_log` (`EmployeeID`, `fromName`, `Date`, `Message`) VALUES
-(1, 'Weng', '2024-07-03', 'HELLO PARE');
+(1, 'Weng', '2024-07-03', 'HELLO PARE'),
+(1, 'Weng', '2024-07-03', 'Nako po 8:37 na\r\n');
 
 -- --------------------------------------------------------
 
@@ -193,16 +202,19 @@ CREATE TABLE `hr_add_account` (
   `Identity_No` varchar(100) NOT NULL,
   `Employment_type` varchar(100) NOT NULL,
   `Position` varchar(100) NOT NULL,
-  `Department` varchar(100) NOT NULL
+  `Department` varchar(100) NOT NULL,
+  `accNO` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `hr_add_account`
 --
 
-INSERT INTO `hr_add_account` (`EmployeeID`, `FirstName`, `MiddleInitial`, `LastName`, `Date_of_birth`, `Gender`, `Address`, `City`, `Region`, `Country`, `Status`, `Nationality`, `Email`, `Moblie_No`, `Identity_No`, `Employment_type`, `Position`, `Department`) VALUES
-(1, 'Gerandy Ernest', 'J.', 'Buensuceso', '2004-12-09', 'Male', '594 Batong Dalig Kawit Cavite', 'Kawit', 'CALABARZON', 'Philippines', 'Single', 'Filipino', 'gerandyb2k18@gmail.com', '09927274046', '20221081', 'Human Resources', 'Head Human Resources', 'Company Department'),
-(2, 'Ken Clarence', 'C', 'Orosco', '2003-12-23', 'Male', 'Palico', 'Imus', 'CALABARZON', 'Philippines', 'Single', 'Filipino', 'ken@email.com', '0993213251', '202210823', '', '', '');
+INSERT INTO `hr_add_account` (`EmployeeID`, `FirstName`, `MiddleInitial`, `LastName`, `Date_of_birth`, `Gender`, `Address`, `City`, `Region`, `Country`, `Status`, `Nationality`, `Email`, `Moblie_No`, `Identity_No`, `Employment_type`, `Position`, `Department`, `accNO`) VALUES
+(1, 'Gerandy Ernest', 'J.', 'Buensuceso', '2004-12-09', 'Male', '594 Batong Dalig Kawit Cavite', 'Kawit', 'CALABARZON', 'Philippines', 'Single', 'Filipino', 'gerandyb2k18@gmail.com', '09927274046', '20221081', 'Human Resources', 'Head Human Resources', 'Company Department', 0),
+(2, 'Ken Clarence', 'C', 'Orosco', '2003-12-23', 'Male', 'Palico', 'Imus', 'CALABARZON', 'Philippines', 'Single', 'Filipino', 'ken@email.com', '0993213251', '202210823', '', '', '', 0),
+(5, 'asd', '', '', '0000-00-00', '', '', '', '', '', '', '', '', '', '', '', '', '', 0),
+(6, 'ads', 'ads', 'asd', '0000-00-00', 'asd', 'sad', 'sda', 'sda', 'sda', 'sad', 'sda', 'ads', 'sad', 'asd', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -338,6 +350,14 @@ CREATE TABLE `hr_list_of_employee` (
   `Position` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `hr_list_of_employee`
+--
+
+INSERT INTO `hr_list_of_employee` (`EmployeeID`, `Employee_Name`, `Department`, `Position`) VALUES
+(1, 'Gerandy', 'Sales', 'Manager'),
+(2, 'Ken', 'Manger', 'Depart');
+
 -- --------------------------------------------------------
 
 --
@@ -354,6 +374,13 @@ CREATE TABLE `hr_payslip_receipt` (
   `HourlyRate` decimal(10,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `hr_payslip_receipt`
+--
+
+INSERT INTO `hr_payslip_receipt` (`Issued_Date`, `Receipt_Code`, `Employee_Name`, `Department`, `EmployeeID`, `Date`, `HourlyRate`) VALUES
+('2024-07-03', 1, 'Gerandy', 'Sales', 1, '2024-07-03', 1000.00);
+
 -- --------------------------------------------------------
 
 --
@@ -364,15 +391,17 @@ CREATE TABLE `login` (
   `EmployeeID` int(55) NOT NULL,
   `username` varchar(55) NOT NULL,
   `password` varchar(55) NOT NULL,
-  `Employment_Type` varchar(55) NOT NULL
+  `Employment_Type` varchar(55) NOT NULL,
+  `accNO` int(55) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `login`
 --
 
-INSERT INTO `login` (`EmployeeID`, `username`, `password`, `Employment_Type`) VALUES
-(1, 'bibs', '123', 'Human Resources');
+INSERT INTO `login` (`EmployeeID`, `username`, `password`, `Employment_Type`, `accNO`) VALUES
+(1, 'Bibs', '123', 'Human Resources', 1),
+(2, 'ken', '123', '', 2);
 
 --
 -- Indexes for dumped tables
@@ -491,7 +520,8 @@ ALTER TABLE `hr_payslip_receipt`
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
-  ADD PRIMARY KEY (`EmployeeID`);
+  ADD KEY `login_ibfk_1` (`EmployeeID`),
+  ADD KEY `login_ibfk_2` (`accNO`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -507,7 +537,7 @@ ALTER TABLE `employee_deduction_payslip`
 -- AUTO_INCREMENT for table `employee_earning_payslip`
 --
 ALTER TABLE `employee_earning_payslip`
-  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `employee_history`
@@ -519,7 +549,7 @@ ALTER TABLE `employee_history`
 -- AUTO_INCREMENT for table `employee_information`
 --
 ALTER TABLE `employee_information`
-  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `employee_info_earnings`
@@ -543,7 +573,7 @@ ALTER TABLE `employee_payslip_receipt`
 -- AUTO_INCREMENT for table `hr_add_account`
 --
 ALTER TABLE `hr_add_account`
-  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `hr_deduction_payslip`
@@ -585,19 +615,13 @@ ALTER TABLE `hr_emp_info_earnings_edit`
 -- AUTO_INCREMENT for table `hr_list_of_employee`
 --
 ALTER TABLE `hr_list_of_employee`
-  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `hr_payslip_receipt`
 --
 ALTER TABLE `hr_payslip_receipt`
-  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `login`
---
-ALTER TABLE `login`
-  MODIFY `EmployeeID` int(55) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `EmployeeID` int(50) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables
@@ -646,7 +670,7 @@ ALTER TABLE `employee_info_earnings`
 -- Constraints for table `employee_log`
 --
 ALTER TABLE `employee_log`
-  ADD CONSTRAINT `employee_log_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`);
+  ADD CONSTRAINT `employee_log_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `employee_information` (`EmployeeID`);
 
 --
 -- Constraints for table `employee_payslip_receipt`
@@ -709,7 +733,8 @@ ALTER TABLE `hr_payslip_receipt`
 -- Constraints for table `login`
 --
 ALTER TABLE `login`
-  ADD CONSTRAINT `login_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `employee_information` (`EmployeeID`);
+  ADD CONSTRAINT `login_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `hr_add_account` (`EmployeeID`),
+  ADD CONSTRAINT `login_ibfk_2` FOREIGN KEY (`accNO`) REFERENCES `hr_add_account` (`EmployeeID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

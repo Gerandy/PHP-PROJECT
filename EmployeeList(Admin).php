@@ -107,25 +107,39 @@ include('config/php/datagetter.php');
 
                            <div class="mid">
                              <div class="t">
-                             <div class="text"><h3>PROFILE</h3> </div>
-                              <div class="text"> <h3>EMPLOYEE ID</h3> </div>
+                             
                              <div class="text"><h3>EMPLOYEE NAME</h3> </div>
                                <div class="text"><h3>DEPARTMENT</h3> </div>
                                  <div class="text"><h3>POSITION</h3> </div>
                              </div>
                             
                             
-                            <div class=AdminListOfEmployee_Scrollbar>
-                            <div class= inside onclick=redirectToEmployeeDetailsAdmin()>                       
-                            <div class= text></div>   
-                                                
-                            <div class=text><p> .$row['EmployeeID']. "</p></div>
-                            <div class=text><p>" .$row['EmployeeName'].  "</p></div>
-                            <div class=text><p>" .$row['Department'].  "</p></div>
-                            <div class=text><p>" .$row['Position'].  "</p></div>
-                            
-                            </div>
-                            
+                             <div class="AdminListOfEmployee_Scrollbar">
+                             <?php while($row = mysqli_fetch_assoc($result_listofemp)){ ?>
+                                        <table class="EmployeeListTable" >
+                                            <tr class="EmployeeDetails_Bar">
+                                                <td class="EmployeeList_Content"> 
+                                                    <?php echo$row['Employee_Name'] ?>
+                                            </td>
+                                                <td class="EmployeeList_Content"> 
+                                            <?php echo $row['Department']?>
+
+                                                </td>
+                                                <td class="EmployeeList_Content"> 
+                                                    
+                                            </td>
+                                                <td class="EmployeeList_Content"> 
+
+                                                <?php echo $row['Position']?>
+
+
+                                                </td>
+                                                <td class="EmployeeList_Content"> 
+                                                    
+                                            </td>
+                                            </tr>
+                                        </table>
+                            <?php } ?>
                           
                              <script>
                                 function redirectToEmployeeDetailsAdmin(){

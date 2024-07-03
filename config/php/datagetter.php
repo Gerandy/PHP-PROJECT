@@ -7,6 +7,9 @@ $sql_message = "select login.EmployeeID, employee_log.* from login inner join em
 $sql_earnings = "select login.EmployeeID, employee_payslip_receipt.*, employee_earning_payslip.*, employee_deduction_payslip.* from login inner join employee_payslip_receipt on login.EmployeeID = employee_payslip_receipt.EmployeeID inner join  employee_earning_payslip on employee_earning_payslip.EmployeeID = employee_payslip_receipt.EmployeeID inner join employee_deduction_payslip on employee_earning_payslip.EmployeeID = employee_deduction_payslip.EmployeeID where username = '$usernamelogin'";
 $sql_employeeinfo = "select login.EmployeeID, employee_information.* from login inner join employee_information on login.EmployeeID = employee_information.EmployeeID where username ='$usernamelogin';";
 $sql_employeeearning ="select login.EmployeeID, employee_info_earnings.* from login inner join employee_info_earnings on employee_info_earnings.EmployeeID = login.EmployeeID where username ='$usernamelogin';";
+$sql_listofemp = "select * from hr_list_of_employee;";
+
+
 
 
 $result_name = mysqli_query($conn,$sql_name);
@@ -15,6 +18,7 @@ $result_message1 = mysqli_query($conn,$sql_message);
 $result_earnings = mysqli_query($conn,$sql_earnings);
 $result_employeeinfo = mysqli_query($conn,$sql_employeeinfo);
 $result_employeeearning = mysqli_query($conn,$sql_employeeearning);
+$result_listofemp = mysqli_query($conn,$sql_listofemp);
 
 while($row = mysqli_fetch_assoc($result_name)){
     $_SESSION['Identity_No'] = $row['Identity_No'];
