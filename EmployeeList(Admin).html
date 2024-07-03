@@ -105,68 +105,59 @@
                                  <div class="text"><h3>POSITION</h3> </div>
                              </div>
 
-                             <div class="AdminListOfEmployee_Scrollbar">
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
-                             <script>
-                                function redirectToEmployeeDetailsAdmin(){
-                                    window.location.href='Employeedetails(ADMIN).php';
-                                }
-                             </script>
+                                <div class="AdminListOfEmployee_Scrollbar">
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
+                                    <div class="AdminListOfEmployee_Scrollbar">
+                                        <table class="EmployeeListTable" onclick="redirectToEmployeeDetailsAdmin()">
+                                            <tr class="EmployeeDetails_Bar">
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                            </tr>
+                                        </table>
+                                        
+                                        <table class="EmployeeListTable" onclick="redirectToEmployeeDetailsAdmin()">
+                                            <tr class="EmployeeDetails_Bar">
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                            </tr>
+                                        </table>
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
+                                        <table class="EmployeeListTable" onclick="redirectToEmployeeDetailsAdmin()">
+                                            <tr class="EmployeeDetails_Bar">
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> --</td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                            </tr>
+                                        </table>
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
+                                        <table class="EmployeeListTable" onclick="redirectToEmployeeDetailsAdmin()">
+                                            <tr class="EmployeeDetails_Bar">
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                                <td class="EmployeeList_Content"> -- </td>
+                                            </tr>
+                                        </table>
 
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
-
-                             <div class="inside" onclick="redirectToEmployeeDetailsAdmin()">
-                                <div class="text"><img src="" class="EmployeePhoto"></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                                <div class="text"><p> --- </p></div>
-                             </div>
-                               <div class="inside">
-
-                                <!-- add button admin // pwede i comment nalang din para mawala yung add button  -->
-                                <div class="text"><p></p></div>
-                                <div class="text"><p> <a href="Admin(AddAccount).php"><img src="assets/Icon/plus.png" class="plus"></a></p></div>
-                                <div class="text"><p></p></div>
-                                <div class="text"><p></p></div>
-                             </div>
-                            </div>
+                                    </div>                                                                     
+          
+                                    <div class="inside">
+                                        <!-- add button admin // pwede i comment nalang din para mawala yung add button  -->
+                                        <div class="text"><p></p></div>
+                                        <div class="text"><p><a href="Admin(AddAccount).php"><img src="assets/Icon/plus.png" class="plus"></a></p></div>
+                                        <div class="text"><p></p></div>
+                                        <div class="text"><p></p></div>
+                                    </div>
+                                </div>
                            </div>
                 </div>
 
@@ -176,42 +167,42 @@
                             <p class="Notification_Text"> NOTIFICATION </p>
                             
                             <div class="AdminNotification_Scrollbar">
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
-                                </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
+                                <table  class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> NEW MESSAGE </th>
+                                    </tr>
+                                    <tr>
+                                        <td class="Notif_Message"> You have a new Message </td>
+                                    </tr>
+                                </table>
 
-                            <table>
-                                <tr>
-                                    <th> NEW MESSAGE </th>
-                                </tr>
-                                <tr>
-                                    <td> You have a new Message </td>
-                                </tr>
-                            </table>
+                                <table  class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> NEW MESSAGE </th>
+                                    </tr>
+                                    <tr>
+                                        <td class="Notif_Message"> You have a new Message </td>
+                                    </tr>
+                                </table>
 
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
-                                </tr>
-                            </table>
+                                <table  class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                    </tr>
+                                    <tr class="Notif">
+                                        <td class="Notif_Message"> New Announcemnet </td>
+                                    </tr>
+                                </table>
 
-                            <table>
-                                <tr>
-                                    <th> ANNOUNCEMENT </th>
-                                </tr>
-                                <tr>
-                                    <td> New Announcemnet </td>
-                                </tr>
-                            </table>
-                        </div>
+                                <table  class="NotificationTable">
+                                    <tr class="Notif">
+                                        <th  class="Notif_Text"> ANNOUNCEMENT </th>
+                                    </tr>
+                                    <tr class="Notif">
+                                        <td class="Notif_Message"> New Announcemnet </td>
+                                    </tr>
+                                </table>
+                            </div>
                         </div>
 
                         <div class="About_User">
