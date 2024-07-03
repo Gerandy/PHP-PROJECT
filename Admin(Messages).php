@@ -103,55 +103,17 @@ include('config/php/datagetter.php');
                         
                         <div class="AdminMessage_Scrollbar">
                         <div class="Table_PaySlip_Receipt">
-                            <table class="LogTable clickableTable"> 
+                        <?php while($row = mysqli_fetch_assoc($result_message)){ ?>
+                            <table class="LogTable"> 
                                 <tr>
-                                    <th class="Date Text"> FROM: "HR NAME"</th>
+                                    <th class="Date Text"> <?php echo "FROM: ".$row['fromName'];?></th>
                                 </tr> 
                                 <tr>
-                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
-                                </tr>
-                            </table>
-                            <table class="LogTable clickableTable"> 
-                                <tr>
-                                    <th class="Date Text"> FROM: "HR NAME"</th>
-                                </tr> 
-                                <tr>
-                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
-                                </tr>
-                            </table>
-                            <table class="LogTable clickableTable"> 
-                                <tr>
-                                    <th class="Date Text"> FROM: "HR NAME"</th>
-                                </tr> 
-                                <tr>
-                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
-                                </tr>
-                            </table>
-                            <table class="LogTable clickableTable"> 
-                                <tr>
-                                    <th class="Date Text"> FROM: "HR NAME"</th>
-                                </tr> 
-                                <tr>
-                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
+                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text"><?php echo $row['Message'];?></span>   </td>
                                 </tr>
                             </table>
                             
-                            <table class="LogTable clickableTable"> 
-                                <tr>
-                                    <th class="Date Text"> FROM: "HR NAME"</th>
-                                </tr> 
-                                <tr>
-                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
-                                </tr>
-                            </table>
-                            <table class="LogTable clickableTable"> 
-                                <tr>
-                                    <th class="Date Text"> FROM: "HR NAME"</th>
-                                </tr> 
-                                <tr>
-                                    <td colspan="2" class="Text"> <img src="assets/images/Profile.jpg" class="Profile_Photo"> <span class="Log_Text">Your request to change your PASSWORD is approved! </span>   </td>
-                                </tr>
-                            </table>
+                            <?php }?>
                         </div>
                         </div>
                     </div>                    
@@ -168,7 +130,7 @@ include('config/php/datagetter.php');
                             
                             <div class="AdminNotification_Scrollbar">
                             <?php  
-                       while($row = mysqli_fetch_assoc($result_message)){
+                       while($row = mysqli_fetch_assoc($result_message1)){
                            echo "<table class= NotificationTable>";
                            
                            echo  "<tr class= Notif>";

@@ -1,7 +1,7 @@
 <?php
 session_start();
-    $accno = "";
-    $_SESSION['accn'] = "nak";
+    
+    
     
     if (isset($_POST['submit'])){
         $username = $_POST['username'];  
@@ -15,14 +15,18 @@ session_start();
          echo '<script>alert("INVALID USERNAME OR PASSWORD")</script>';
         }
         else if ($row['username'] == $username &&  $row['password'] == $password){
-            $_SESSION['username'] = $username;
-            header("location: Employee(DashBoard).php"); 
+            if($row['Employment_Type'] == "Human Resources"){
+
+                $_SESSION['username'] = $username;
+                $_SESSION['username'] = $username;
+                header("location: Admin(DashBoard).php"); 
+            }
+            else{
+                $_SESSION['username'] = $username;
+                $_SESSION['username'] = $username;
+                header("location: Employee(DashBoard).php"); 
+            }    
+        }else{
+
         }
-            
-            
-            
-            
     }
-        
-    
-?>

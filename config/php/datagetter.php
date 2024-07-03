@@ -11,6 +11,7 @@ $sql_employeeearning ="select login.EmployeeID, employee_info_earnings.* from lo
 
 $result_name = mysqli_query($conn,$sql_name);
 $result_message = mysqli_query($conn,$sql_message);
+$result_message1 = mysqli_query($conn,$sql_message);
 $result_earnings = mysqli_query($conn,$sql_earnings);
 $result_employeeinfo = mysqli_query($conn,$sql_employeeinfo);
 $result_employeeearning = mysqli_query($conn,$sql_employeeearning);
