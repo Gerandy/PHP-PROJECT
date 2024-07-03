@@ -249,14 +249,14 @@ font-family: Commissioner, sans-serif;
 
 /* Table for notification */
 
-table {
+.NotificationTable {
   border-collapse: collapse;
-  width: 90%;
+  width: 95%;
   margin: 20px auto; 
   color: #B5B2B2;
 }
 
-th, td {
+.Notif_Text, .Notif_Message {
   border: none;
   padding: 10px;
   text-align: left;
@@ -265,7 +265,61 @@ th, td {
   
 }
 
-th {
+.Notif_Message {
+  background-color: #474F56;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 0px 0px 20px 20px;
+  font-family: Commissioner, sans-serif;
+}
+
+
+
+
+/* Employee List table Start */
+
+
+.EmployeeListTable {
+  border-collapse: separate;
+  width: 98%;
+  margin: 20px auto;
+  color: #B5B2B2;
+  border-radius: 20px; 
+  overflow: hidden; 
+
+}
+
+.EmployeeDetails_Bar {
+  background-color: #474F56;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Commissioner, sans-serif;
+  padding: 10px;
+  text-align: center;
+}
+
+.EmployeeList_Content {
+  background-color: #474F56;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: Commissioner, sans-serif;
+  padding: 10px;
+  border-bottom: 1px solid #333; 
+  border-radius: 0 !important;
+}
+
+.EmployeeList_Content p {
+  margin: 0;
+  padding: 10px;
+}
+
+
+/* Empployee List table End */
+
+
+
+
+.Notif_Text {
   background-color: #474F56;
   font-size: 40px;
   border-radius: 20px 20px 0 0;
@@ -274,12 +328,13 @@ th {
   font-family: Commissioner, sans-serif;
 }
 
-td {
+.EmployeeList_Content {
   background-color: #474F56;
   font-size: 24px;
   font-weight: 700;
   border-radius: 0 0 20px 20px;
   font-family: Commissioner, sans-serif;
+  padding: 20px;
 }
 
 
@@ -319,3 +374,4 @@ td {
 }
 
 /* End of Messages Window CSS */
+
