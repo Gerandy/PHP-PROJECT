@@ -116,8 +116,8 @@ include('config/php/datagetter.php');
                                 </div>
                                 <div class="EmployeeInfo_Text2">
                                     <p>Deductions: </p>         <p class="EmployeeInformation"> <?php echo $_SESSION['Deductions']?> </p>
-                                                                <p class="EmployeeInformation"> <?php echo $_SESSION['Deductions']?> </p>
-                                                                <p class="EmployeeInformation"> <?php echo $_SESSION['Deductions']?> </p>
+                                                                <p class="EmployeeInformation"> <?php echo $_SESSION['Deductions2']?> </p>
+                                                                <p class="EmployeeInformation"> <?php echo $_SESSION['Deductions3']?> </p>
                                 </div>
                             </div>
                         </div>

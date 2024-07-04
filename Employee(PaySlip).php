@@ -1,5 +1,4 @@
 <?php 
-
 include('config/php/connect.php');
 include('config/php/logincomand.php');
 include('config/php/datagetter.php');
@@ -126,37 +125,38 @@ include('config/php/datagetter.php');
 
             <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
             <!-- Dashboard Content Here -->
-
-                <!-- Drop Downs (Month, Semi, Pending) -->
-                 <form method="GET" >
-                <div class="dropdown">                   
-                        <select class="months" name="months" >
-                        <option value="January">January</option>
-                        <option value="February">February</option>
-                        <option value="March">March</option>
-                        <option value="April">April</option>
-                        <option value="May">May</option>
-                        <option value="June">June</option>
-                        <option value="July">July</option>
-                        <option value="August">August</option>
-                        <option value="September">September</option>
-                        <option value="October">October</option>
-                        <option value="Novermber">Novermber</option>
-                        <option value="December">December</option>
-                        </select></p> </button>    
+<!-- Drop Downs (Month, Semi, Pending) -->
+<div class="dropdown">
+                    <button onclick="toggleMonthDropdown()" class="MonthDropDown"> MONTH: </button>
+                    <div id="Month" class="dropdown-content">
+                        <a href="#"> January </a>
+                        <a href="#"> February </a>
+                        <a href="#"> March </a>
+                        <a href="#"> April </a>
+                        <a href="#"> May </a>
+                        <a href="#"> June </a>
+                        <a href="#"> July </a>
+                        <a href="#"> August </a>
+                        <a href="#"> September </a>
+                        <a href="#"> October </a>
+                        <a href="#"> November </a>
+                        <a href="#"> December </a>
+                    </div>
                 </div>
-                <select class="Half" name="Half" >
-                        <option value="Half">Half</option>
-                        <option value="Full">Full</option>
-                        </select></p> </button> 
-
-                    <input type="submit"> 
-                    </form>
-                        
-                
-                
-                
-                
+                <div class="dropdown">
+                    <button onclick="toggleSemiMonthlyDropdown()" class="SemiMonthlyDropDown"> SEMI-MONTHLY: </button>
+                    <div id="Semi-Monthly" class="dropdown-content">
+                        <a href="#"> 1-15 </a>
+                        <a href="#"> 15-31 </a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button onclick="togglePendingDropdown()" class="PendingDropDown"> PENDING: </button>
+                    <div id="Pending" class="dropdown-content">
+                        <a href="#"> idk </a>
+                        <a href="#"> dikoalam </a>
+                    </div>
+                </div>
                 <!-- End  Drop Downs -->
 
                 <!-- Pay Slip Receipt -->
@@ -199,37 +199,18 @@ include('config/php/datagetter.php');
                                         <th class="Earning Text"> EARNING </th>
                                         <th class="Amount Text"> AMOUNT </th>
                                     </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1"  class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
+                                    
                                         <td colspan="1" class="Text"> TOTAL EARNING </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
+                                        <td colspan="1" class="Amount Text"> 
+                                    <?php echo $_SESSION['Total_Earning']; ?>        
+                                    </td>
                                     </tr>
                                     <tr>
                                         <td colspan="1" class="Text"> NET PAY </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
+                                        <td colspan="1" class="Amount Text"> 
+
+                                        <?php echo $_SESSION['NetPay']; ?>
+                                        </td>
                                     </tr>
                                 </table>
                             </div>
@@ -237,39 +218,14 @@ include('config/php/datagetter.php');
                                 <table>  
                                     <tr>
                                         <th class="Deduction Text"> DEDUCTION </th>
-                                        <th class="Amount Text"> AMOUNT </th>
+                                        <th class="Amount Text"> TAX </th>
                                     </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
-                                    <tr>
-                                        <td colspan="1" class="Text"> --- </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
-                                    </tr>
+                                    
                                     <tr>
                                         <td colspan="1" class="Text"> TOTAL DEDUCTION </td>
-                                        <td colspan="1" class="Amount Text"> --- </td>
+                                        <td colspan="1" class="Amount Text"> 
+                                    <?php echo $_SESSION['Total_Deduction']; ?>        
+                                    </td>
                                     </tr>
                                 </table>
                             </div>

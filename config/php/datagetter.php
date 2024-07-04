@@ -31,11 +31,15 @@ while($row = mysqli_fetch_assoc($result_name)){
 
 while($row = mysqli_fetch_assoc($result_earnings)){
 // PAY SLIP RECEIPT
- $_SESSION['Date'] = $row['Date'];
- $_SESSION['Receipt_Code'] = $row['Receipt_Code'];
- $_SESSION['EmployeeName'] = $row['EmployeeName'];
- $_SESSION['Department'] = $row['Department'];
- $_SESSION['EmployeeID'] = $row['EmployeeID'];
+$_SESSION['Date'] = $row['Date'];
+$_SESSION['Receipt_Code'] = $row['Receipt_Code'];
+$_SESSION['EmployeeName'] = $row['EmployeeName'];
+$_SESSION['Department'] = $row['Department'];
+$_SESSION['EmployeeID'] = $row['EmployeeID'];
+$_SESSION['Total_Earning'] = $row['Total_Earning'];
+$_SESSION['NetPay'] = $row['NetPay'];
+$_SESSION['Amount'] = $row['Amount'];
+$_SESSION['Total_Deduction'] = $row['Total_Deduction'];
 // PAY SLIP RECEIPT END
 
 // EARNING
@@ -58,6 +62,7 @@ while($row = mysqli_fetch_assoc($result_employeeinfo )){
      $_SESSION['Email'] = $row['Email'];
      $_SESSION['Mobile_No'] = $row['Mobile_No'];
      $_SESSION['Identity_No'] = $row['Identity_No'];
+     
     }
 
 while($row = mysqli_fetch_assoc($result_employeeearning )){
@@ -67,8 +72,13 @@ while($row = mysqli_fetch_assoc($result_employeeearning )){
     $_SESSION['Position'] = $row['Position'];
     $_SESSION['Salary'] = $row['Salary'];
     $_SESSION['Deductions'] = $row['Deductions'];
+    $_SESSION['Deductions2'] = $row['Deduction2'];
+    $_SESSION['Deductions3'] = $row['Deduction3'];
+   
+    
     }
 
-
-
+    
+    
+    
 ?>

@@ -100,7 +100,7 @@ include('config/php/datagetter.php');
                     <!-- Dashboard Content Here -->
                     <div class="AccountGreeting">
                         <p class="Dashboard_Text"> WELCOME </p> <br>
-                        <p class="Dashboard_Text Employee"> "ADMIN NAME"</p>
+                        <p class="Dashboard_Text Employee">  <?php echo $_SESSION['FirstName']." ".$_SESSION['MiddleInitial']." ".$_SESSION['LastName'] ; ?></p>
                     </div>
                     <div class="Main_Container">
                         <div class="Image_Carousel">

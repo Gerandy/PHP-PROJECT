@@ -157,7 +157,7 @@ include('config/php/datagetter.php');
                         <p class="Notification_Text"> NOTIFICATION </p>
                         <div class="EmployeeNotification_Scrollbar">
                         <?php  
-                       while($row = mysqli_fetch_assoc($result_message)){
+                       while($row = mysqli_fetch_assoc($result_message1)){
                            echo "<table class= NotificationTable>";
                            
                            echo  "<tr class= Notif>";

@@ -39,13 +39,11 @@
                 <div class="LogIn_Box">
                     
                     <form action="" method="POST">
-                        <label class="sr-only">User ID</label>
-
-
+                        <label class="sr-only"></label>
                         <input type="text" placeholder="Username:" name="username" class="input_UserID" required>
                         <br>                       
                         <br>
-                        <label class="sr-only">Password</label>
+                        <label class="sr-only"></label>
                         <input type="password" placeholder="Password:" name="password" class="input" required>
                         <br>
                         <input type="checkbox">

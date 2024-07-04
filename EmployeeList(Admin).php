@@ -102,7 +102,7 @@ include('config/php/datagetter.php');
                     <!-- Dito mo lagay delosreyes mga gawa mo-->
                           <div class="top">
                            <h2>LIST OF EMPLOYEE</h2>
-                            <div class="search"><input type="text" name="search" placeholder="Search" class="sr"></div>
+                            
                          </div> 
 
                            <div class="mid">

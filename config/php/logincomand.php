@@ -17,12 +17,12 @@ session_start();
         else if ($row['username'] == $username &&  $row['password'] == $password){
             if($row['Employment_Type'] == "Human Resources"){
 
-                $_SESSION['username'] = $username;
+                
                 $_SESSION['username'] = $username;
                 header("location: Admin(DashBoard).php"); 
             }
             else{
-                $_SESSION['username'] = $username;
+               
                 $_SESSION['username'] = $username;
                 header("location: Employee(DashBoard).php"); 
             }    
