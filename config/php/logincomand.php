@@ -15,6 +15,7 @@ session_start();
          echo '<script>alert("INVALID USERNAME OR PASSWORD")</script>';
         }
         else if ($row['username'] == $username &&  $row['password'] == $password){
+            
             if($row['Employment_Type'] == "Human Resources"){
 
                 

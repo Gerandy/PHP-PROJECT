@@ -1,4 +1,5 @@
-<?php 
+<?php  
+
 // ewqe
 include('connect.php');
 $usernamelogin = $_SESSION['username'];
@@ -31,15 +32,16 @@ while($row = mysqli_fetch_assoc($result_name)){
 
 while($row = mysqli_fetch_assoc($result_earnings)){
 // PAY SLIP RECEIPT
-$_SESSION['Date'] = $row['Date'];
-$_SESSION['Receipt_Code'] = $row['Receipt_Code'];
-$_SESSION['EmployeeName'] = $row['EmployeeName'];
-$_SESSION['Department'] = $row['Department'];
-$_SESSION['EmployeeID'] = $row['EmployeeID'];
-$_SESSION['Total_Earning'] = $row['Total_Earning'];
-$_SESSION['NetPay'] = $row['NetPay'];
-$_SESSION['Amount'] = $row['Amount'];
-$_SESSION['Total_Deduction'] = $row['Total_Deduction'];
+    $_SESSION['Date'] = $row['Date'];
+    $_SESSION['Receipt_Code'] = $row['Receipt_Code'];
+    $_SESSION['EmployeeName'] = $row['EmployeeName'];
+    $_SESSION['Department'] = $row['Department'];
+    $_SESSION['EmployeeID'] = $row['EmployeeID'];
+    $_SESSION['Total_Earning'] = $row['Total_Earning'];
+    $_SESSION['NetPay'] = $row['NetPay'];
+    $_SESSION['Amount'] = $row['Amount'];
+    $_SESSION['Total_Deduction'] = $row['Total_Deduction'];
+
 // PAY SLIP RECEIPT END
 
 // EARNING
