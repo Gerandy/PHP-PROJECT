@@ -7,6 +7,7 @@ include('config/php/addAccount.php');
 // $result = mysqli_query($conn, $sql_username);
 // $row = mysqli_fetch_assoc($result);
 // hi
+// testing mag memerge conflict ba dito
 ?>
 <!-- er -->
 <!DOCTYPE html>
@@ -90,7 +91,7 @@ include('config/php/addAccount.php');
 
                 <div class="col-xs-12 col-sm-9 col-md-8 Dashboard_Content">
                     <!-- Dashboard Content Here -->
-                    <!-- Dito mo lagay delosreyes mga gawa mo-->
+                    <!-- Dito mo lagay delosreyes mga gawa mo testing mag memerge conflict ba dito-->
                   <h1>ADD ACCCOUNT</h1>
                     <!-- Employee Info Start -->
                     <div class="Employee">
