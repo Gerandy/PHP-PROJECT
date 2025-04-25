@@ -7,6 +7,7 @@ include('config/php/addAccount.php');
 // $result = mysqli_query($conn, $sql_username);
 // $row = mysqli_fetch_assoc($result);
 // hi
+// hello
 ?>
 <!-- er -->
 <!DOCTYPE html>
